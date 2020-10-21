@@ -2,6 +2,12 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Redshifter\mopo\src">
+      <UniqueIdentifier>{8053D2C8-48F0-957A-7872-2B332552F83D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Redshifter\mopo">
+      <UniqueIdentifier>{CB7F45F7-2118-9F74-ED63-542543D59BB6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Redshifter\Source">
       <UniqueIdentifier>{1FD09CD8-DB8E-3FEE-9578-121115330238}</UniqueIdentifier>
     </Filter>
@@ -427,6 +433,111 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\mopo\src\alias.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\arpeggiator.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\biquad_filter.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\bit_crush.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\bypass_router.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\delay.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\distortion.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\envelope.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\feedback.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\formant_manager.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\ladder_filter.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\linear_slope.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\magnitude_lookup.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\memory.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\midi_lookup.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\mono_panner.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\operators.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\oscillator.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\portamento_slope.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\processor.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\processor_router.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\resonance_lookup.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\reverb.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\reverb_all_pass.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\reverb_comb.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\sample_decay_lookup.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\simple_delay.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\smooth_filter.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\smooth_value.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\state_variable_filter.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\step_generator.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\stutter.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\trigger_operators.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\value.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mopo\src\voice_handler.cpp">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
       <Filter>Redshifter\Source</Filter>
     </ClCompile>
@@ -2422,6 +2533,9 @@
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.mm">
       <Filter>JUCE Modules\juce_gui_extra</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp">
+      <Filter>JUCE Library Code</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp">
       <Filter>JUCE Library Code</Filter>
     </ClCompile>
@@ -2460,6 +2574,135 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\mopo\src\alias.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\arpeggiator.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\biquad_filter.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\bit_crush.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\bypass_router.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\circular_queue.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\common.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\delay.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\distortion.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\envelope.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\feedback.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\formant_manager.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\ladder_filter.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\linear_slope.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\magnitude_lookup.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\memory.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\midi_lookup.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\mono_panner.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\mopo.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\note_handler.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\operators.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\oscillator.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\portamento_slope.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\processor.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\processor_router.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\resonance_lookup.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\reverb.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\reverb_all_pass.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\reverb_comb.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\reverb_tuning.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\sample_decay_lookup.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\simple_delay.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\smooth_filter.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\smooth_value.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\state_variable_filter.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\step_generator.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\stutter.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\tick_router.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\trigger_operators.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\utils.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\value.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\voice_handler.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mopo\src\wave.h">
+      <Filter>Redshifter\mopo\src</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>Redshifter\Source</Filter>
     </ClInclude>
@@ -4662,6 +4905,9 @@
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h">
       <Filter>JUCE Modules\juce_gui_extra</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h">
+      <Filter>JUCE Library Code</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h">
       <Filter>JUCE Library Code</Filter>
     </ClInclude>
@@ -4670,6 +4916,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\mopo\src\Makefile.am">
+      <Filter>Redshifter\mopo\src</Filter>
+    </None>
     <None Include="..\..\..\..\..\..\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe</Filter>
     </None>

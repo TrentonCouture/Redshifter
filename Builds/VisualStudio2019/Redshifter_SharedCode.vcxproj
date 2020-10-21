@@ -137,6 +137,41 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\mopo\src\alias.cpp"/>
+    <ClCompile Include="..\..\mopo\src\arpeggiator.cpp"/>
+    <ClCompile Include="..\..\mopo\src\biquad_filter.cpp"/>
+    <ClCompile Include="..\..\mopo\src\bit_crush.cpp"/>
+    <ClCompile Include="..\..\mopo\src\bypass_router.cpp"/>
+    <ClCompile Include="..\..\mopo\src\delay.cpp"/>
+    <ClCompile Include="..\..\mopo\src\distortion.cpp"/>
+    <ClCompile Include="..\..\mopo\src\envelope.cpp"/>
+    <ClCompile Include="..\..\mopo\src\feedback.cpp"/>
+    <ClCompile Include="..\..\mopo\src\formant_manager.cpp"/>
+    <ClCompile Include="..\..\mopo\src\ladder_filter.cpp"/>
+    <ClCompile Include="..\..\mopo\src\linear_slope.cpp"/>
+    <ClCompile Include="..\..\mopo\src\magnitude_lookup.cpp"/>
+    <ClCompile Include="..\..\mopo\src\memory.cpp"/>
+    <ClCompile Include="..\..\mopo\src\midi_lookup.cpp"/>
+    <ClCompile Include="..\..\mopo\src\mono_panner.cpp"/>
+    <ClCompile Include="..\..\mopo\src\operators.cpp"/>
+    <ClCompile Include="..\..\mopo\src\oscillator.cpp"/>
+    <ClCompile Include="..\..\mopo\src\portamento_slope.cpp"/>
+    <ClCompile Include="..\..\mopo\src\processor.cpp"/>
+    <ClCompile Include="..\..\mopo\src\processor_router.cpp"/>
+    <ClCompile Include="..\..\mopo\src\resonance_lookup.cpp"/>
+    <ClCompile Include="..\..\mopo\src\reverb.cpp"/>
+    <ClCompile Include="..\..\mopo\src\reverb_all_pass.cpp"/>
+    <ClCompile Include="..\..\mopo\src\reverb_comb.cpp"/>
+    <ClCompile Include="..\..\mopo\src\sample_decay_lookup.cpp"/>
+    <ClCompile Include="..\..\mopo\src\simple_delay.cpp"/>
+    <ClCompile Include="..\..\mopo\src\smooth_filter.cpp"/>
+    <ClCompile Include="..\..\mopo\src\smooth_value.cpp"/>
+    <ClCompile Include="..\..\mopo\src\state_variable_filter.cpp"/>
+    <ClCompile Include="..\..\mopo\src\step_generator.cpp"/>
+    <ClCompile Include="..\..\mopo\src\stutter.cpp"/>
+    <ClCompile Include="..\..\mopo\src\trigger_operators.cpp"/>
+    <ClCompile Include="..\..\mopo\src\value.cpp"/>
+    <ClCompile Include="..\..\mopo\src\voice_handler.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2014,6 +2049,7 @@
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\JuceLibraryCode\BinaryData.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_basics.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_devices.cpp"/>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_formats.cpp"/>
@@ -2028,6 +2064,49 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\mopo\src\alias.h"/>
+    <ClInclude Include="..\..\mopo\src\arpeggiator.h"/>
+    <ClInclude Include="..\..\mopo\src\biquad_filter.h"/>
+    <ClInclude Include="..\..\mopo\src\bit_crush.h"/>
+    <ClInclude Include="..\..\mopo\src\bypass_router.h"/>
+    <ClInclude Include="..\..\mopo\src\circular_queue.h"/>
+    <ClInclude Include="..\..\mopo\src\common.h"/>
+    <ClInclude Include="..\..\mopo\src\delay.h"/>
+    <ClInclude Include="..\..\mopo\src\distortion.h"/>
+    <ClInclude Include="..\..\mopo\src\envelope.h"/>
+    <ClInclude Include="..\..\mopo\src\feedback.h"/>
+    <ClInclude Include="..\..\mopo\src\formant_manager.h"/>
+    <ClInclude Include="..\..\mopo\src\ladder_filter.h"/>
+    <ClInclude Include="..\..\mopo\src\linear_slope.h"/>
+    <ClInclude Include="..\..\mopo\src\magnitude_lookup.h"/>
+    <ClInclude Include="..\..\mopo\src\memory.h"/>
+    <ClInclude Include="..\..\mopo\src\midi_lookup.h"/>
+    <ClInclude Include="..\..\mopo\src\mono_panner.h"/>
+    <ClInclude Include="..\..\mopo\src\mopo.h"/>
+    <ClInclude Include="..\..\mopo\src\note_handler.h"/>
+    <ClInclude Include="..\..\mopo\src\operators.h"/>
+    <ClInclude Include="..\..\mopo\src\oscillator.h"/>
+    <ClInclude Include="..\..\mopo\src\portamento_slope.h"/>
+    <ClInclude Include="..\..\mopo\src\processor.h"/>
+    <ClInclude Include="..\..\mopo\src\processor_router.h"/>
+    <ClInclude Include="..\..\mopo\src\resonance_lookup.h"/>
+    <ClInclude Include="..\..\mopo\src\reverb.h"/>
+    <ClInclude Include="..\..\mopo\src\reverb_all_pass.h"/>
+    <ClInclude Include="..\..\mopo\src\reverb_comb.h"/>
+    <ClInclude Include="..\..\mopo\src\reverb_tuning.h"/>
+    <ClInclude Include="..\..\mopo\src\sample_decay_lookup.h"/>
+    <ClInclude Include="..\..\mopo\src\simple_delay.h"/>
+    <ClInclude Include="..\..\mopo\src\smooth_filter.h"/>
+    <ClInclude Include="..\..\mopo\src\smooth_value.h"/>
+    <ClInclude Include="..\..\mopo\src\state_variable_filter.h"/>
+    <ClInclude Include="..\..\mopo\src\step_generator.h"/>
+    <ClInclude Include="..\..\mopo\src\stutter.h"/>
+    <ClInclude Include="..\..\mopo\src\tick_router.h"/>
+    <ClInclude Include="..\..\mopo\src\trigger_operators.h"/>
+    <ClInclude Include="..\..\mopo\src\utils.h"/>
+    <ClInclude Include="..\..\mopo\src\value.h"/>
+    <ClInclude Include="..\..\mopo\src\voice_handler.h"/>
+    <ClInclude Include="..\..\mopo\src\wave.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
@@ -2762,10 +2841,12 @@
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\misc\juce_WebBrowserComponent.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\native\juce_mac_CarbonViewWrapperComponent.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_gui_extra\juce_gui_extra.h"/>
+    <ClInclude Include="..\..\JuceLibraryCode\BinaryData.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JuceHeader.h"/>
     <ClInclude Include="..\..\JuceLibraryCode\JucePluginDefines.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\mopo\src\Makefile.am"/>
     <None Include="..\..\..\..\..\..\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt"/>
     <None Include="..\..\..\..\..\..\JUCE\modules\juce_audio_devices\native\oboe\readme.md"/>
     <None Include="..\..\..\..\..\..\JUCE\modules\juce_audio_formats\codecs\flac\Flac Licence.txt"/>
