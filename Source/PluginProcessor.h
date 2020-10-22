@@ -9,11 +9,12 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "SynthManager.h"
 
 //==============================================================================
 /**
 */
-class RedshifterAudioProcessor  : public juce::AudioProcessor
+class RedshifterAudioProcessor  : public juce::AudioProcessor, public SynthManager
 {
 public:
     //==============================================================================

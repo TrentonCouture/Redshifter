@@ -3,117 +3,12 @@
 <JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="nKcm4M" name="Redshifter">
-    <GROUP id="{E19D658F-4261-7E43-728E-577FCD37E31E}" name="mopo">
-      <GROUP id="{9E9A55E5-536D-6451-5366-51076B7525A3}" name="src">
-        <FILE id="J6ic2s" name="alias.cpp" compile="1" resource="0" file="mopo/src/alias.cpp"/>
-        <FILE id="e1UMXt" name="alias.h" compile="0" resource="0" file="mopo/src/alias.h"/>
-        <FILE id="L09zt7" name="arpeggiator.cpp" compile="1" resource="0" file="mopo/src/arpeggiator.cpp"/>
-        <FILE id="D6iaYp" name="arpeggiator.h" compile="0" resource="0" file="mopo/src/arpeggiator.h"/>
-        <FILE id="wEFFy6" name="biquad_filter.cpp" compile="1" resource="0"
-              file="mopo/src/biquad_filter.cpp"/>
-        <FILE id="eyHrUq" name="biquad_filter.h" compile="0" resource="0" file="mopo/src/biquad_filter.h"/>
-        <FILE id="VO2Yl2" name="bit_crush.cpp" compile="1" resource="0" file="mopo/src/bit_crush.cpp"/>
-        <FILE id="IztoIw" name="bit_crush.h" compile="0" resource="0" file="mopo/src/bit_crush.h"/>
-        <FILE id="ZOUtTC" name="bypass_router.cpp" compile="1" resource="0"
-              file="mopo/src/bypass_router.cpp"/>
-        <FILE id="oqvdkt" name="bypass_router.h" compile="0" resource="0" file="mopo/src/bypass_router.h"/>
-        <FILE id="KZLcxA" name="circular_queue.h" compile="0" resource="0"
-              file="mopo/src/circular_queue.h"/>
-        <FILE id="gXZo7R" name="common.h" compile="0" resource="0" file="mopo/src/common.h"/>
-        <FILE id="BFpCpA" name="delay.cpp" compile="1" resource="0" file="mopo/src/delay.cpp"/>
-        <FILE id="pdbVCx" name="delay.h" compile="0" resource="0" file="mopo/src/delay.h"/>
-        <FILE id="nwQVJz" name="distortion.cpp" compile="1" resource="0" file="mopo/src/distortion.cpp"/>
-        <FILE id="HG62Gj" name="distortion.h" compile="0" resource="0" file="mopo/src/distortion.h"/>
-        <FILE id="eGbFaO" name="envelope.cpp" compile="1" resource="0" file="mopo/src/envelope.cpp"/>
-        <FILE id="KV4UmU" name="envelope.h" compile="0" resource="0" file="mopo/src/envelope.h"/>
-        <FILE id="wEhWhO" name="feedback.cpp" compile="1" resource="0" file="mopo/src/feedback.cpp"/>
-        <FILE id="RMxTzq" name="feedback.h" compile="0" resource="0" file="mopo/src/feedback.h"/>
-        <FILE id="CZn5x9" name="formant_manager.cpp" compile="1" resource="0"
-              file="mopo/src/formant_manager.cpp"/>
-        <FILE id="v0cowF" name="formant_manager.h" compile="0" resource="0"
-              file="mopo/src/formant_manager.h"/>
-        <FILE id="StTFyD" name="ladder_filter.cpp" compile="1" resource="0"
-              file="mopo/src/ladder_filter.cpp"/>
-        <FILE id="ofCtUJ" name="ladder_filter.h" compile="0" resource="0" file="mopo/src/ladder_filter.h"/>
-        <FILE id="sj9vPj" name="linear_slope.cpp" compile="1" resource="0"
-              file="mopo/src/linear_slope.cpp"/>
-        <FILE id="YnKtcH" name="linear_slope.h" compile="0" resource="0" file="mopo/src/linear_slope.h"/>
-        <FILE id="rvA0gU" name="magnitude_lookup.cpp" compile="1" resource="0"
-              file="mopo/src/magnitude_lookup.cpp"/>
-        <FILE id="VgH886" name="magnitude_lookup.h" compile="0" resource="0"
-              file="mopo/src/magnitude_lookup.h"/>
-        <FILE id="x8p9ql" name="Makefile.am" compile="0" resource="1" file="mopo/src/Makefile.am"/>
-        <FILE id="ZGVJe5" name="memory.cpp" compile="1" resource="0" file="mopo/src/memory.cpp"/>
-        <FILE id="pLPO0K" name="memory.h" compile="0" resource="0" file="mopo/src/memory.h"/>
-        <FILE id="ia6x6r" name="midi_lookup.cpp" compile="1" resource="0" file="mopo/src/midi_lookup.cpp"/>
-        <FILE id="MlZpjb" name="midi_lookup.h" compile="0" resource="0" file="mopo/src/midi_lookup.h"/>
-        <FILE id="SaL3U3" name="mono_panner.cpp" compile="1" resource="0" file="mopo/src/mono_panner.cpp"/>
-        <FILE id="k4xVWj" name="mono_panner.h" compile="0" resource="0" file="mopo/src/mono_panner.h"/>
-        <FILE id="Y7lGtt" name="mopo.h" compile="0" resource="0" file="mopo/src/mopo.h"/>
-        <FILE id="IDn0Fu" name="note_handler.h" compile="0" resource="0" file="mopo/src/note_handler.h"/>
-        <FILE id="XYVwYI" name="operators.cpp" compile="1" resource="0" file="mopo/src/operators.cpp"/>
-        <FILE id="Wv343A" name="operators.h" compile="0" resource="0" file="mopo/src/operators.h"/>
-        <FILE id="k6b27b" name="oscillator.cpp" compile="1" resource="0" file="mopo/src/oscillator.cpp"/>
-        <FILE id="WUemMQ" name="oscillator.h" compile="0" resource="0" file="mopo/src/oscillator.h"/>
-        <FILE id="SufX3h" name="portamento_slope.cpp" compile="1" resource="0"
-              file="mopo/src/portamento_slope.cpp"/>
-        <FILE id="fYa7Di" name="portamento_slope.h" compile="0" resource="0"
-              file="mopo/src/portamento_slope.h"/>
-        <FILE id="Zca2Oz" name="processor.cpp" compile="1" resource="0" file="mopo/src/processor.cpp"/>
-        <FILE id="x5THOq" name="processor.h" compile="0" resource="0" file="mopo/src/processor.h"/>
-        <FILE id="WRH8rN" name="processor_router.cpp" compile="1" resource="0"
-              file="mopo/src/processor_router.cpp"/>
-        <FILE id="mbg4WW" name="processor_router.h" compile="0" resource="0"
-              file="mopo/src/processor_router.h"/>
-        <FILE id="Agy51Z" name="resonance_lookup.cpp" compile="1" resource="0"
-              file="mopo/src/resonance_lookup.cpp"/>
-        <FILE id="micYEt" name="resonance_lookup.h" compile="0" resource="0"
-              file="mopo/src/resonance_lookup.h"/>
-        <FILE id="jSvvUj" name="reverb.cpp" compile="1" resource="0" file="mopo/src/reverb.cpp"/>
-        <FILE id="IDsANn" name="reverb.h" compile="0" resource="0" file="mopo/src/reverb.h"/>
-        <FILE id="JMNeiN" name="reverb_all_pass.cpp" compile="1" resource="0"
-              file="mopo/src/reverb_all_pass.cpp"/>
-        <FILE id="U7jFgS" name="reverb_all_pass.h" compile="0" resource="0"
-              file="mopo/src/reverb_all_pass.h"/>
-        <FILE id="VfL6nF" name="reverb_comb.cpp" compile="1" resource="0" file="mopo/src/reverb_comb.cpp"/>
-        <FILE id="I3p8M3" name="reverb_comb.h" compile="0" resource="0" file="mopo/src/reverb_comb.h"/>
-        <FILE id="vQww1z" name="reverb_tuning.h" compile="0" resource="0" file="mopo/src/reverb_tuning.h"/>
-        <FILE id="HtWX7H" name="sample_decay_lookup.cpp" compile="1" resource="0"
-              file="mopo/src/sample_decay_lookup.cpp"/>
-        <FILE id="xxk0Dd" name="sample_decay_lookup.h" compile="0" resource="0"
-              file="mopo/src/sample_decay_lookup.h"/>
-        <FILE id="gDfY2M" name="simple_delay.cpp" compile="1" resource="0"
-              file="mopo/src/simple_delay.cpp"/>
-        <FILE id="M4XYVB" name="simple_delay.h" compile="0" resource="0" file="mopo/src/simple_delay.h"/>
-        <FILE id="zjiH4X" name="smooth_filter.cpp" compile="1" resource="0"
-              file="mopo/src/smooth_filter.cpp"/>
-        <FILE id="O8O7zl" name="smooth_filter.h" compile="0" resource="0" file="mopo/src/smooth_filter.h"/>
-        <FILE id="oAZ46u" name="smooth_value.cpp" compile="1" resource="0"
-              file="mopo/src/smooth_value.cpp"/>
-        <FILE id="CEafBz" name="smooth_value.h" compile="0" resource="0" file="mopo/src/smooth_value.h"/>
-        <FILE id="HSQYou" name="state_variable_filter.cpp" compile="1" resource="0"
-              file="mopo/src/state_variable_filter.cpp"/>
-        <FILE id="NfeGG3" name="state_variable_filter.h" compile="0" resource="0"
-              file="mopo/src/state_variable_filter.h"/>
-        <FILE id="GazVVO" name="step_generator.cpp" compile="1" resource="0"
-              file="mopo/src/step_generator.cpp"/>
-        <FILE id="ExOrh4" name="step_generator.h" compile="0" resource="0"
-              file="mopo/src/step_generator.h"/>
-        <FILE id="sCABpv" name="stutter.cpp" compile="1" resource="0" file="mopo/src/stutter.cpp"/>
-        <FILE id="tk6wxX" name="stutter.h" compile="0" resource="0" file="mopo/src/stutter.h"/>
-        <FILE id="yBBSk0" name="tick_router.h" compile="0" resource="0" file="mopo/src/tick_router.h"/>
-        <FILE id="byMMf6" name="trigger_operators.cpp" compile="1" resource="0"
-              file="mopo/src/trigger_operators.cpp"/>
-        <FILE id="E1LAxh" name="trigger_operators.h" compile="0" resource="0"
-              file="mopo/src/trigger_operators.h"/>
-        <FILE id="RMOnFo" name="utils.h" compile="0" resource="0" file="mopo/src/utils.h"/>
-        <FILE id="r66jgQ" name="value.cpp" compile="1" resource="0" file="mopo/src/value.cpp"/>
-        <FILE id="XetCoV" name="value.h" compile="0" resource="0" file="mopo/src/value.h"/>
-        <FILE id="u71wdr" name="voice_handler.cpp" compile="1" resource="0"
-              file="mopo/src/voice_handler.cpp"/>
-        <FILE id="hIZdJg" name="voice_handler.h" compile="0" resource="0" file="mopo/src/voice_handler.h"/>
-        <FILE id="dwUVFP" name="wave.h" compile="0" resource="0" file="mopo/src/wave.h"/>
-      </GROUP>
+    <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
+      <FILE id="bIzKGK" name="MidiManager.cpp" compile="1" resource="0" file="Source/MidiManager.cpp"/>
+      <FILE id="r2be9C" name="MidiManager.h" compile="0" resource="0" file="Source/MidiManager.h"/>
+      <FILE id="zEUhbc" name="SynthManager.cpp" compile="1" resource="0"
+            file="Source/SynthManager.cpp"/>
+      <FILE id="cfH8gR" name="SynthManager.h" compile="0" resource="0" file="Source/SynthManager.h"/>
     </GROUP>
     <GROUP id="{22E8697E-2807-40D2-DDB5-EE3704B3BD1E}" name="Source">
       <FILE id="HA4Rxp" name="PluginProcessor.cpp" compile="1" resource="0"
