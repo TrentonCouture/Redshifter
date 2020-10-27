@@ -95,6 +95,7 @@ void RedshifterAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+	initialize(sampleRate, samplesPerBlock, 2);
 }
 
 void RedshifterAudioProcessor::releaseResources()
@@ -133,7 +134,9 @@ void RedshifterAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-	processMidi(midiMessages);
+	buffer.clear();
+
+	process(buffer, midiMessages);
 }
 
 //==============================================================================

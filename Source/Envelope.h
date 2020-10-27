@@ -1,19 +1,11 @@
 /*
   ==============================================================================
 
-    MidiManager.h
-    Created: 22 Oct 2020 4:33:18pm
+    Envelope.h
+    Created: 27 Oct 2020 2:33:06pm
     Author:  Trenton
 
   ==============================================================================
 */
 
 #pragma once
-
-#include <JuceHeader.h>
-
-class MidiManager
-{
-public:
-	void takeMidiMessage(const juce::MidiMessage& message);
-};

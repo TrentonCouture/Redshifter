@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    SynthManager.h
-    Created: 21 Oct 2020 6:45:38pm
+    RSSound.h
+    Created: 23 Oct 2020 12:39:20pm
     Author:  Trenton
 
   ==============================================================================
@@ -11,12 +11,9 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "MidiManager.h"
 
-class SynthManager
+class RSSound : public juce::SynthesiserSound
 {
-protected:
-	void processMidi(const juce::MidiBuffer& midiMessages);
-private:
-	MidiManager m_midiManager;
+	bool appliesToNote(int midiNoteNumber) override;
+	bool appliesToChannel(int midiChannel) override;
 };
