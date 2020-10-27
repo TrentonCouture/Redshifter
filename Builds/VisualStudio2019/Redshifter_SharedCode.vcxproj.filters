@@ -457,7 +457,7 @@
     <ClCompile Include="..\..\Source\RSEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Envelope.cpp">
+    <ClCompile Include="..\..\Source\AmpEnvelope.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Oscillators.cpp">
@@ -2619,7 +2619,7 @@
     <ClInclude Include="..\..\Source\RSEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Envelope.h">
+    <ClInclude Include="..\..\Source\AmpEnvelope.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Oscillators.h">

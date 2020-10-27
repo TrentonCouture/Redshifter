@@ -17,7 +17,7 @@ class OscillatorEngine : public juce::Synthesiser
 {
 public:
 	OscillatorEngine();
-	void initialize(int sampleRate, int numSamples, int numChannels);
+	void initialize(const int sampleRate, const int numSamples, const int numChannels);
 private:
 	RSSound m_sound;
 	Oscillators m_oscs;

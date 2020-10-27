@@ -9,3 +9,13 @@
 */
 
 #pragma once
+#include <JuceHeader.h>
+
+class AmpEnvelope
+{
+public:
+	void initialize(const int sampleRate);
+	void process(juce::AudioBuffer<float>& buffer, const juce::MidiBuffer& midiBuffer);
+private:
+	juce::ADSR m_adsr;
+};

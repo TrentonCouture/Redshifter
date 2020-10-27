@@ -10,7 +10,7 @@
 
 #include "RSEngine.h"
 
-void RSEngine::initialize(int sampleRate, int numSamples, int numChannels)
+void RSEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
 	m_oscEng.initialize(sampleRate, numSamples, numChannels);
 

@@ -17,7 +17,7 @@ OscillatorEngine::OscillatorEngine()
 	addVoice(&m_oscs);
 }
 
-void OscillatorEngine::initialize(int sampleRate, int numSamples, int numChannels)
+void OscillatorEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
 	m_oscs.initialize(sampleRate, numSamples, numChannels);
 	setCurrentPlaybackSampleRate(sampleRate);

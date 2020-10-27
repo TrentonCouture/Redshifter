@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              headerPath="C:\ASIOSDK2.3\common\">
   <MAINGROUP id="nKcm4M" name="Redshifter">
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
       <FILE id="MLxSxw" name="RSEngine.cpp" compile="1" resource="0" file="Source/RSEngine.cpp"/>
       <FILE id="d0ex28" name="RSEngine.h" compile="0" resource="0" file="Source/RSEngine.h"/>
-      <FILE id="Z7j4vB" name="Envelope.cpp" compile="1" resource="0" file="Source/Envelope.cpp"/>
-      <FILE id="YY1YJm" name="Envelope.h" compile="0" resource="0" file="Source/Envelope.h"/>
+      <FILE id="Z7j4vB" name="AmpEnvelope.cpp" compile="1" resource="0" file="Source/AmpEnvelope.cpp"/>
+      <FILE id="YY1YJm" name="AmpEnvelope.h" compile="0" resource="0" file="Source/AmpEnvelope.h"/>
       <FILE id="Ip4OvT" name="Oscillators.cpp" compile="1" resource="0" file="Source/Oscillators.cpp"/>
       <FILE id="gJaSv1" name="Oscillators.h" compile="0" resource="0" file="Source/Oscillators.h"/>
       <FILE id="cSRGuX" name="OscillatorEngine.cpp" compile="1" resource="0"
@@ -27,7 +28,8 @@
       <FILE id="KlJOxY" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
   </MAINGROUP>
-  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               JUCE_ASIO="1"/>
   <EXPORTFORMATS>
     <VS2019 targetFolder="Builds/VisualStudio2019">
       <CONFIGURATIONS>

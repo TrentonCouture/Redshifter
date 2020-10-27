@@ -15,8 +15,12 @@ Oscillators::Oscillators() : m_osc([](float x) { return std::sin(x); }, 128)
 
 }
 
-void Oscillators::initialize(int sampleRate, int numSamples, int numChannels)
+void Oscillators::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
+	m_adsr.setSampleRate(sampleRate);
+	juce::ADSR::Parameters adsrParams;
+	m_adsr.setParameters(adsrParams);
+
 	m_numChannels = numChannels;
 	juce::dsp::ProcessSpec pSpec;
 	pSpec.maximumBlockSize = numSamples;
@@ -34,20 +38,21 @@ float Oscillators::noteToFreq(const int note) {
 void Oscillators::startNote(int midiNoteNumber, float velocity, juce::SynthesiserSound* sound, int currentPitchWheelPosition)
 {
 	m_play = true;
+	m_adsr.noteOn();
 	m_osc.setFrequency(noteToFreq(midiNoteNumber), true);
 }
 
 void Oscillators::stopNote(float velocity, bool tailOff)
 {
+	m_adsr.noteOff();
 	m_play = false;
 }
 
 void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples)
 {
-	if (m_play)
-	{
-		auto block = juce::dsp::AudioBlock<float>(outputBuffer);
-		juce::dsp::ProcessContextReplacing<float> context(block);
-		m_osc.process(context);
-	}
+	auto wholeBlock = juce::dsp::AudioBlock<float>(outputBuffer);
+	auto block = wholeBlock.getSubBlock(startSample, (size_t) numSamples);
+	juce::dsp::ProcessContextReplacing<float> context(block);
+	m_osc.process(context);
+	m_adsr.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
 }
