@@ -10,11 +10,12 @@
 
 #pragma once
 #include <JuceHeader.h>
+#include "Parameters.h"
 
 class Oscillators : public juce::SynthesiserVoice
 {
 public:
-	Oscillators();
+	Oscillators(const int sampleRate, const int numSamples, const int numChannels);
 	void initialize(const int sampleRate, const int numSamples, const int numChannels);
 	bool canPlaySound(juce::SynthesiserSound*) override { return true; }
 	void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override;
@@ -26,6 +27,7 @@ public:
 private:
 	juce::dsp::Oscillator<float> m_osc;
 	juce::ADSR m_adsr;
+	Parameters m_params;
 
 	int m_numChannels;
 	bool m_play;

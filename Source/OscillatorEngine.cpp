@@ -13,12 +13,17 @@
 
 OscillatorEngine::OscillatorEngine()
 {
-	addSound(m_sound);
-	addVoice(&m_oscs);
+	//addSound(&m_sound);
+	//addVoice(&m_oscs);
+	addSound(new RSSound);
+
 }
 
 void OscillatorEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
-	m_oscs.initialize(sampleRate, numSamples, numChannels);
 	setCurrentPlaybackSampleRate(sampleRate);
+
+	if (getNumVoices() > 0)
+		removeVoice(0);
+	addVoice(new Oscillators(sampleRate, numSamples, numChannels));
 }

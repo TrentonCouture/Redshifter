@@ -22,6 +22,9 @@ RedshifterAudioProcessor::RedshifterAudioProcessor()
                        )
 #endif
 {
+
+	for (auto &it : m_parameters.getAllParams())
+		addParameter(it.second);
 }
 
 RedshifterAudioProcessor::~RedshifterAudioProcessor()

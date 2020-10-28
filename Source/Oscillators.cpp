@@ -10,12 +10,7 @@
 
 #include "Oscillators.h"
 
-Oscillators::Oscillators() : m_osc([](float x) { return std::sin(x); }, 128)
-{
-
-}
-
-void Oscillators::initialize(const int sampleRate, const int numSamples, const int numChannels)
+Oscillators::Oscillators(const int sampleRate, const int numSamples, const int numChannels) : m_osc([](float x) { return std::sin(x); }, 128)
 {
 	m_adsr.setSampleRate(sampleRate);
 	juce::ADSR::Parameters adsrParams;
@@ -30,6 +25,10 @@ void Oscillators::initialize(const int sampleRate, const int numSamples, const i
 	m_osc.prepare(pSpec);
 }
 
+void Oscillators::initialize(const int sampleRate, const int numSamples, const int numChannels)
+{
+}
+
 float Oscillators::noteToFreq(const int note) {
     const int a = 440; 
     return (a) * std::pow(2.0, ((note - 69) / 12.0));
@@ -37,7 +36,9 @@ float Oscillators::noteToFreq(const int note) {
 
 void Oscillators::startNote(int midiNoteNumber, float velocity, juce::SynthesiserSound* sound, int currentPitchWheelPosition)
 {
-	m_play = true;
+	juce::ADSR::Parameters adsrParams;
+	adsrParams.attack = *m_params.getParam("attack");
+	m_adsr.setParameters(adsrParams);
 	m_adsr.noteOn();
 	m_osc.setFrequency(noteToFreq(midiNoteNumber), true);
 }
@@ -45,7 +46,6 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 void Oscillators::stopNote(float velocity, bool tailOff)
 {
 	m_adsr.noteOff();
-	m_play = false;
 }
 
 void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples)

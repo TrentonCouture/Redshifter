@@ -4,6 +4,14 @@
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
               headerPath="C:\ASIOSDK2.3\common\">
   <MAINGROUP id="nKcm4M" name="Redshifter">
+    <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
+      <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
+      <FILE id="IDUTgX" name="WholeInterface.cpp" compile="1" resource="0"
+            file="Source/WholeInterface.cpp"/>
+      <FILE id="CQfeXm" name="WholeInterface.h" compile="0" resource="0"
+            file="Source/WholeInterface.h"/>
+    </GROUP>
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
       <FILE id="MLxSxw" name="RSEngine.cpp" compile="1" resource="0" file="Source/RSEngine.cpp"/>
       <FILE id="d0ex28" name="RSEngine.h" compile="0" resource="0" file="Source/RSEngine.h"/>
@@ -19,6 +27,8 @@
       <FILE id="qbk9I6" name="RSSound.h" compile="0" resource="0" file="Source/RSSound.h"/>
     </GROUP>
     <GROUP id="{22E8697E-2807-40D2-DDB5-EE3704B3BD1E}" name="Source">
+      <FILE id="vecfe1" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
+      <FILE id="jtnRR3" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
       <FILE id="HA4Rxp" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="KlzCPI" name="PluginProcessor.h" compile="0" resource="0"

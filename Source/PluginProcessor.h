@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "RSEngine.h"
+#include "Parameters.h"
 
 //==============================================================================
 /**
@@ -56,5 +57,6 @@ public:
 
 private:
     //==============================================================================
+	Parameters m_parameters;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (RedshifterAudioProcessor)
 };

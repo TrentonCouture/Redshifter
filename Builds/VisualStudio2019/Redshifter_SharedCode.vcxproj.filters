@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Redshifter\GUI">
+      <UniqueIdentifier>{C7DD2396-240D-4791-2D3D-17DC34070A37}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Redshifter\Synthesis">
       <UniqueIdentifier>{8EAE1536-942C-746E-1382-A2B83EF14857}</UniqueIdentifier>
     </Filter>
@@ -454,6 +457,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GUISection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\WholeInterface.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\RSEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
@@ -468,6 +477,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\RSSound.cpp">
       <Filter>Redshifter\Synthesis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Parameters.cpp">
+      <Filter>Redshifter\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
       <Filter>Redshifter\Source</Filter>
@@ -2616,6 +2628,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\GUISection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\WholeInterface.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\RSEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
@@ -2630,6 +2648,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\RSSound.h">
       <Filter>Redshifter\Synthesis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Parameters.h">
+      <Filter>Redshifter\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>Redshifter\Source</Filter>

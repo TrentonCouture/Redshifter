@@ -137,11 +137,14 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\GUISection.cpp"/>
+    <ClCompile Include="..\..\Source\WholeInterface.cpp"/>
     <ClCompile Include="..\..\Source\RSEngine.cpp"/>
     <ClCompile Include="..\..\Source\AmpEnvelope.cpp"/>
     <ClCompile Include="..\..\Source\Oscillators.cpp"/>
     <ClCompile Include="..\..\Source\OscillatorEngine.cpp"/>
     <ClCompile Include="..\..\Source\RSSound.cpp"/>
+    <ClCompile Include="..\..\Source\Parameters.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2142,11 +2145,14 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\GUISection.h"/>
+    <ClInclude Include="..\..\Source\WholeInterface.h"/>
     <ClInclude Include="..\..\Source\RSEngine.h"/>
     <ClInclude Include="..\..\Source\AmpEnvelope.h"/>
     <ClInclude Include="..\..\Source\Oscillators.h"/>
     <ClInclude Include="..\..\Source\OscillatorEngine.h"/>
     <ClInclude Include="..\..\Source\RSSound.h"/>
+    <ClInclude Include="..\..\Source\Parameters.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
