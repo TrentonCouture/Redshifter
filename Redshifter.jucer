@@ -5,6 +5,8 @@
               headerPath="C:\ASIOSDK2.3\common\">
   <MAINGROUP id="nKcm4M" name="Redshifter">
     <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
+      <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
       <FILE id="IDUTgX" name="WholeInterface.cpp" compile="1" resource="0"
@@ -15,8 +17,6 @@
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
       <FILE id="MLxSxw" name="RSEngine.cpp" compile="1" resource="0" file="Source/RSEngine.cpp"/>
       <FILE id="d0ex28" name="RSEngine.h" compile="0" resource="0" file="Source/RSEngine.h"/>
-      <FILE id="Z7j4vB" name="AmpEnvelope.cpp" compile="1" resource="0" file="Source/AmpEnvelope.cpp"/>
-      <FILE id="YY1YJm" name="AmpEnvelope.h" compile="0" resource="0" file="Source/AmpEnvelope.h"/>
       <FILE id="Ip4OvT" name="Oscillators.cpp" compile="1" resource="0" file="Source/Oscillators.cpp"/>
       <FILE id="gJaSv1" name="Oscillators.h" compile="0" resource="0" file="Source/Oscillators.h"/>
       <FILE id="cSRGuX" name="OscillatorEngine.cpp" compile="1" resource="0"

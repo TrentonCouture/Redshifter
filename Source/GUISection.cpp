@@ -22,9 +22,6 @@ void GUISection::addSlider(juce::Slider& slider)
 void GUISection::sliderValueChanged(juce::Slider* slider)
 {
 	auto name = slider->getName().toStdString();
-	//auto editorPtr = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
-	//if (editorPtr)
-	//	editorPtr->getEngine()->
 
 	m_params.getParam(name)->setValueNotifyingHost(slider->getValue());
 }

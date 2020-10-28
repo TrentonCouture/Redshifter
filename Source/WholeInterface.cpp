@@ -12,13 +12,14 @@
 
 WholeInterface::WholeInterface()
 {
-	m_attackSlider.setSliderStyle(juce::Slider::Rotary);
-	m_attackSlider.setName("attack");
-	addSlider(m_attackSlider);
+	addAndMakeVisible(m_envSection);
 }
 
 
 void WholeInterface::resized()
 {
-	m_attackSlider.setBounds(50, 50, 50, 50);
+	auto area = getLocalBounds();
+
+	int envSectionHeight = 100;
+	m_envSection.setBounds(area.removeFromTop(envSectionHeight));
 }

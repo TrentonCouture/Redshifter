@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    WholeInterface.h
-    Created: 27 Oct 2020 9:10:29pm
+    EnvSection.h
+    Created: 28 Oct 2020 8:48:56am
     Author:  Trenton
 
   ==============================================================================
@@ -11,14 +11,16 @@
 #pragma once
 #include <JuceHeader.h>
 #include "GUISection.h"
-#include "EnvSection.h"
 
-class WholeInterface : public GUISection
+class EnvSection : public GUISection
 {
 public:
-	WholeInterface();
+	EnvSection();
 	void resized() override;
+	void paint(juce::Graphics& g) override;
 private:
-	EnvSection m_envSection;
-	
+	juce::Slider m_attackSlider;
+	juce::Slider m_decaySlider;
+	juce::Slider m_sustainSlider;
+	juce::Slider m_releaseSlider;
 };

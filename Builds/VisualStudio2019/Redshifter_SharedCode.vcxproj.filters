@@ -457,6 +457,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\EnvSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GUISection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -464,9 +467,6 @@
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RSEngine.cpp">
-      <Filter>Redshifter\Synthesis</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\AmpEnvelope.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Oscillators.cpp">
@@ -2628,6 +2628,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\EnvSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GUISection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
@@ -2635,9 +2638,6 @@
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\RSEngine.h">
-      <Filter>Redshifter\Synthesis</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\AmpEnvelope.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Oscillators.h">

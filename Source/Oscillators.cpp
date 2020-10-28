@@ -38,6 +38,9 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 {
 	juce::ADSR::Parameters adsrParams;
 	adsrParams.attack = *m_params.getParam("attack");
+	adsrParams.decay = *m_params.getParam("decay");
+	adsrParams.sustain = *m_params.getParam("sustain");
+	adsrParams.release = *m_params.getParam("release");
 	m_adsr.setParameters(adsrParams);
 	m_adsr.noteOn();
 	m_osc.setFrequency(noteToFreq(midiNoteNumber), true);

@@ -19,6 +19,4 @@ public:
 	OscillatorEngine();
 	void initialize(const int sampleRate, const int numSamples, const int numChannels);
 private:
-	//RSSound m_sound;
-	//Oscillators m_oscs;
 };

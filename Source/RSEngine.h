@@ -11,7 +11,6 @@
 #pragma once
 #include "JuceHeader.h"
 #include "OscillatorEngine.h"
-#include "AmpEnvelope.h"
 
 class RSEngine
 {

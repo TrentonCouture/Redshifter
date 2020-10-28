@@ -13,8 +13,6 @@
 
 OscillatorEngine::OscillatorEngine()
 {
-	//addSound(&m_sound);
-	//addVoice(&m_oscs);
 	addSound(new RSSound);
 
 }
