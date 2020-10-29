@@ -15,6 +15,7 @@
 #include "ReverbSection.h"
 #include "ChorusSection.h"
 #include "FilterSection.h"
+#include "PhaserSection.h"
 
 class WholeInterface : public GUISection
 {
@@ -26,5 +27,5 @@ private:
 	ReverbSection m_reverbSection;
 	ChorusSection m_chorusSection;
 	FilterSection m_filterSection;
-	
+	PhaserSection m_phaserSection;
 };

@@ -42,6 +42,11 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	m_effects.get<2>().setResonance(*m_params.getParam("resonance"));
 	m_effects.get<2>().setDrive(*m_params.getParam("filterDrive") * 10 + 1);
 
+	const float maxPhaserRate = 99.9;
+	m_effects.get<3>().setRate(*m_params.getParam("phaserRate") * maxPhaserRate);
+	m_effects.get<3>().setDepth(*m_params.getParam("phaserDepth"));
+	m_effects.get<3>().setMix(*m_params.getParam("phaserMix"));
+
 	auto block = juce::dsp::AudioBlock<float>(buffer);
 	juce::dsp::ProcessContextReplacing<float> context(block);
 	m_effects.process(context);
