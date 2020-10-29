@@ -24,7 +24,8 @@ public:
 	void stopNote(float velocity, bool tailOff) override;
 	float noteToFreq(const int note);
 private:
-	juce::dsp::Oscillator<float> m_osc;
+	juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> m_sinOsc;
+	juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> m_sawOsc;
 	juce::ADSR m_adsr;
 	Parameters m_params;
 };

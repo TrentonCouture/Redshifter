@@ -472,6 +472,9 @@
     <ClCompile Include="..\..\Source\GUISection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\OscillatorSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PhaserSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -2656,6 +2659,9 @@
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GUISection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\OscillatorSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\PhaserSection.h">

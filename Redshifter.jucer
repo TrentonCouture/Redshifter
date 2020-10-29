@@ -17,6 +17,10 @@
       <FILE id="UsrsVa" name="GainSection.h" compile="0" resource="0" file="Source/GainSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
+      <FILE id="iTTfr3" name="OscillatorSection.cpp" compile="1" resource="0"
+            file="Source/OscillatorSection.cpp"/>
+      <FILE id="u1ksWE" name="OscillatorSection.h" compile="0" resource="0"
+            file="Source/OscillatorSection.h"/>
       <FILE id="r8FJm7" name="PhaserSection.cpp" compile="1" resource="0"
             file="Source/PhaserSection.cpp"/>
       <FILE id="YS917e" name="PhaserSection.h" compile="0" resource="0" file="Source/PhaserSection.h"/>

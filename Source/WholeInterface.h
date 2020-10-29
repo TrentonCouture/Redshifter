@@ -17,6 +17,7 @@
 #include "FilterSection.h"
 #include "PhaserSection.h"
 #include "GainSection.h"
+#include "OscillatorSection.h"
 
 class WholeInterface : public GUISection
 {
@@ -30,4 +31,5 @@ private:
 	FilterSection m_filterSection;
 	PhaserSection m_phaserSection;
 	GainSection m_gainSection;
+	OscillatorSection m_oscillatorSection;
 };

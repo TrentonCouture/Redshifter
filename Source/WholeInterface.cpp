@@ -18,6 +18,7 @@ WholeInterface::WholeInterface()
 	addAndMakeVisible(m_filterSection);
 	addAndMakeVisible(m_phaserSection);
 	addAndMakeVisible(m_gainSection);
+	addAndMakeVisible(m_oscillatorSection);
 }
 
 
@@ -32,4 +33,5 @@ void WholeInterface::resized()
 	m_filterSection.setBounds(area.removeFromTop(sectionHeight));
 	m_phaserSection.setBounds(area.removeFromTop(sectionHeight));
 	m_gainSection.setBounds(area.removeFromTop(sectionHeight));
+	m_oscillatorSection.setBounds(area.removeFromTop(sectionHeight));
 }

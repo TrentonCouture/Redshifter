@@ -142,6 +142,7 @@
     <ClCompile Include="..\..\Source\FilterSection.cpp"/>
     <ClCompile Include="..\..\Source\GainSection.cpp"/>
     <ClCompile Include="..\..\Source\GUISection.cpp"/>
+    <ClCompile Include="..\..\Source\OscillatorSection.cpp"/>
     <ClCompile Include="..\..\Source\PhaserSection.cpp"/>
     <ClCompile Include="..\..\Source\ReverbSection.cpp"/>
     <ClCompile Include="..\..\Source\WholeInterface.cpp"/>
@@ -2155,6 +2156,7 @@
     <ClInclude Include="..\..\Source\FilterSection.h"/>
     <ClInclude Include="..\..\Source\GainSection.h"/>
     <ClInclude Include="..\..\Source\GUISection.h"/>
+    <ClInclude Include="..\..\Source\OscillatorSection.h"/>
     <ClInclude Include="..\..\Source\PhaserSection.h"/>
     <ClInclude Include="..\..\Source\ReverbSection.h"/>
     <ClInclude Include="..\..\Source\WholeInterface.h"/>
