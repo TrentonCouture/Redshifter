@@ -15,6 +15,7 @@ WholeInterface::WholeInterface()
 	addAndMakeVisible(m_envSection);
 	addAndMakeVisible(m_reverbSection);
 	addAndMakeVisible(m_chorusSection);
+	addAndMakeVisible(m_filterSection);
 }
 
 
@@ -26,4 +27,5 @@ void WholeInterface::resized()
 	m_envSection.setBounds(area.removeFromTop(sectionHeight));
 	m_reverbSection.setBounds(area.removeFromTop(sectionHeight));
 	m_chorusSection.setBounds(area.removeFromTop(sectionHeight));
+	m_filterSection.setBounds(area.removeFromTop(sectionHeight));
 }

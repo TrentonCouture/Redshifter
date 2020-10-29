@@ -463,6 +463,9 @@
     <ClCompile Include="..\..\Source\EnvSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\FilterSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GUISection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -2638,6 +2641,9 @@
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\EnvSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FilterSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GUISection.h">

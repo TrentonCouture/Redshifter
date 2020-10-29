@@ -14,6 +14,7 @@
 #include "EnvSection.h"
 #include "ReverbSection.h"
 #include "ChorusSection.h"
+#include "FilterSection.h"
 
 class WholeInterface : public GUISection
 {
@@ -24,5 +25,6 @@ private:
 	EnvSection m_envSection;
 	ReverbSection m_reverbSection;
 	ChorusSection m_chorusSection;
+	FilterSection m_filterSection;
 	
 };

@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\ChorusSection.cpp"/>
     <ClCompile Include="..\..\Source\EnvSection.cpp"/>
+    <ClCompile Include="..\..\Source\FilterSection.cpp"/>
     <ClCompile Include="..\..\Source\GUISection.cpp"/>
     <ClCompile Include="..\..\Source\ReverbSection.cpp"/>
     <ClCompile Include="..\..\Source\WholeInterface.cpp"/>
@@ -2149,6 +2150,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\ChorusSection.h"/>
     <ClInclude Include="..\..\Source\EnvSection.h"/>
+    <ClInclude Include="..\..\Source\FilterSection.h"/>
     <ClInclude Include="..\..\Source\GUISection.h"/>
     <ClInclude Include="..\..\Source\ReverbSection.h"/>
     <ClInclude Include="..\..\Source\WholeInterface.h"/>

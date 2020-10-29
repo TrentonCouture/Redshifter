@@ -20,6 +20,8 @@ void RSEngine::initialize(const int sampleRate, const int numSamples, const int 
 	effectsSpec.numChannels = numChannels;
 	m_effects.prepare(effectsSpec);
 
+	m_effects.get<2>().setMode(juce::dsp::LadderFilterMode::LPF24);
+
 }
 void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiBuffer)
 {
@@ -34,6 +36,9 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	m_effects.get<1>().setRate(*m_params.getParam("chorusRate") * maxChorusRate);
 	m_effects.get<1>().setDepth(*m_params.getParam("chorusDepth"));
 	m_effects.get<1>().setMix(*m_params.getParam("chorusMix"));
+
+	const float maxCutoff = 20000;
+	m_effects.get<2>().setCutoffFrequencyHz(*m_params.getParam("cutoff") * maxCutoff);
 
 	auto block = juce::dsp::AudioBlock<float>(buffer);
 	juce::dsp::ProcessContextReplacing<float> context(block);

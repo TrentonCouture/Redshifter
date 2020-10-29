@@ -10,6 +10,9 @@
       <FILE id="kHShLG" name="ChorusSection.h" compile="0" resource="0" file="Source/ChorusSection.h"/>
       <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
       <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
+      <FILE id="zoNqOp" name="FilterSection.cpp" compile="1" resource="0"
+            file="Source/FilterSection.cpp"/>
+      <FILE id="MlE4cY" name="FilterSection.h" compile="0" resource="0" file="Source/FilterSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
       <FILE id="h90Lb3" name="ReverbSection.cpp" compile="1" resource="0"
