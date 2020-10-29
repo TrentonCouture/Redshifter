@@ -25,7 +25,7 @@ void RSEngine::initialize(const int sampleRate, const int numSamples, const int 
 	lfoSpec.maximumBlockSize = numSamples;
 	lfoSpec.numChannels = numChannels;
 	m_lfo.prepare(lfoSpec);
-	m_lfo.initialise([](float x) {return 1 + 0.5 * std::sin(x); });
+	m_lfo.initialise([](float x) {return 0.5 * std::sin(x); });
 
 	m_effects.get<2>().setMode(juce::dsp::LadderFilterMode::LPF24);
 
@@ -48,7 +48,7 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	m_lfo.setFrequency(*m_params.getParam("lfoFilterFreq") * lfoMaxFreq);
 	auto lfoGain = m_lfo.processSample(0.0);
 	const float maxCutoff = 20000;
-	m_effects.get<Effect::filter>().setCutoffFrequencyHz(lfoGain * *m_params.getParam("cutoff") * maxCutoff);
+	m_effects.get<Effect::filter>().setCutoffFrequencyHz((1 + lfoGain * *m_params.getParam("lfoFilterAmp")) * *m_params.getParam("cutoff") * maxCutoff);
 	m_effects.get<Effect::filter>().setResonance(*m_params.getParam("resonance"));
 	m_effects.get<Effect::filter>().setDrive(*m_params.getParam("filterDrive") * 10 + 1);
 
