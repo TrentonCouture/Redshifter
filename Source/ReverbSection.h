@@ -1,28 +1,25 @@
 /*
   ==============================================================================
 
-    WholeInterface.h
-    Created: 27 Oct 2020 9:10:29pm
+    ReverbSection.h
+    Created: 28 Oct 2020 6:56:51pm
     Author:  Trenton
 
   ==============================================================================
 */
 
 #pragma once
+
 #include <JuceHeader.h>
 #include "GUISection.h"
-#include "EnvSection.h"
-#include "ReverbSection.h"
-#include "ChorusSection.h"
 
-class WholeInterface : public GUISection
+class ReverbSection : public GUISection
 {
 public:
-	WholeInterface();
+	ReverbSection();
 	void resized() override;
+	void paint(juce::Graphics& g) override;
 private:
-	EnvSection m_envSection;
-	ReverbSection m_reverbSection;
-	ChorusSection m_chorusSection;
-	
+	juce::Slider m_roomSizeSlider;
+	juce::Slider m_wetSlider;
 };

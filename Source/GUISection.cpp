@@ -14,8 +14,13 @@
 void GUISection::addSlider(juce::Slider& slider)
 {
 	addAndMakeVisible(slider);
-	auto range = m_params.getParam(slider.getName().toStdString())->getNormalisableRange();
+	auto parameter = m_params.getParam(slider.getName().toStdString());
+	auto range = parameter->getNormalisableRange();
 	slider.setRange(range.start, range.end);
+	slider.setValue(parameter->get());
+
+	slider.setSliderStyle(juce::Slider::RotaryVerticalDrag);
+	slider.setTextBoxStyle(juce::Slider::NoTextBox, true, 0, 0);
 	slider.addListener(this);
 }
 

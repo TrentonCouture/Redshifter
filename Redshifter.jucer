@@ -5,10 +5,16 @@
               headerPath="C:\ASIOSDK2.3\common\">
   <MAINGROUP id="nKcm4M" name="Redshifter">
     <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="hpDklU" name="ChorusSection.cpp" compile="1" resource="0"
+            file="Source/ChorusSection.cpp"/>
+      <FILE id="kHShLG" name="ChorusSection.h" compile="0" resource="0" file="Source/ChorusSection.h"/>
       <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
       <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
+      <FILE id="h90Lb3" name="ReverbSection.cpp" compile="1" resource="0"
+            file="Source/ReverbSection.cpp"/>
+      <FILE id="KoBJWS" name="ReverbSection.h" compile="0" resource="0" file="Source/ReverbSection.h"/>
       <FILE id="IDUTgX" name="WholeInterface.cpp" compile="1" resource="0"
             file="Source/WholeInterface.cpp"/>
       <FILE id="CQfeXm" name="WholeInterface.h" compile="0" resource="0"

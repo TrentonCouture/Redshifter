@@ -137,8 +137,10 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ChorusSection.cpp"/>
     <ClCompile Include="..\..\Source\EnvSection.cpp"/>
     <ClCompile Include="..\..\Source\GUISection.cpp"/>
+    <ClCompile Include="..\..\Source\ReverbSection.cpp"/>
     <ClCompile Include="..\..\Source\WholeInterface.cpp"/>
     <ClCompile Include="..\..\Source\RSEngine.cpp"/>
     <ClCompile Include="..\..\Source\Oscillators.cpp"/>
@@ -2145,8 +2147,10 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\ChorusSection.h"/>
     <ClInclude Include="..\..\Source\EnvSection.h"/>
     <ClInclude Include="..\..\Source\GUISection.h"/>
+    <ClInclude Include="..\..\Source\ReverbSection.h"/>
     <ClInclude Include="..\..\Source\WholeInterface.h"/>
     <ClInclude Include="..\..\Source\RSEngine.h"/>
     <ClInclude Include="..\..\Source\Oscillators.h"/>

@@ -11,6 +11,7 @@
 #pragma once
 #include "JuceHeader.h"
 #include "OscillatorEngine.h"
+#include "Parameters.h"
 
 class RSEngine
 {
@@ -19,4 +20,7 @@ public:
 	void process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiBuffer);
 private:
 	OscillatorEngine m_oscEng;
+	juce::dsp::ProcessorChain<juce::dsp::Reverb, juce::dsp::Chorus<float>> m_effects;
+
+	Parameters m_params;
 };
