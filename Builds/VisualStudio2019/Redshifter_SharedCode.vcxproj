@@ -140,6 +140,7 @@
     <ClCompile Include="..\..\Source\ChorusSection.cpp"/>
     <ClCompile Include="..\..\Source\EnvSection.cpp"/>
     <ClCompile Include="..\..\Source\FilterSection.cpp"/>
+    <ClCompile Include="..\..\Source\GainSection.cpp"/>
     <ClCompile Include="..\..\Source\GUISection.cpp"/>
     <ClCompile Include="..\..\Source\PhaserSection.cpp"/>
     <ClCompile Include="..\..\Source\ReverbSection.cpp"/>
@@ -2152,6 +2153,7 @@
     <ClInclude Include="..\..\Source\ChorusSection.h"/>
     <ClInclude Include="..\..\Source\EnvSection.h"/>
     <ClInclude Include="..\..\Source\FilterSection.h"/>
+    <ClInclude Include="..\..\Source\GainSection.h"/>
     <ClInclude Include="..\..\Source\GUISection.h"/>
     <ClInclude Include="..\..\Source\PhaserSection.h"/>
     <ClInclude Include="..\..\Source\ReverbSection.h"/>

@@ -20,7 +20,7 @@ public:
 	void process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiBuffer);
 private:
 	OscillatorEngine m_oscEng;
-	juce::dsp::ProcessorChain<juce::dsp::Reverb, juce::dsp::Chorus<float>, juce::dsp::LadderFilter<float>, juce::dsp::Phaser<float>> m_effects;
+	juce::dsp::ProcessorChain < juce::dsp::Reverb, juce::dsp::Chorus<float>, juce::dsp::LadderFilter<float>, juce::dsp::Phaser<float>, juce::dsp::Gain<float>> m_effects;
 
 	Parameters m_params;
 };

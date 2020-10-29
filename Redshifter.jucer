@@ -13,6 +13,8 @@
       <FILE id="zoNqOp" name="FilterSection.cpp" compile="1" resource="0"
             file="Source/FilterSection.cpp"/>
       <FILE id="MlE4cY" name="FilterSection.h" compile="0" resource="0" file="Source/FilterSection.h"/>
+      <FILE id="GyQy8h" name="GainSection.cpp" compile="1" resource="0" file="Source/GainSection.cpp"/>
+      <FILE id="UsrsVa" name="GainSection.h" compile="0" resource="0" file="Source/GainSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
       <FILE id="r8FJm7" name="PhaserSection.cpp" compile="1" resource="0"

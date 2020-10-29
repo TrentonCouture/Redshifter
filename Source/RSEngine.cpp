@@ -47,6 +47,8 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	m_effects.get<3>().setDepth(*m_params.getParam("phaserDepth"));
 	m_effects.get<3>().setMix(*m_params.getParam("phaserMix"));
 
+	m_effects.get<4>().setGainLinear(*m_params.getParam("gain"));
+
 	auto block = juce::dsp::AudioBlock<float>(buffer);
 	juce::dsp::ProcessContextReplacing<float> context(block);
 	m_effects.process(context);

@@ -29,5 +29,6 @@ std::unordered_map<std::string, juce::AudioParameterFloat*> Parameters::m_floatP
 	{ "filterDrive", new juce::AudioParameterFloat("filterDrive", "FilterDrive", 0.0f, 1.0f, 0.5f) },
 	{ "phaserRate", new juce::AudioParameterFloat("phaserRate", "PhaserRate", 0.0f, 1.0f, 0.5f) },
 	{ "phaserDepth", new juce::AudioParameterFloat("phaserDepth", "PhaserDepth", 0.0f, 1.0f, 0.5f) },
-	{ "phaserMix", new juce::AudioParameterFloat("phaserMix", "PhaserMix", 0.0f, 1.0f, 0.5f) }
+	{ "phaserMix", new juce::AudioParameterFloat("phaserMix", "PhaserMix", 0.0f, 1.0f, 0.5f) },
+	{ "gain", new juce::AudioParameterFloat("gain", "Gain", 0.0f, 1.0f, 0.5f) }
 	});

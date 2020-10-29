@@ -16,6 +16,7 @@
 #include "ChorusSection.h"
 #include "FilterSection.h"
 #include "PhaserSection.h"
+#include "GainSection.h"
 
 class WholeInterface : public GUISection
 {
@@ -28,4 +29,5 @@ private:
 	ChorusSection m_chorusSection;
 	FilterSection m_filterSection;
 	PhaserSection m_phaserSection;
+	GainSection m_gainSection;
 };
