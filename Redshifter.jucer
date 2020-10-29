@@ -8,9 +8,6 @@
       <FILE id="hpDklU" name="ChorusSection.cpp" compile="1" resource="0"
             file="Source/ChorusSection.cpp"/>
       <FILE id="kHShLG" name="ChorusSection.h" compile="0" resource="0" file="Source/ChorusSection.h"/>
-      <FILE id="uJfhED" name="EffectSection.cpp" compile="1" resource="0"
-            file="Source/EffectSection.cpp"/>
-      <FILE id="f3MkiI" name="EffectSection.h" compile="0" resource="0" file="Source/EffectSection.h"/>
       <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
       <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
       <FILE id="zoNqOp" name="FilterSection.cpp" compile="1" resource="0"
@@ -20,6 +17,10 @@
       <FILE id="UsrsVa" name="GainSection.h" compile="0" resource="0" file="Source/GainSection.h"/>
       <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
       <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
+      <FILE id="vioV5h" name="LfoFilterSection.cpp" compile="1" resource="0"
+            file="Source/LfoFilterSection.cpp"/>
+      <FILE id="O90yRw" name="LfoFilterSection.h" compile="0" resource="0"
+            file="Source/LfoFilterSection.h"/>
       <FILE id="iTTfr3" name="OscillatorSection.cpp" compile="1" resource="0"
             file="Source/OscillatorSection.cpp"/>
       <FILE id="u1ksWE" name="OscillatorSection.h" compile="0" resource="0"
@@ -36,6 +37,8 @@
             file="Source/WholeInterface.h"/>
     </GROUP>
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
+      <FILE id="b0ggRB" name="LFOs.cpp" compile="1" resource="0" file="Source/LFOs.cpp"/>
+      <FILE id="JbZbWD" name="LFOs.h" compile="0" resource="0" file="Source/LFOs.h"/>
       <FILE id="MLxSxw" name="RSEngine.cpp" compile="1" resource="0" file="Source/RSEngine.cpp"/>
       <FILE id="d0ex28" name="RSEngine.h" compile="0" resource="0" file="Source/RSEngine.h"/>
       <FILE id="Ip4OvT" name="Oscillators.cpp" compile="1" resource="0" file="Source/Oscillators.cpp"/>

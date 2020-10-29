@@ -12,6 +12,16 @@
 #include "JuceHeader.h"
 #include "OscillatorEngine.h"
 #include "Parameters.h"
+#include "LFOs.h"
+
+enum Effect
+{
+	reverb,
+	chorus,
+	filter,
+	phaser,
+	gain
+};
 
 class RSEngine
 {
@@ -22,5 +32,9 @@ private:
 	OscillatorEngine m_oscEng;
 	juce::dsp::ProcessorChain < juce::dsp::Reverb, juce::dsp::Chorus<float>, juce::dsp::LadderFilter<float>, juce::dsp::Phaser<float>, juce::dsp::Gain<float>> m_effects;
 
+	juce::dsp::Oscillator<float> m_lfo;
+
 	Parameters m_params;
+
+	int m_freqCounter;
 };

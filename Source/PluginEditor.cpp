@@ -15,7 +15,7 @@ RedshifterAudioProcessorEditor::RedshifterAudioProcessorEditor (RedshifterAudioP
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 400);
+    setSize (400, 350);
 	addAndMakeVisible(m_wholeInterface);
 }
 
@@ -27,7 +27,7 @@ RedshifterAudioProcessorEditor::~RedshifterAudioProcessorEditor()
 void RedshifterAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-	g.setColour(juce::Colours::darkred);
+	g.setColour(juce::Colours::black);
 	//g.beginTransparencyLayer(0.5);
 	g.fillAll();
 	//g.endTransparencyLayer();

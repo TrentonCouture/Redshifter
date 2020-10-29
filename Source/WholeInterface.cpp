@@ -19,6 +19,7 @@ WholeInterface::WholeInterface()
 	addAndMakeVisible(m_filterSection);
 	addAndMakeVisible(m_phaserSection);
 	addAndMakeVisible(m_gainSection);
+	addAndMakeVisible(m_lfoFilterSection);
 }
 
 
@@ -43,4 +44,7 @@ void WholeInterface::resized()
 	auto phaserAndGain = area.removeFromTop(sectionHeight);
 	m_phaserSection.setBounds(phaserAndGain.removeFromLeft(sectionWidth));
 	m_gainSection.setBounds(phaserAndGain.removeFromLeft(sectionWidth));
+
+	auto lfos = area.removeFromTop(sectionHeight);
+	m_lfoFilterSection.setBounds(lfos.removeFromLeft(sectionWidth));
 }

@@ -1,22 +1,23 @@
 /*
   ==============================================================================
 
-    EffectSection.h
-    Created: 29 Oct 2020 6:26:46am
+    LfoFilterSection.h
+    Created: 29 Oct 2020 4:06:58pm
     Author:  Trenton
 
   ==============================================================================
 */
 
 #pragma once
-
 #include <JuceHeader.h>
 #include "GUISection.h"
 
-class EffectSection : public GUISection
+class LfoFilterSection : public GUISection
 {
 public:
-	EffectSection();
-	void resized() override {};
-	void paint(juce::Graphics& g) override {};
+	LfoFilterSection();
+	void resized() override;
+private:
+	juce::Slider m_freqSlider;
+	juce::Slider m_ampSlider;
 };

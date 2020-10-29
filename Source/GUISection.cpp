@@ -37,7 +37,15 @@ void GUISection::paint(juce::Graphics& g)
 	auto inner = border.subtractedFrom(getLocalBounds());
 
 	g.setColour(juce::Colours::black);
+	juce::ColourGradient gradient;
+	//gradient.isRadial = true;
+	gradient.point1 = inner.getCentre().toFloat();
+	gradient.point2 = inner.getBottomRight().toFloat();
+	gradient.addColour(0, juce::Colours::black);
+	gradient.addColour(.3, juce::Colours::black);
+	gradient.addColour(1.0, juce::Colours::darkred);
+	g.setGradientFill(gradient);
 	g.fillRect(inner);
 
-	//g.fillAll(juce::Colours::black);
+	//g.fillAll();
 }

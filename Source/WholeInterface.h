@@ -18,6 +18,7 @@
 #include "PhaserSection.h"
 #include "GainSection.h"
 #include "OscillatorSection.h"
+#include "LfoFilterSection.h"
 
 class WholeInterface : public juce::Component
 {
@@ -32,4 +33,5 @@ private:
 	PhaserSection m_phaserSection;
 	GainSection m_gainSection;
 	OscillatorSection m_oscillatorSection;
+	LfoFilterSection m_lfoFilterSection;
 };

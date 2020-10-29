@@ -460,9 +460,6 @@
     <ClCompile Include="..\..\Source\ChorusSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\EffectSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\EnvSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -473,6 +470,9 @@
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GUISection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LfoFilterSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\OscillatorSection.cpp">
@@ -486,6 +486,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\WholeInterface.cpp">
       <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\LFOs.cpp">
+      <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\RSEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
@@ -2652,9 +2655,6 @@
     <ClInclude Include="..\..\Source\ChorusSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\EffectSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\EnvSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
@@ -2665,6 +2665,9 @@
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GUISection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LfoFilterSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\OscillatorSection.h">
@@ -2678,6 +2681,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\WholeInterface.h">
       <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LFOs.h">
+      <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\RSEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
