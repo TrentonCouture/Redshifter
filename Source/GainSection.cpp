@@ -16,11 +16,6 @@ GainSection::GainSection()
 	addSlider(m_gainSlider);
 }
 
-void GainSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::violet);
-}
-
 void GainSection::resized()
 {
 	auto area = getLocalBounds();

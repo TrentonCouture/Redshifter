@@ -22,11 +22,6 @@ FilterSection::FilterSection()
 	addSlider(m_driveSlider);
 }
 
-void FilterSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::green);
-}
-
 void FilterSection::resized()
 {
 	auto area = getLocalBounds();

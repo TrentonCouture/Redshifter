@@ -19,10 +19,6 @@ ReverbSection::ReverbSection()
 	addSlider(m_wetSlider);
 }
 
-void ReverbSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::white);
-}
 
 void ReverbSection::resized()
 {

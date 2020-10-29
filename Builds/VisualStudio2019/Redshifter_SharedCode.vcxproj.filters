@@ -460,6 +460,9 @@
     <ClCompile Include="..\..\Source\ChorusSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\EffectSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\EnvSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -2647,6 +2650,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\ChorusSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\EffectSection.h">
       <Filter>Redshifter\GUI</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\EnvSection.h">

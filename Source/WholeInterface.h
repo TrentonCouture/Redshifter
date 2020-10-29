@@ -19,7 +19,7 @@
 #include "GainSection.h"
 #include "OscillatorSection.h"
 
-class WholeInterface : public GUISection
+class WholeInterface : public juce::Component
 {
 public:
 	WholeInterface();

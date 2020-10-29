@@ -25,11 +25,6 @@ EnvSection::EnvSection()
 	addSlider(m_releaseSlider);
 }
 
-void EnvSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::black);
-}
-
 void EnvSection::resized()
 {
 	auto area = getLocalBounds();

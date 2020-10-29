@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\ChorusSection.cpp"/>
+    <ClCompile Include="..\..\Source\EffectSection.cpp"/>
     <ClCompile Include="..\..\Source\EnvSection.cpp"/>
     <ClCompile Include="..\..\Source\FilterSection.cpp"/>
     <ClCompile Include="..\..\Source\GainSection.cpp"/>
@@ -2152,6 +2153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\ChorusSection.h"/>
+    <ClInclude Include="..\..\Source\EffectSection.h"/>
     <ClInclude Include="..\..\Source\EnvSection.h"/>
     <ClInclude Include="..\..\Source\FilterSection.h"/>
     <ClInclude Include="..\..\Source\GainSection.h"/>

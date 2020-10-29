@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    FilterSection.h
-    Created: 28 Oct 2020 9:59:38pm
+    EffectSection.h
+    Created: 29 Oct 2020 6:26:46am
     Author:  Trenton
 
   ==============================================================================
@@ -13,13 +13,10 @@
 #include <JuceHeader.h>
 #include "GUISection.h"
 
-class FilterSection : public GUISection
+class EffectSection : public GUISection
 {
 public:
-	FilterSection();
-	void resized() override;
-private:
-	juce::Slider m_cutoffSlider;
-	juce::Slider m_resonanceSlider;
-	juce::Slider m_driveSlider;
+	EffectSection();
+	void resized() override {};
+	void paint(juce::Graphics& g) override {};
 };

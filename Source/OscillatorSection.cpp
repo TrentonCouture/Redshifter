@@ -16,11 +16,6 @@ OscillatorSection::OscillatorSection()
 	addSlider(m_oscMixSlider);
 }
 
-void OscillatorSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::fuchsia);
-}
-
 void OscillatorSection::resized()
 {
 	auto area = getLocalBounds();

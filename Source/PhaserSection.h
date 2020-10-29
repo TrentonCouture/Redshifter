@@ -18,7 +18,6 @@ class PhaserSection : public GUISection
 public:
 	PhaserSection();
 	void resized() override;
-	void paint(juce::Graphics& g) override;
 private:
 	juce::Slider m_rateSlider;
 	juce::Slider m_depthSlider;

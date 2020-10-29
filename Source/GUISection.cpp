@@ -30,3 +30,14 @@ void GUISection::sliderValueChanged(juce::Slider* slider)
 
 	m_params.getParam(name)->setValueNotifyingHost(slider->getValue());
 }
+
+void GUISection::paint(juce::Graphics& g)
+{
+	juce::BorderSize<int> border(1, 1, 1, 1);
+	auto inner = border.subtractedFrom(getLocalBounds());
+
+	g.setColour(juce::Colours::black);
+	g.fillRect(inner);
+
+	//g.fillAll(juce::Colours::black);
+}

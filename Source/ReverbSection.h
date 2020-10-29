@@ -18,7 +18,6 @@ class ReverbSection : public GUISection
 public:
 	ReverbSection();
 	void resized() override;
-	void paint(juce::Graphics& g) override;
 private:
 	juce::Slider m_roomSizeSlider;
 	juce::Slider m_wetSlider;

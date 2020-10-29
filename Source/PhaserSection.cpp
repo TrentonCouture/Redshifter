@@ -22,11 +22,6 @@ PhaserSection::PhaserSection()
 	addSlider(m_mixSlider);
 }
 
-void PhaserSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::gold);
-}
-
 void PhaserSection::resized()
 {
 	auto area = getLocalBounds();

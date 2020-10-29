@@ -18,7 +18,6 @@ class OscillatorSection : public GUISection
 public:
 	OscillatorSection();
 	void resized() override;
-	void paint(juce::Graphics& g) override;
 private:
 	juce::Slider m_oscMixSlider;
 };

@@ -8,6 +8,9 @@
       <FILE id="hpDklU" name="ChorusSection.cpp" compile="1" resource="0"
             file="Source/ChorusSection.cpp"/>
       <FILE id="kHShLG" name="ChorusSection.h" compile="0" resource="0" file="Source/ChorusSection.h"/>
+      <FILE id="uJfhED" name="EffectSection.cpp" compile="1" resource="0"
+            file="Source/EffectSection.cpp"/>
+      <FILE id="f3MkiI" name="EffectSection.h" compile="0" resource="0" file="Source/EffectSection.h"/>
       <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
       <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
       <FILE id="zoNqOp" name="FilterSection.cpp" compile="1" resource="0"

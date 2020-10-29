@@ -22,11 +22,6 @@ ChorusSection::ChorusSection()
 	addSlider(m_mixSlider);
 }
 
-void ChorusSection::paint(juce::Graphics& g)
-{
-	g.fillAll(juce::Colours::aqua);
-}
-
 void ChorusSection::resized()
 {
 	auto area = getLocalBounds();

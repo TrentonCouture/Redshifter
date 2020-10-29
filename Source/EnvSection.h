@@ -17,7 +17,6 @@ class EnvSection : public GUISection
 public:
 	EnvSection();
 	void resized() override;
-	void paint(juce::Graphics& g) override;
 private:
 	juce::Slider m_attackSlider;
 	juce::Slider m_decaySlider;
