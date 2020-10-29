@@ -39,6 +39,8 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 
 	const float maxCutoff = 20000;
 	m_effects.get<2>().setCutoffFrequencyHz(*m_params.getParam("cutoff") * maxCutoff);
+	m_effects.get<2>().setResonance(*m_params.getParam("resonance"));
+	m_effects.get<2>().setDrive(*m_params.getParam("filterDrive") * 10 + 1);
 
 	auto block = juce::dsp::AudioBlock<float>(buffer);
 	juce::dsp::ProcessContextReplacing<float> context(block);

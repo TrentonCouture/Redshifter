@@ -21,4 +21,6 @@ public:
 	void paint(juce::Graphics& g) override;
 private:
 	juce::Slider m_cutoffSlider;
+	juce::Slider m_resonanceSlider;
+	juce::Slider m_driveSlider;
 };
