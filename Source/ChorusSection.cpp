@@ -14,6 +14,12 @@ ChorusSection::ChorusSection()
 {
 	m_rateSlider.setName("chorusRate");
 	addSlider(m_rateSlider);
+
+	m_depthSlider.setName("chorusDepth");
+	addSlider(m_depthSlider);
+
+	m_mixSlider.setName("chorusMix");
+	addSlider(m_mixSlider);
 }
 
 void ChorusSection::paint(juce::Graphics& g)
@@ -26,4 +32,6 @@ void ChorusSection::resized()
 	auto area = getLocalBounds();
 	const int sliderHeight = 50;
 	m_rateSlider.setBounds(area.removeFromLeft(sliderHeight));
+	m_depthSlider.setBounds(area.removeFromLeft(sliderHeight));
+	m_mixSlider.setBounds(area.removeFromLeft(sliderHeight));
 }

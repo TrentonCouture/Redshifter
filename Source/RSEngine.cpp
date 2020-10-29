@@ -32,6 +32,8 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 
 	const float maxChorusRate = 99.9;
 	m_effects.get<1>().setRate(*m_params.getParam("chorusRate") * maxChorusRate);
+	m_effects.get<1>().setDepth(*m_params.getParam("chorusDepth"));
+	m_effects.get<1>().setMix(*m_params.getParam("chorusMix"));
 
 	auto block = juce::dsp::AudioBlock<float>(buffer);
 	juce::dsp::ProcessContextReplacing<float> context(block);
