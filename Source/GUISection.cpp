@@ -21,8 +21,6 @@ void GUISection::addSlider(juce::Slider& slider)
 	addAndMakeVisible(slider);
 
 	m_labels.add(new juce::Label());
-	m_labels.getLast()->attachToComponent(&slider, false);
-	m_labels.getLast()->setText(slider.getName().toStdString(), juce::NotificationType::dontSendNotification);
 
 	addAndMakeVisible(*m_labels.getLast());
 
@@ -34,6 +32,9 @@ void GUISection::addSlider(juce::Slider& slider)
 	slider.setSliderStyle(juce::Slider::RotaryVerticalDrag);
 	slider.setTextBoxStyle(juce::Slider::NoTextBox, true, 0, 0);
 	slider.addListener(this);
+
+	m_labels.getLast()->attachToComponent(&slider, false);
+	m_labels.getLast()->setText(parameter->getName(10), juce::NotificationType::dontSendNotification);
 }
 
 void GUISection::sliderValueChanged(juce::Slider* slider)

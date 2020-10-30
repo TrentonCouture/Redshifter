@@ -25,9 +25,15 @@ ReverbSection::ReverbSection()
 void ReverbSection::resized()
 {
 	auto area = getLocalBounds();
+
 	const int labelHeight = 24;
 	area.removeFromTop(labelHeight);
+
+	const int numSliders = 2;
 	const int sliderHeight = 50;
-	m_roomSizeSlider.setBounds(area.removeFromLeft(sliderHeight));
+	const int spacingWidth = (getWidth() - numSliders * sliderHeight) / (numSliders + 1);
+	area.removeFromLeft(spacingWidth);
 	m_wetSlider.setBounds(area.removeFromLeft(sliderHeight));
+	area.removeFromLeft(spacingWidth);
+	m_roomSizeSlider.setBounds(area.removeFromLeft(sliderHeight));
 }

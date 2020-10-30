@@ -29,8 +29,13 @@ void FilterSection::resized()
 	auto area = getLocalBounds();
 	const int labelHeight = 24;
 	area.removeFromTop(labelHeight);
+	const int numSliders = 3;
 	const int sliderHeight = 50;
+	const int spacingWidth = (getWidth() - numSliders * sliderHeight) / (numSliders + 1);
+	area.removeFromLeft(spacingWidth);
 	m_cutoffSlider.setBounds(area.removeFromLeft(sliderHeight));
+	area.removeFromLeft(spacingWidth);
 	m_resonanceSlider.setBounds(area.removeFromLeft(sliderHeight));
+	area.removeFromLeft(spacingWidth);
 	m_driveSlider.setBounds(area.removeFromLeft(sliderHeight));
 }

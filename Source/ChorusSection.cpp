@@ -29,8 +29,13 @@ void ChorusSection::resized()
 	auto area = getLocalBounds();
 	const int labelHeight = 24;
 	area.removeFromTop(labelHeight);
+	const int numSliders = 3;
 	const int sliderHeight = 50;
-	m_rateSlider.setBounds(area.removeFromLeft(sliderHeight));
-	m_depthSlider.setBounds(area.removeFromLeft(sliderHeight));
+	const int spacingWidth = (getWidth() - numSliders * sliderHeight) / (numSliders + 1);
+	area.removeFromLeft(spacingWidth);
 	m_mixSlider.setBounds(area.removeFromLeft(sliderHeight));
+	area.removeFromLeft(spacingWidth);
+	m_rateSlider.setBounds(area.removeFromLeft(sliderHeight));
+	area.removeFromLeft(spacingWidth);
+	m_depthSlider.setBounds(area.removeFromLeft(sliderHeight));
 }
