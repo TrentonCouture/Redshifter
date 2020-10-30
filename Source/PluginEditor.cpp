@@ -15,7 +15,7 @@ RedshifterAudioProcessorEditor::RedshifterAudioProcessorEditor (RedshifterAudioP
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 350);
+    setSize (600, 300);
 	addAndMakeVisible(m_wholeInterface);
 }
 

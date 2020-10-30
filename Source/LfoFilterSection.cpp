@@ -16,12 +16,16 @@ LfoFilterSection::LfoFilterSection()
 
 	m_ampSlider.setName("lfoFilterAmp");
 	addSlider(m_ampSlider);
+
+	m_isLeft = false;
 }
 
 
 void LfoFilterSection::resized()
 {
 	auto area = getLocalBounds();
+	const int labelHeight = 24;
+	area.removeFromTop(labelHeight);
 	const int sliderHeight = 50;
 	m_freqSlider.setBounds(area.removeFromLeft(sliderHeight));
 	m_ampSlider.setBounds(area.removeFromLeft(sliderHeight));

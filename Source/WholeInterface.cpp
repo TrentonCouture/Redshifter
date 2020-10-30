@@ -27,11 +27,12 @@ void WholeInterface::resized()
 {
 	auto area = getLocalBounds();
 
-	const int oscillatorSectionHeight = 100;
-	const int sectionHeight = 50;
-	const int sectionWidth = 200;
+	const int sectionHeight = 75;
+	const int sectionWidth = getWidth() / 2;
 
-	m_oscillatorSection.setBounds(area.removeFromTop(oscillatorSectionHeight));
+	auto oscAndLfo = area.removeFromTop(sectionHeight);
+	m_oscillatorSection.setBounds(oscAndLfo.removeFromLeft(sectionWidth));
+	m_lfoFilterSection.setBounds(oscAndLfo.removeFromLeft(sectionWidth));
 
 	auto envAndReverb = area.removeFromTop(sectionHeight);
 	m_envSection.setBounds(envAndReverb.removeFromLeft(sectionWidth));
@@ -46,5 +47,4 @@ void WholeInterface::resized()
 	m_gainSection.setBounds(phaserAndGain.removeFromLeft(sectionWidth));
 
 	auto lfos = area.removeFromTop(sectionHeight);
-	m_lfoFilterSection.setBounds(lfos.removeFromLeft(sectionWidth));
 }

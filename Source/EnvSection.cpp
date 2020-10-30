@@ -23,11 +23,15 @@ EnvSection::EnvSection()
 
 	m_releaseSlider.setName("release");
 	addSlider(m_releaseSlider);
+
+	m_isLeft = true;
 }
 
 void EnvSection::resized()
 {
 	auto area = getLocalBounds();
+	const int labelHeight = 24;
+	area.removeFromTop(labelHeight);
 	const int sliderHeight = 50;
 	m_attackSlider.setBounds(area.removeFromLeft(sliderHeight));
 	m_decaySlider.setBounds(area.removeFromLeft(sliderHeight));

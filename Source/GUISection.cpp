@@ -11,9 +11,21 @@
 #include "GUISection.h"
 #include "PluginEditor.h"
 
+//GUISection::GUISection()
+//{
+//	//m_isLeft = true;
+//}
+
 void GUISection::addSlider(juce::Slider& slider)
 {
 	addAndMakeVisible(slider);
+
+	m_labels.add(new juce::Label());
+	m_labels.getLast()->attachToComponent(&slider, false);
+	m_labels.getLast()->setText(slider.getName().toStdString(), juce::NotificationType::dontSendNotification);
+
+	addAndMakeVisible(*m_labels.getLast());
+
 	auto parameter = m_params.getParam(slider.getName().toStdString());
 	auto range = parameter->getNormalisableRange();
 	slider.setRange(range.start, range.end);
@@ -36,16 +48,25 @@ void GUISection::paint(juce::Graphics& g)
 	juce::BorderSize<int> border(1, 1, 1, 1);
 	auto inner = border.subtractedFrom(getLocalBounds());
 
-	g.setColour(juce::Colours::black);
 	juce::ColourGradient gradient;
-	//gradient.isRadial = true;
-	gradient.point1 = inner.getCentre().toFloat();
+	gradient.point1 = inner.getTopLeft().toFloat();
 	gradient.point2 = inner.getBottomRight().toFloat();
-	gradient.addColour(0, juce::Colours::black);
-	gradient.addColour(.3, juce::Colours::black);
-	gradient.addColour(1.0, juce::Colours::darkred);
-	g.setGradientFill(gradient);
-	g.fillRect(inner);
 
-	//g.fillAll();
+	if (m_isLeft)
+	{
+		gradient.addColour(0, juce::Colours::black);
+		gradient.addColour(0.2, juce::Colours::darkred);
+		gradient.addColour(1.0, juce::Colours::darkred);
+	}
+	else
+	{
+		gradient.addColour(0, juce::Colours::darkred);
+		gradient.addColour(0.9, juce::Colours::darkred);
+		gradient.addColour(1.0, juce::Colours::crimson);
+	}
+
+	g.setGradientFill(gradient);
+	g.fillRoundedRectangle(inner.toFloat(), 20.0);
+
+
 }

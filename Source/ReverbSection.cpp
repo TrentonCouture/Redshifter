@@ -17,12 +17,16 @@ ReverbSection::ReverbSection()
 
 	m_wetSlider.setName("wet");
 	addSlider(m_wetSlider);
+
+	m_isLeft = false;
 }
 
 
 void ReverbSection::resized()
 {
 	auto area = getLocalBounds();
+	const int labelHeight = 24;
+	area.removeFromTop(labelHeight);
 	const int sliderHeight = 50;
 	m_roomSizeSlider.setBounds(area.removeFromLeft(sliderHeight));
 	m_wetSlider.setBounds(area.removeFromLeft(sliderHeight));
