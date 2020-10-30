@@ -13,8 +13,6 @@
 Oscillators::Oscillators(const int sampleRate, const int numSamples, const int numChannels) 
 {
 	m_adsr.setSampleRate(sampleRate);
-	juce::ADSR::Parameters adsrParams;
-	m_adsr.setParameters(adsrParams);
 
 	juce::dsp::ProcessSpec pSpec;
 	pSpec.maximumBlockSize = numSamples;
@@ -24,8 +22,8 @@ Oscillators::Oscillators(const int sampleRate, const int numSamples, const int n
 	m_sinOsc.prepare(pSpec);
 	m_sawOsc.prepare(pSpec);
 
-	m_sinOsc.get<0>().initialise([](float x) {return 0.2 * std::sin(x); }, 128);
-	m_sawOsc.get<0>().initialise([](float x) {return 0.2 * x / juce::MathConstants<float>::pi; }, 128);
+	m_sinOsc.get<Osc::osc>().initialise([](float x) {return 0.2 * std::sin(x); }, 128);
+	m_sawOsc.get<Osc::osc>().initialise([](float x) {return 0.2 * x / juce::MathConstants<float>::pi; }, 128);
 }
 
 
@@ -42,8 +40,8 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 	adsrParams.sustain = *m_params.getParam("sustain");
 	adsrParams.release = *m_params.getParam("release");
 	m_adsr.setParameters(adsrParams);
-	m_sinOsc.get<0>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_sawOsc.get<0>().setFrequency(noteToFreq(midiNoteNumber), true);
+	m_sinOsc.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
+	m_sawOsc.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 	m_adsr.noteOn();
 }
 
@@ -54,8 +52,8 @@ void Oscillators::stopNote(float velocity, bool tailOff)
 
 void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples)
 {
-	m_sinOsc.get<1>().setGainLinear(*m_params.getParam("oscMix"));
-	m_sawOsc.get<1>().setGainLinear(1.0 - *m_params.getParam("oscMix"));
+	m_sinOsc.get<Osc::vol>().setGainLinear(*m_params.getParam("oscMix"));
+	m_sawOsc.get<Osc::vol>().setGainLinear(1.0 - *m_params.getParam("oscMix"));
 
 	juce::AudioBuffer<float> tempBuffer(outputBuffer.getNumChannels(), outputBuffer.getNumSamples());
 	tempBuffer.clear();

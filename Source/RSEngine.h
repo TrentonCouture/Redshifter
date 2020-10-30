@@ -27,7 +27,7 @@ class RSEngine
 {
 public:
 	void initialize(const int sampleRate, const int numSamples, const int numChannels);
-	void process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiBuffer);
+	void process(juce::AudioBuffer<float>& buffer, const juce::MidiBuffer& midiBuffer);
 private:
 	OscillatorEngine m_oscEng;
 	juce::dsp::ProcessorChain < juce::dsp::Reverb, juce::dsp::Chorus<float>, juce::dsp::LadderFilter<float>, juce::dsp::Phaser<float>, juce::dsp::Gain<float>> m_effects;
@@ -35,6 +35,4 @@ private:
 	juce::dsp::Oscillator<float> m_lfo;
 
 	Parameters m_params;
-
-	int m_freqCounter;
 };

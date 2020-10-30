@@ -30,7 +30,7 @@ void RSEngine::initialize(const int sampleRate, const int numSamples, const int 
 	m_effects.get<2>().setMode(juce::dsp::LadderFilterMode::LPF24);
 
 }
-void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiBuffer)
+void RSEngine::process(juce::AudioBuffer<float>& buffer, const juce::MidiBuffer& midiBuffer)
 {
 	m_oscEng.renderNextBlock(buffer, midiBuffer, 0, buffer.getNumSamples());
 

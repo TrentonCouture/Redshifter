@@ -12,6 +12,12 @@
 #include <JuceHeader.h>
 #include "Parameters.h"
 
+enum Osc
+{
+	osc,
+	vol
+};
+
 class Oscillators : public juce::SynthesiserVoice
 {
 public:
