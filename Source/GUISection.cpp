@@ -56,14 +56,14 @@ void GUISection::paint(juce::Graphics& g)
 	if (m_isLeft)
 	{
 		gradient.addColour(0, juce::Colours::black);
-		gradient.addColour(0.2, juce::Colours::darkred);
+		gradient.addColour(0.1, juce::Colours::darkred);
 		gradient.addColour(1.0, juce::Colours::darkred);
 	}
 	else
 	{
 		gradient.addColour(0, juce::Colours::darkred);
 		gradient.addColour(0.9, juce::Colours::darkred);
-		gradient.addColour(1.0, juce::Colours::crimson);
+		gradient.addColour(1.0, juce::Colours::black);
 	}
 
 	g.setGradientFill(gradient);
