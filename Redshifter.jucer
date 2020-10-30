@@ -2,64 +2,62 @@
 
 <JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              headerPath="C:\ASIOSDK2.3\common\">
+              headerPath="C:\ASIOSDK2.3\common\&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\">
   <MAINGROUP id="nKcm4M" name="Redshifter">
-    <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
-      <FILE id="hpDklU" name="ChorusSection.cpp" compile="1" resource="0"
-            file="Source/ChorusSection.cpp"/>
-      <FILE id="kHShLG" name="ChorusSection.h" compile="0" resource="0" file="Source/ChorusSection.h"/>
-      <FILE id="qn7Mh8" name="EnvSection.cpp" compile="1" resource="0" file="Source/EnvSection.cpp"/>
-      <FILE id="CVx3Kh" name="EnvSection.h" compile="0" resource="0" file="Source/EnvSection.h"/>
-      <FILE id="zoNqOp" name="FilterSection.cpp" compile="1" resource="0"
-            file="Source/FilterSection.cpp"/>
-      <FILE id="MlE4cY" name="FilterSection.h" compile="0" resource="0" file="Source/FilterSection.h"/>
-      <FILE id="GyQy8h" name="GainSection.cpp" compile="1" resource="0" file="Source/GainSection.cpp"/>
-      <FILE id="UsrsVa" name="GainSection.h" compile="0" resource="0" file="Source/GainSection.h"/>
-      <FILE id="AE7MtE" name="GUISection.cpp" compile="1" resource="0" file="Source/GUISection.cpp"/>
-      <FILE id="tkSRU7" name="GUISection.h" compile="0" resource="0" file="Source/GUISection.h"/>
-      <FILE id="vioV5h" name="LfoFilterSection.cpp" compile="1" resource="0"
-            file="Source/LfoFilterSection.cpp"/>
-      <FILE id="O90yRw" name="LfoFilterSection.h" compile="0" resource="0"
-            file="Source/LfoFilterSection.h"/>
-      <FILE id="iTTfr3" name="OscillatorSection.cpp" compile="1" resource="0"
-            file="Source/OscillatorSection.cpp"/>
-      <FILE id="u1ksWE" name="OscillatorSection.h" compile="0" resource="0"
-            file="Source/OscillatorSection.h"/>
-      <FILE id="r8FJm7" name="PhaserSection.cpp" compile="1" resource="0"
-            file="Source/PhaserSection.cpp"/>
-      <FILE id="YS917e" name="PhaserSection.h" compile="0" resource="0" file="Source/PhaserSection.h"/>
-      <FILE id="h90Lb3" name="ReverbSection.cpp" compile="1" resource="0"
-            file="Source/ReverbSection.cpp"/>
-      <FILE id="KoBJWS" name="ReverbSection.h" compile="0" resource="0" file="Source/ReverbSection.h"/>
-      <FILE id="IDUTgX" name="WholeInterface.cpp" compile="1" resource="0"
-            file="Source/WholeInterface.cpp"/>
-      <FILE id="CQfeXm" name="WholeInterface.h" compile="0" resource="0"
-            file="Source/WholeInterface.h"/>
-    </GROUP>
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
-      <FILE id="b0ggRB" name="LFOs.cpp" compile="1" resource="0" file="Source/LFOs.cpp"/>
-      <FILE id="JbZbWD" name="LFOs.h" compile="0" resource="0" file="Source/LFOs.h"/>
-      <FILE id="MLxSxw" name="RSEngine.cpp" compile="1" resource="0" file="Source/RSEngine.cpp"/>
-      <FILE id="d0ex28" name="RSEngine.h" compile="0" resource="0" file="Source/RSEngine.h"/>
-      <FILE id="Ip4OvT" name="Oscillators.cpp" compile="1" resource="0" file="Source/Oscillators.cpp"/>
-      <FILE id="gJaSv1" name="Oscillators.h" compile="0" resource="0" file="Source/Oscillators.h"/>
-      <FILE id="cSRGuX" name="OscillatorEngine.cpp" compile="1" resource="0"
-            file="Source/OscillatorEngine.cpp"/>
-      <FILE id="nghvT8" name="OscillatorEngine.h" compile="0" resource="0"
-            file="Source/OscillatorEngine.h"/>
-      <FILE id="ZBk4pv" name="RSSound.cpp" compile="1" resource="0" file="Source/RSSound.cpp"/>
-      <FILE id="qbk9I6" name="RSSound.h" compile="0" resource="0" file="Source/RSSound.h"/>
+      <FILE id="UtU0Ga" name="OscillatorEngine.cpp" compile="1" resource="0"
+            file="Source/Synthesis/OscillatorEngine.cpp"/>
+      <FILE id="Gve7wU" name="OscillatorEngine.h" compile="0" resource="0"
+            file="Source/Synthesis/OscillatorEngine.h"/>
+      <FILE id="qCZaZO" name="Oscillators.cpp" compile="1" resource="0" file="Source/Synthesis/Oscillators.cpp"/>
+      <FILE id="CKbbHC" name="Oscillators.h" compile="0" resource="0" file="Source/Synthesis/Oscillators.h"/>
+      <FILE id="oAIZVa" name="RSEngine.cpp" compile="1" resource="0" file="Source/Synthesis/RSEngine.cpp"/>
+      <FILE id="c8MlDF" name="RSEngine.h" compile="0" resource="0" file="Source/Synthesis/RSEngine.h"/>
+      <FILE id="U3sMb6" name="RSSound.cpp" compile="1" resource="0" file="Source/Synthesis/RSSound.cpp"/>
+      <FILE id="JBOc7z" name="RSSound.h" compile="0" resource="0" file="Source/Synthesis/RSSound.h"/>
+    </GROUP>
+    <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="rJ2k4J" name="ChorusSection.cpp" compile="1" resource="0"
+            file="Source/GUI/ChorusSection.cpp"/>
+      <FILE id="exLQ9j" name="ChorusSection.h" compile="0" resource="0" file="Source/GUI/ChorusSection.h"/>
+      <FILE id="pObDoU" name="EnvSection.cpp" compile="1" resource="0" file="Source/GUI/EnvSection.cpp"/>
+      <FILE id="gIXaoG" name="EnvSection.h" compile="0" resource="0" file="Source/GUI/EnvSection.h"/>
+      <FILE id="BvEWMJ" name="FilterSection.cpp" compile="1" resource="0"
+            file="Source/GUI/FilterSection.cpp"/>
+      <FILE id="Kaiq1i" name="FilterSection.h" compile="0" resource="0" file="Source/GUI/FilterSection.h"/>
+      <FILE id="pFvEY9" name="GainSection.cpp" compile="1" resource="0" file="Source/GUI/GainSection.cpp"/>
+      <FILE id="hVKp4s" name="GainSection.h" compile="0" resource="0" file="Source/GUI/GainSection.h"/>
+      <FILE id="ACVPGK" name="GUISection.cpp" compile="1" resource="0" file="Source/GUI/GUISection.cpp"/>
+      <FILE id="R749j2" name="GUISection.h" compile="0" resource="0" file="Source/GUI/GUISection.h"/>
+      <FILE id="POBrmL" name="LfoFilterSection.cpp" compile="1" resource="0"
+            file="Source/GUI/LfoFilterSection.cpp"/>
+      <FILE id="oZfxFV" name="LfoFilterSection.h" compile="0" resource="0"
+            file="Source/GUI/LfoFilterSection.h"/>
+      <FILE id="RDWerd" name="OscillatorSection.cpp" compile="1" resource="0"
+            file="Source/GUI/OscillatorSection.cpp"/>
+      <FILE id="VFW6ry" name="OscillatorSection.h" compile="0" resource="0"
+            file="Source/GUI/OscillatorSection.h"/>
+      <FILE id="qWUWXa" name="PhaserSection.cpp" compile="1" resource="0"
+            file="Source/GUI/PhaserSection.cpp"/>
+      <FILE id="I8ORSb" name="PhaserSection.h" compile="0" resource="0" file="Source/GUI/PhaserSection.h"/>
+      <FILE id="EB5ReE" name="ReverbSection.cpp" compile="1" resource="0"
+            file="Source/GUI/ReverbSection.cpp"/>
+      <FILE id="c5fHtB" name="ReverbSection.h" compile="0" resource="0" file="Source/GUI/ReverbSection.h"/>
+      <FILE id="TDbJ0M" name="WholeInterface.cpp" compile="1" resource="0"
+            file="Source/GUI/WholeInterface.cpp"/>
+      <FILE id="Aq8vXe" name="WholeInterface.h" compile="0" resource="0"
+            file="Source/GUI/WholeInterface.h"/>
     </GROUP>
     <GROUP id="{22E8697E-2807-40D2-DDB5-EE3704B3BD1E}" name="Source">
-      <FILE id="vecfe1" name="Parameters.cpp" compile="1" resource="0" file="Source/Parameters.cpp"/>
-      <FILE id="jtnRR3" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
-      <FILE id="HA4Rxp" name="PluginProcessor.cpp" compile="1" resource="0"
-            file="Source/PluginProcessor.cpp"/>
-      <FILE id="KlzCPI" name="PluginProcessor.h" compile="0" resource="0"
-            file="Source/PluginProcessor.h"/>
-      <FILE id="hNRmPc" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="KlJOxY" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="u0xwZB" name="Parameters.cpp" compile="1" resource="0" file="Source/Common/Parameters.cpp"/>
+      <FILE id="X8Iehu" name="Parameters.h" compile="0" resource="0" file="Source/Common/Parameters.h"/>
+      <FILE id="vuZw25" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/Common/PluginEditor.cpp"/>
+      <FILE id="GKMWxf" name="PluginEditor.h" compile="0" resource="0" file="Source/Common/PluginEditor.h"/>
+      <FILE id="RGlh6W" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/Common/PluginProcessor.cpp"/>
+      <FILE id="xzbb6P" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/Common/PluginProcessor.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"

@@ -23,9 +23,9 @@ void OscillatorEngine::initialize(const int sampleRate, const int numSamples, co
 
 	if (getNumVoices() > 0)
 	{
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 8; i++)
 			removeVoice(0);
 	}
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 8; i++)
 		addVoice(new Oscillators(sampleRate, numSamples, numChannels));
 }

@@ -63,7 +63,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;..\..\JuceLibraryCode;C:\JUCE\modules;C:\ASIOSDK2.3\common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;..\..\JuceLibraryCode;C:\JUCE\modules;C:\ASIOSDK2.3\common\;..\..\Source\;..\..\Source\GUI\;..\..\Source\Synthesis\;..\..\Source\Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2019_78A5026=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=1;JucePlugin_Build_AUv3=0;JucePlugin_Build_RTAS=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JUCE_SHARED_CODE=1;JUCE_DISPLAY_SPLASH_SCREEN=1;JUCE_USE_DARK_SPLASH_SCREEN=1;JUCE_PROJUCER_VERSION=0x60004;JUCE_MODULE_AVAILABLE_juce_audio_basics=1;JUCE_MODULE_AVAILABLE_juce_audio_devices=1;JUCE_MODULE_AVAILABLE_juce_audio_formats=1;JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1;JUCE_MODULE_AVAILABLE_juce_audio_processors=1;JUCE_MODULE_AVAILABLE_juce_audio_utils=1;JUCE_MODULE_AVAILABLE_juce_core=1;JUCE_MODULE_AVAILABLE_juce_data_structures=1;JUCE_MODULE_AVAILABLE_juce_dsp=1;JUCE_MODULE_AVAILABLE_juce_events=1;JUCE_MODULE_AVAILABLE_juce_graphics=1;JUCE_MODULE_AVAILABLE_juce_gui_basics=1;JUCE_MODULE_AVAILABLE_juce_gui_extra=1;JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1;JUCE_ASIO=1;JUCE_VST3_CAN_REPLACE_VST2=0;JUCE_STRICT_REFCOUNTEDPOINTER=1;JucePlugin_Enable_IAA=0;JucePlugin_Name=&quot;Redshifter&quot;;JucePlugin_Desc=&quot;Redshifter&quot;;JucePlugin_Manufacturer=&quot;yourcompany&quot;;JucePlugin_ManufacturerWebsite=&quot;&quot;;JucePlugin_ManufacturerEmail=&quot;&quot;;JucePlugin_ManufacturerCode=0x4d616e75;JucePlugin_PluginCode=0x4874386c;JucePlugin_IsSynth=0;JucePlugin_WantsMidiInput=0;JucePlugin_ProducesMidiOutput=0;JucePlugin_IsMidiEffect=0;JucePlugin_EditorRequiresKeyboardFocus=0;JucePlugin_Version=1.0.0;JucePlugin_VersionCode=0x10000;JucePlugin_VersionString=&quot;1.0.0&quot;;JucePlugin_VSTUniqueID=JucePlugin_PluginCode;JucePlugin_VSTCategory=kPlugCategEffect;JucePlugin_Vst3Category=&quot;Fx&quot;;JucePlugin_AUMainType='aufx';JucePlugin_AUSubType=JucePlugin_PluginCode;JucePlugin_AUExportPrefix=RedshifterAU;JucePlugin_AUExportPrefixQuoted=&quot;RedshifterAU&quot;;JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_CFBundleIdentifier=com.yourcompany.Redshifter;JucePlugin_RTASCategory=0;JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_RTASProductId=JucePlugin_PluginCode;JucePlugin_RTASDisableBypass=0;JucePlugin_RTASDisableMultiMono=0;JucePlugin_AAXIdentifier=com.yourcompany.Redshifter;JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_AAXProductId=JucePlugin_PluginCode;JucePlugin_AAXCategory=0;JucePlugin_AAXDisableBypass=0;JucePlugin_AAXDisableMultiMono=0;JucePlugin_IAAType=0x61757278;JucePlugin_IAASubType=JucePlugin_PluginCode;JucePlugin_IAAName=&quot;yourcompany: Redshifter&quot;;JucePlugin_VSTNumMidiInputs=16;JucePlugin_VSTNumMidiOutputs=16;JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -103,7 +103,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>C:\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;..\..\JuceLibraryCode;C:\JUCE\modules;C:\ASIOSDK2.3\common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;..\..\JuceLibraryCode;C:\JUCE\modules;C:\ASIOSDK2.3\common\;..\..\Source\;..\..\Source\GUI\;..\..\Source\Synthesis\;..\..\Source\Common\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2019_78A5026=1;JUCE_APP_VERSION=1.0.0;JUCE_APP_VERSION_HEX=0x10000;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=1;JucePlugin_Build_AUv3=0;JucePlugin_Build_RTAS=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JUCE_SHARED_CODE=1;JUCE_DISPLAY_SPLASH_SCREEN=1;JUCE_USE_DARK_SPLASH_SCREEN=1;JUCE_PROJUCER_VERSION=0x60004;JUCE_MODULE_AVAILABLE_juce_audio_basics=1;JUCE_MODULE_AVAILABLE_juce_audio_devices=1;JUCE_MODULE_AVAILABLE_juce_audio_formats=1;JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1;JUCE_MODULE_AVAILABLE_juce_audio_processors=1;JUCE_MODULE_AVAILABLE_juce_audio_utils=1;JUCE_MODULE_AVAILABLE_juce_core=1;JUCE_MODULE_AVAILABLE_juce_data_structures=1;JUCE_MODULE_AVAILABLE_juce_dsp=1;JUCE_MODULE_AVAILABLE_juce_events=1;JUCE_MODULE_AVAILABLE_juce_graphics=1;JUCE_MODULE_AVAILABLE_juce_gui_basics=1;JUCE_MODULE_AVAILABLE_juce_gui_extra=1;JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1;JUCE_ASIO=1;JUCE_VST3_CAN_REPLACE_VST2=0;JUCE_STRICT_REFCOUNTEDPOINTER=1;JucePlugin_Enable_IAA=0;JucePlugin_Name=&quot;Redshifter&quot;;JucePlugin_Desc=&quot;Redshifter&quot;;JucePlugin_Manufacturer=&quot;yourcompany&quot;;JucePlugin_ManufacturerWebsite=&quot;&quot;;JucePlugin_ManufacturerEmail=&quot;&quot;;JucePlugin_ManufacturerCode=0x4d616e75;JucePlugin_PluginCode=0x4874386c;JucePlugin_IsSynth=0;JucePlugin_WantsMidiInput=0;JucePlugin_ProducesMidiOutput=0;JucePlugin_IsMidiEffect=0;JucePlugin_EditorRequiresKeyboardFocus=0;JucePlugin_Version=1.0.0;JucePlugin_VersionCode=0x10000;JucePlugin_VersionString=&quot;1.0.0&quot;;JucePlugin_VSTUniqueID=JucePlugin_PluginCode;JucePlugin_VSTCategory=kPlugCategEffect;JucePlugin_Vst3Category=&quot;Fx&quot;;JucePlugin_AUMainType='aufx';JucePlugin_AUSubType=JucePlugin_PluginCode;JucePlugin_AUExportPrefix=RedshifterAU;JucePlugin_AUExportPrefixQuoted=&quot;RedshifterAU&quot;;JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_CFBundleIdentifier=com.yourcompany.Redshifter;JucePlugin_RTASCategory=0;JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_RTASProductId=JucePlugin_PluginCode;JucePlugin_RTASDisableBypass=0;JucePlugin_RTASDisableMultiMono=0;JucePlugin_AAXIdentifier=com.yourcompany.Redshifter;JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode;JucePlugin_AAXProductId=JucePlugin_PluginCode;JucePlugin_AAXCategory=0;JucePlugin_AAXDisableBypass=0;JucePlugin_AAXDisableMultiMono=0;JucePlugin_IAAType=0x61757278;JucePlugin_IAASubType=JucePlugin_PluginCode;JucePlugin_IAAName=&quot;yourcompany: Redshifter&quot;;JucePlugin_VSTNumMidiInputs=16;JucePlugin_VSTNumMidiOutputs=16;JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -137,24 +137,23 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\ChorusSection.cpp"/>
-    <ClCompile Include="..\..\Source\EnvSection.cpp"/>
-    <ClCompile Include="..\..\Source\FilterSection.cpp"/>
-    <ClCompile Include="..\..\Source\GainSection.cpp"/>
-    <ClCompile Include="..\..\Source\GUISection.cpp"/>
-    <ClCompile Include="..\..\Source\LfoFilterSection.cpp"/>
-    <ClCompile Include="..\..\Source\OscillatorSection.cpp"/>
-    <ClCompile Include="..\..\Source\PhaserSection.cpp"/>
-    <ClCompile Include="..\..\Source\ReverbSection.cpp"/>
-    <ClCompile Include="..\..\Source\WholeInterface.cpp"/>
-    <ClCompile Include="..\..\Source\LFOs.cpp"/>
-    <ClCompile Include="..\..\Source\RSEngine.cpp"/>
-    <ClCompile Include="..\..\Source\Oscillators.cpp"/>
-    <ClCompile Include="..\..\Source\OscillatorEngine.cpp"/>
-    <ClCompile Include="..\..\Source\RSSound.cpp"/>
-    <ClCompile Include="..\..\Source\Parameters.cpp"/>
-    <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
-    <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
+    <ClCompile Include="..\..\Source\Synthesis\OscillatorEngine.cpp"/>
+    <ClCompile Include="..\..\Source\Synthesis\Oscillators.cpp"/>
+    <ClCompile Include="..\..\Source\Synthesis\RSEngine.cpp"/>
+    <ClCompile Include="..\..\Source\Synthesis\RSSound.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\ChorusSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\EnvSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\FilterSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\GainSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\GUISection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\LfoFilterSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\OscillatorSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\PhaserSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\ReverbSection.cpp"/>
+    <ClCompile Include="..\..\Source\GUI\WholeInterface.cpp"/>
+    <ClCompile Include="..\..\Source\Common\Parameters.cpp"/>
+    <ClCompile Include="..\..\Source\Common\PluginEditor.cpp"/>
+    <ClCompile Include="..\..\Source\Common\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
@@ -2153,24 +2152,23 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\ChorusSection.h"/>
-    <ClInclude Include="..\..\Source\EnvSection.h"/>
-    <ClInclude Include="..\..\Source\FilterSection.h"/>
-    <ClInclude Include="..\..\Source\GainSection.h"/>
-    <ClInclude Include="..\..\Source\GUISection.h"/>
-    <ClInclude Include="..\..\Source\LfoFilterSection.h"/>
-    <ClInclude Include="..\..\Source\OscillatorSection.h"/>
-    <ClInclude Include="..\..\Source\PhaserSection.h"/>
-    <ClInclude Include="..\..\Source\ReverbSection.h"/>
-    <ClInclude Include="..\..\Source\WholeInterface.h"/>
-    <ClInclude Include="..\..\Source\LFOs.h"/>
-    <ClInclude Include="..\..\Source\RSEngine.h"/>
-    <ClInclude Include="..\..\Source\Oscillators.h"/>
-    <ClInclude Include="..\..\Source\OscillatorEngine.h"/>
-    <ClInclude Include="..\..\Source\RSSound.h"/>
-    <ClInclude Include="..\..\Source\Parameters.h"/>
-    <ClInclude Include="..\..\Source\PluginProcessor.h"/>
-    <ClInclude Include="..\..\Source\PluginEditor.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\Oscillators.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\RSEngine.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\RSSound.h"/>
+    <ClInclude Include="..\..\Source\GUI\ChorusSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\EnvSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\FilterSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\GainSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\GUISection.h"/>
+    <ClInclude Include="..\..\Source\GUI\LfoFilterSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\OscillatorSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\PhaserSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\ReverbSection.h"/>
+    <ClInclude Include="..\..\Source\GUI\WholeInterface.h"/>
+    <ClInclude Include="..\..\Source\Common\Parameters.h"/>
+    <ClInclude Include="..\..\Source\Common\PluginEditor.h"/>
+    <ClInclude Include="..\..\Source\Common\PluginProcessor.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>

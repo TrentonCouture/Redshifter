@@ -2,11 +2,11 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Redshifter\GUI">
-      <UniqueIdentifier>{C7DD2396-240D-4791-2D3D-17DC34070A37}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Redshifter\Synthesis">
       <UniqueIdentifier>{8EAE1536-942C-746E-1382-A2B83EF14857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Redshifter\GUI">
+      <UniqueIdentifier>{C7DD2396-240D-4791-2D3D-17DC34070A37}</UniqueIdentifier>
     </Filter>
     <Filter Include="Redshifter\Source">
       <UniqueIdentifier>{1FD09CD8-DB8E-3FEE-9578-121115330238}</UniqueIdentifier>
@@ -457,58 +457,55 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\ChorusSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\EnvSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\FilterSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\GainSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\GUISection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\LfoFilterSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\OscillatorSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\PhaserSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\ReverbSection.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\WholeInterface.cpp">
-      <Filter>Redshifter\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\LFOs.cpp">
+    <ClCompile Include="..\..\Source\Synthesis\OscillatorEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RSEngine.cpp">
+    <ClCompile Include="..\..\Source\Synthesis\Oscillators.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Oscillators.cpp">
+    <ClCompile Include="..\..\Source\Synthesis\RSEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\OscillatorEngine.cpp">
+    <ClCompile Include="..\..\Source\Synthesis\RSSound.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\RSSound.cpp">
-      <Filter>Redshifter\Synthesis</Filter>
+    <ClCompile Include="..\..\Source\GUI\ChorusSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Parameters.cpp">
+    <ClCompile Include="..\..\Source\GUI\EnvSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\FilterSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\GainSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\GUISection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\LfoFilterSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\OscillatorSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\PhaserSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\ReverbSection.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GUI\WholeInterface.cpp">
+      <Filter>Redshifter\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Common\Parameters.cpp">
       <Filter>Redshifter\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\PluginProcessor.cpp">
+    <ClCompile Include="..\..\Source\Common\PluginEditor.cpp">
       <Filter>Redshifter\Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\PluginEditor.cpp">
+    <ClCompile Include="..\..\Source\Common\PluginProcessor.cpp">
       <Filter>Redshifter\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2652,58 +2649,55 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\ChorusSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\EnvSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\FilterSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\GainSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\GUISection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\LfoFilterSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\OscillatorSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\PhaserSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\ReverbSection.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\WholeInterface.h">
-      <Filter>Redshifter\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\LFOs.h">
+    <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\RSEngine.h">
+    <ClInclude Include="..\..\Source\Synthesis\Oscillators.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Oscillators.h">
+    <ClInclude Include="..\..\Source\Synthesis\RSEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\OscillatorEngine.h">
+    <ClInclude Include="..\..\Source\Synthesis\RSSound.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\RSSound.h">
-      <Filter>Redshifter\Synthesis</Filter>
+    <ClInclude Include="..\..\Source\GUI\ChorusSection.h">
+      <Filter>Redshifter\GUI</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Parameters.h">
+    <ClInclude Include="..\..\Source\GUI\EnvSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\FilterSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\GainSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\GUISection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\LfoFilterSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\OscillatorSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\PhaserSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\ReverbSection.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GUI\WholeInterface.h">
+      <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\Parameters.h">
       <Filter>Redshifter\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\PluginProcessor.h">
+    <ClInclude Include="..\..\Source\Common\PluginEditor.h">
       <Filter>Redshifter\Source</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\PluginEditor.h">
+    <ClInclude Include="..\..\Source\Common\PluginProcessor.h">
       <Filter>Redshifter\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">

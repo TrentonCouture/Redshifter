@@ -12,7 +12,6 @@
 #include "JuceHeader.h"
 #include "OscillatorEngine.h"
 #include "Parameters.h"
-#include "LFOs.h"
 
 enum Effect
 {

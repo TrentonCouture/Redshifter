@@ -22,8 +22,8 @@ Oscillators::Oscillators(const int sampleRate, const int numSamples, const int n
 	m_sinOsc.prepare(pSpec);
 	m_sawOsc.prepare(pSpec);
 
-	m_sinOsc.get<Osc::osc>().initialise([](float x) {return 0.2 * std::sin(x); }, 128);
-	m_sawOsc.get<Osc::osc>().initialise([](float x) {return 0.2 * x / juce::MathConstants<float>::pi; }, 128);
+	m_sinOsc.get<Osc::osc>().initialise([](float x) {return 0.1 * std::sin(x); }, 128);
+	m_sawOsc.get<Osc::osc>().initialise([](float x) {return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
 }
 
 
