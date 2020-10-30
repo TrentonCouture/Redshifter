@@ -39,7 +39,7 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	reverbParams.wetLevel = *m_params.getParam("wet");
 	m_effects.get<Effect::reverb>().setParameters(reverbParams);
 
-	const float maxChorusRate = 99.9;
+	const float maxChorusRate = 5;
 	m_effects.get<Effect::chorus>().setRate(*m_params.getParam("chorusRate") * maxChorusRate);
 	m_effects.get<Effect::chorus>().setDepth(*m_params.getParam("chorusDepth"));
 	m_effects.get<Effect::chorus>().setMix(*m_params.getParam("chorusMix"));
@@ -52,7 +52,7 @@ void RSEngine::process(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiB
 	m_effects.get<Effect::filter>().setResonance(*m_params.getParam("resonance"));
 	m_effects.get<Effect::filter>().setDrive(*m_params.getParam("filterDrive") * 10 + 1);
 
-	const float maxPhaserRate = 99.9;
+	const float maxPhaserRate = 5;
 	m_effects.get<Effect::phaser>().setRate(*m_params.getParam("phaserRate") * maxPhaserRate);
 	m_effects.get<Effect::phaser>().setDepth(*m_params.getParam("phaserDepth"));
 	m_effects.get<Effect::phaser>().setMix(*m_params.getParam("phaserMix"));

@@ -21,6 +21,8 @@ FilterSection::FilterSection()
 	m_driveSlider.setName("filterDrive");
 	addSlider(m_driveSlider);
 
+	m_cutoffSlider.setSkewFactorFromMidPoint(.1);
+
 	m_isLeft = false;
 }
 
