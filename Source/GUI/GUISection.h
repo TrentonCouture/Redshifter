@@ -16,8 +16,8 @@
 class GUISection : public juce::Component, public juce::Slider::Listener
 {
 protected:
-	//GUISection();
 	void addSlider(juce::Slider& slider);
+	void addButton(juce::ShapeButton& button);
 	void sliderValueChanged(juce::Slider* slider) override;
 	void paint(juce::Graphics& g) override;
 protected:

@@ -11,11 +11,6 @@
 #include "GUISection.h"
 #include "PluginEditor.h"
 
-//GUISection::GUISection()
-//{
-//	//m_isLeft = true;
-//}
-
 void GUISection::addSlider(juce::Slider& slider)
 {
 	addAndMakeVisible(slider);
@@ -35,6 +30,15 @@ void GUISection::addSlider(juce::Slider& slider)
 
 	m_labels.getLast()->attachToComponent(&slider, false);
 	m_labels.getLast()->setText(parameter->getName(10), juce::NotificationType::dontSendNotification);
+}
+
+void GUISection::addButton(juce::ShapeButton& button)
+{
+	addAndMakeVisible(button);
+
+	juce::Path buttonPath;
+	buttonPath.addRectangle(0, 0, 15, 7);
+	button.setShape(buttonPath, true, true, true);
 }
 
 void GUISection::sliderValueChanged(juce::Slider* slider)

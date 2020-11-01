@@ -22,12 +22,23 @@ public:
 		return m_floatParams.at(name);
 	}
 
+	juce::AudioParameterChoice* getChoiceParam(std::string name)
+	{
+		return m_choiceParams.at(name);
+	}
+
 	std::unordered_map<std::string, juce::AudioParameterFloat*> getAllParams()
 	{
 		return m_floatParams;
 	}
 
+	std::unordered_map<std::string, juce::AudioParameterChoice*> getAllChoiceParams()
+	{
+		return m_choiceParams;
+	}
+
 private:
 	static std::unordered_map<std::string, juce::AudioParameterFloat*> m_floatParams;
+	static std::unordered_map<std::string, juce::AudioParameterChoice*> m_choiceParams;
 };
 

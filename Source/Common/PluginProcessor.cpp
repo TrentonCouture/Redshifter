@@ -25,6 +25,9 @@ RedshifterAudioProcessor::RedshifterAudioProcessor()
 
 	for (auto &it : m_parameters.getAllParams())
 		addParameter(it.second);
+
+	for (auto &it : m_parameters.getAllChoiceParams())
+		addParameter(it.second);
 }
 
 RedshifterAudioProcessor::~RedshifterAudioProcessor()
