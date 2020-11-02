@@ -37,6 +37,6 @@ std::unordered_map<std::string, juce::AudioParameterFloat*> Parameters::m_floatP
 	});
 
 std::unordered_map<std::string, juce::AudioParameterChoice*> Parameters::m_choiceParams({
-	{ "oscType1", new juce::AudioParameterChoice("oscType1", "OscType1", {"sine1", "saw1", "square1", "triangle1"}, 0) },
-	{ "oscType2", new juce::AudioParameterChoice("oscType2", "OscType2", {"sine2", "saw2", "square2", "triangle2"}, 0) }
+	{ "oscType1", new juce::AudioParameterChoice("oscType1", "OscType1", {"sine", "saw", "square", "triangle"}, 0) },
+	{ "oscType2", new juce::AudioParameterChoice("oscType2", "OscType2", {"sine", "saw", "square", "triangle"}, 0) }
 	});

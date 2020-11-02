@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              headerPath="C:\ASIOSDK2.3\common\&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\">
+              headerPath="C:\ASIOSDK2.3\common\&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\"
+              pluginVST3Category="Synth" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
   <MAINGROUP id="nKcm4M" name="Redshifter">
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
       <FILE id="UtU0Ga" name="OscillatorEngine.cpp" compile="1" resource="0"

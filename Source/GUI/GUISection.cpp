@@ -39,6 +39,7 @@ void GUISection::addButton(juce::ShapeButton& button)
 	juce::Path buttonPath;
 	buttonPath.addRectangle(0, 0, 15, 7);
 	button.setShape(buttonPath, true, true, true);
+	button.addListener(this);
 }
 
 void GUISection::sliderValueChanged(juce::Slider* slider)
@@ -46,6 +47,15 @@ void GUISection::sliderValueChanged(juce::Slider* slider)
 	auto name = slider->getName().toStdString();
 
 	m_params.getParam(name)->setValueNotifyingHost(slider->getValue());
+}
+
+void GUISection::buttonClicked(juce::Button* button)
+{
+	auto name = button->getName().toStdString();
+
+	auto param = m_params.getChoiceParam(name);
+
+	*param = (param->getIndex() + 1) % 4;
 }
 
 void GUISection::paint(juce::Graphics& g)

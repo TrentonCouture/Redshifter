@@ -18,15 +18,19 @@ class OscillatorSection : public GUISection
 public:
 	OscillatorSection();
 	void resized() override;
+	void paint(juce::Graphics& g) override;
 private:
-	juce::Slider m_oscMixSlider;
-	juce::ShapeButton m_sineButton;
-	juce::ShapeButton m_sawButton;
-	juce::ShapeButton m_squareButton;
-	juce::ShapeButton m_triangleButton;
+	void drawSineWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
+	void drawSawWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
+	void drawSquareWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
+	void drawTriangleWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
 
-	juce::ShapeButton m_sineButton2;
-	juce::ShapeButton m_sawButton2;
-	juce::ShapeButton m_squareButton2;
-	juce::ShapeButton m_triangleButton2;
+	juce::Slider m_oscMixSlider;
+	juce::ShapeButton m_oscButton;
+	juce::ShapeButton m_oscButton2;
+
+	juce::Rectangle<int> m_icons1;
+	juce::Rectangle<int> m_icons2;
+
+	Parameters m_params;
 };
