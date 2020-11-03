@@ -18,7 +18,15 @@ enum Osc
 	vol
 };
 
-class Oscillators : public juce::SynthesiserVoice
+enum OscType
+{
+	sine,
+	saw,
+	square,
+	triangle
+};
+
+class Oscillators : public juce::SynthesiserVoice, public juce::AudioProcessorParameter::Listener
 {
 public:
 	Oscillators(const int sampleRate, const int numSamples, const int numChannels);
@@ -29,9 +37,28 @@ public:
 	void startNote(int midiNoteNumber, float velocity, juce::SynthesiserSound* sound, int currentPitchWheelPosition) override;
 	void stopNote(float velocity, bool tailOff) override;
 	float noteToFreq(const int note);
+	void parameterValueChanged(int parameterIndex, float newValue) override;
+	void parameterGestureChanged(int parameterIndex, bool gestureIsStarting) override {};
+
 private:
-	juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> m_sinOsc;
-	juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> m_sawOsc;
+	typedef juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> OscWithGain;
+
+	void processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples);
+
+
+	OscWithGain m_sinOsc1;
+	OscWithGain m_sawOsc1;
+	OscWithGain m_squareOsc1;
+	OscWithGain m_triOsc1;
+
+	OscWithGain m_sinOsc2;
+	OscWithGain m_sawOsc2;
+	OscWithGain m_squareOsc2;
+	OscWithGain m_triOsc2;
+
 	juce::ADSR m_adsr;
 	Parameters m_params;
+
+	OscType m_oscType1;
+	OscType m_oscType2;
 };
