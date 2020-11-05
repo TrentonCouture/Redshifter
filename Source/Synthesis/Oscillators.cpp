@@ -10,25 +10,8 @@
 
 #include "Oscillators.h"
 
-Oscillators::Oscillators(const int sampleRate, const int numSamples, const int numChannels) 
+Oscillators::Oscillators() 
 {
-	m_adsr.setSampleRate(sampleRate);
-
-	juce::dsp::ProcessSpec pSpec;
-	pSpec.maximumBlockSize = numSamples;
-	pSpec.sampleRate = sampleRate;
-	pSpec.numChannels = numChannels;
-
-	m_sinOsc1.prepare(pSpec);
-	m_sawOsc1.prepare(pSpec);
-	m_squareOsc1.prepare(pSpec);
-	m_triOsc1.prepare(pSpec);
-
-	m_sinOsc2.prepare(pSpec);
-	m_sawOsc2.prepare(pSpec);
-	m_squareOsc2.prepare(pSpec);
-	m_triOsc2.prepare(pSpec);
-
 	m_sinOsc1.get<Osc::osc>().initialise([](float x) { return 0.1 * std::sin(x); }, 128);
 	m_sawOsc1.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
 	m_squareOsc1.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
@@ -124,8 +107,31 @@ void Oscillators::processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputB
 		outputBuffer.addFrom(channel, startSample, tempBuffer, channel, startSample, numSamples);
 }
 
+void Oscillators::setCurrentPlaybackSampleRate(double newRate)
+{
+	juce::dsp::ProcessSpec pSpec;
+	pSpec.maximumBlockSize = m_numSamples;
+	pSpec.sampleRate = newRate;
+	pSpec.numChannels = m_numChannels;
+	m_adsr.setSampleRate(newRate);
+
+
+	m_sinOsc1.prepare(pSpec);
+	m_sawOsc1.prepare(pSpec);
+	m_squareOsc1.prepare(pSpec);
+	m_triOsc1.prepare(pSpec);
+
+	m_sinOsc2.prepare(pSpec);
+	m_sawOsc2.prepare(pSpec);
+	m_squareOsc2.prepare(pSpec);
+	m_triOsc2.prepare(pSpec);
+}
+
 void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples)
 {
+	m_numChannels = outputBuffer.getNumChannels();
+	m_numSamples = numSamples;
+
 	m_sinOsc1.get<Osc::vol>().setGainLinear(*m_params.getParam("oscMix"));
 	m_sawOsc1.get<Osc::vol>().setGainLinear(*m_params.getParam("oscMix"));
 	m_squareOsc1.get<Osc::vol>().setGainLinear(*m_params.getParam("oscMix"));

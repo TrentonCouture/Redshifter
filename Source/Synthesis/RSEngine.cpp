@@ -12,7 +12,7 @@
 
 void RSEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
-	m_oscEng.initialize(sampleRate, numSamples, numChannels);
+	m_oscEng.initialize(sampleRate);
 
 	juce::dsp::ProcessSpec effectsSpec;
 	effectsSpec.sampleRate = sampleRate;

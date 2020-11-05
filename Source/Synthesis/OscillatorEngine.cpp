@@ -14,18 +14,12 @@
 OscillatorEngine::OscillatorEngine()
 {
 	addSound(new RSSound);
+	for (int i = 0; i < 8; i++)
+		addVoice(new Oscillators());
 }
 
-void OscillatorEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
+void OscillatorEngine::initialize(const int sampleRate)
 {
 	setCurrentPlaybackSampleRate(sampleRate);
 	setNoteStealingEnabled(true);
-
-	if (getNumVoices() > 0)
-	{
-		for (int i = 0; i < 8; i++)
-			removeVoice(0);
-	}
-	for (int i = 0; i < 8; i++)
-		addVoice(new Oscillators(sampleRate, numSamples, numChannels));
 }
