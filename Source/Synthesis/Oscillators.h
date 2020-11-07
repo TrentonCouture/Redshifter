@@ -29,7 +29,7 @@ enum OscType
 class Oscillators : public juce::SynthesiserVoice, public juce::AudioProcessorParameter::Listener
 {
 public:
-	Oscillators();
+	Oscillators(Parameters* params);
 	bool canPlaySound(juce::SynthesiserSound*) override { return true; }
 	void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override;
 	void controllerMoved(int, int) override {}
@@ -45,6 +45,7 @@ private:
 	typedef juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> OscWithGain;
 
 	void processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples);
+	void checkIfNewBufferParams(int numChannels, int numSamples);
 
 
 	OscWithGain m_sinOsc1;
@@ -58,7 +59,7 @@ private:
 	OscWithGain m_triOsc2;
 
 	juce::ADSR m_adsr;
-	Parameters m_params;
+	Parameters* m_params;
 
 	OscType m_oscType1;
 	OscType m_oscType2;

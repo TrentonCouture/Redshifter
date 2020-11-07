@@ -12,6 +12,9 @@
 
 #include <JuceHeader.h>
 #include "GUISection.h"
+//#include "PluginEditor.h"
+
+//class RedshifterAudioProcessorEditor;
 
 class OscillatorSection : public GUISection
 {
@@ -31,6 +34,4 @@ private:
 
 	juce::Rectangle<int> m_icons1;
 	juce::Rectangle<int> m_icons2;
-
-	Parameters m_params;
 };

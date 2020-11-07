@@ -25,7 +25,7 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
-	RedshifterAudioProcessor* getEngine() { return &audioProcessor; }
+	RSEngine* getEngine() { return &audioProcessor; }
 
 private:
     // This reference is provided as a quick way for your editor to

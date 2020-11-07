@@ -10,11 +10,8 @@
 
 #include "Parameters.h"
 
-Parameters::Parameters()
-{
-}
-
-std::unordered_map<std::string, juce::AudioParameterFloat*> Parameters::m_floatParams({ 
+Parameters::Parameters() :
+	m_floatParams({
 	{ "attack", new juce::AudioParameterFloat("attack", "Attack", 0.1f, 1.0f, 0.5f) },
 	{ "decay", new juce::AudioParameterFloat("decay", "Decay", 0.1f, 1.0f, 0.5f) },
 	{ "sustain", new juce::AudioParameterFloat("sustain", "Sustain", 0.1f, 1.0f, 0.5f) },
@@ -34,9 +31,10 @@ std::unordered_map<std::string, juce::AudioParameterFloat*> Parameters::m_floatP
 	{ "oscMix", new juce::AudioParameterFloat("oscMix", "OscMix", 0.0f, 1.0f, 0.5f) },
 	{ "lfoFilterFreq", new juce::AudioParameterFloat("lfoFilterFreq", "LfoRate", 0.0f, 1.0f, 0.5f) },
 	{ "lfoFilterAmp", new juce::AudioParameterFloat("lfoFilterAmp", "LfoAmp", 0.1f, 1.0f, 0.5f) }
-	});
+		}),
 
-std::unordered_map<std::string, juce::AudioParameterChoice*> Parameters::m_choiceParams({
+	m_choiceParams({
 	{ "oscType1", new juce::AudioParameterChoice("oscType1", "OscType1", {"sine", "saw", "square", "triangle"}, 0) },
 	{ "oscType2", new juce::AudioParameterChoice("oscType2", "OscType2", {"sine", "saw", "square", "triangle"}, 0) }
-	});
+	})
+{}

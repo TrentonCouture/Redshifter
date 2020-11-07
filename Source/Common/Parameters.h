@@ -38,7 +38,7 @@ public:
 	}
 
 private:
-	static std::unordered_map<std::string, juce::AudioParameterFloat*> m_floatParams;
-	static std::unordered_map<std::string, juce::AudioParameterChoice*> m_choiceParams;
+	std::unordered_map<std::string, juce::AudioParameterFloat*> m_floatParams;
+	std::unordered_map<std::string, juce::AudioParameterChoice*> m_choiceParams;
 };
 

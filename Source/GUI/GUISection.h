@@ -24,7 +24,6 @@ protected:
 protected:
 	bool m_isLeft;
 private:
-	Parameters m_params;
 	juce::OwnedArray<juce::Label> m_labels;
 
 };

@@ -16,6 +16,6 @@
 class OscillatorEngine : public juce::Synthesiser
 {
 public:
-	OscillatorEngine();
+	OscillatorEngine(Parameters* params);
 	void initialize(const int sampleRate);
 };

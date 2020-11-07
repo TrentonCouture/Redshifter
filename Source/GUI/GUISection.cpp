@@ -19,17 +19,27 @@ void GUISection::addSlider(juce::Slider& slider)
 
 	addAndMakeVisible(*m_labels.getLast());
 
-	auto parameter = m_params.getParam(slider.getName().toStdString());
-	auto range = parameter->getNormalisableRange();
-	slider.setRange(range.start, range.end);
-	slider.setValue(parameter->get());
+	//juce::AudioParameterFloat* parameter;
+
+	//auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+	//if (parent)
+	//	parameter = parent->getEngine()->getParam(slider.getName().toStdString());
+
+	//auto range = parameter->getNormalisableRange();
+
+	//slider.setRange(range.start, range.end);
+	//slider.setValue(parameter->get());
+
+	slider.setRange(0.0, 1.0);
+	slider.setValue(0.2);
 
 	slider.setSliderStyle(juce::Slider::RotaryVerticalDrag);
 	slider.setTextBoxStyle(juce::Slider::NoTextBox, true, 0, 0);
 	slider.addListener(this);
 
 	m_labels.getLast()->attachToComponent(&slider, false);
-	m_labels.getLast()->setText(parameter->getName(10), juce::NotificationType::dontSendNotification);
+	//m_labels.getLast()->setText(parameter->getName(10), juce::NotificationType::dontSendNotification);
+	m_labels.getLast()->setText(slider.getName().toStdString(), juce::NotificationType::dontSendNotification);
 }
 
 void GUISection::addButton(juce::ShapeButton& button)
@@ -46,16 +56,18 @@ void GUISection::sliderValueChanged(juce::Slider* slider)
 {
 	auto name = slider->getName().toStdString();
 
-	m_params.getParam(name)->setValueNotifyingHost(slider->getValue());
+	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+	if (parent)
+		parent->getEngine()->updateFloatParameter(name, slider->getValue());
 }
 
 void GUISection::buttonClicked(juce::Button* button)
 {
 	auto name = button->getName().toStdString();
 
-	auto param = m_params.getChoiceParam(name);
-
-	*param = (param->getIndex() + 1) % 4;
+	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+	if (parent)
+		parent->getEngine()->updateChoiceParameter(name);
 }
 
 void GUISection::paint(juce::Graphics& g)

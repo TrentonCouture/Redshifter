@@ -499,6 +499,9 @@
     <ClCompile Include="..\..\Source\GUI\WholeInterface.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Common\ParamDescription.cpp">
+      <Filter>Redshifter\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Common\Parameters.cpp">
       <Filter>Redshifter\Source</Filter>
     </ClCompile>
@@ -2690,6 +2693,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\GUI\WholeInterface.h">
       <Filter>Redshifter\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Common\ParamDescription.h">
+      <Filter>Redshifter\Source</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Common\Parameters.h">
       <Filter>Redshifter\Source</Filter>

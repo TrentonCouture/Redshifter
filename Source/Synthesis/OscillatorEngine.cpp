@@ -11,11 +11,11 @@
 #include "OscillatorEngine.h"
 
 
-OscillatorEngine::OscillatorEngine()
+OscillatorEngine::OscillatorEngine(Parameters* params)
 {
 	addSound(new RSSound);
 	for (int i = 0; i < 8; i++)
-		addVoice(new Oscillators());
+		addVoice(new Oscillators(params));
 }
 
 void OscillatorEngine::initialize(const int sampleRate)

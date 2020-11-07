@@ -10,6 +10,9 @@
 
 #include "RSEngine.h"
 
+RSEngine::RSEngine() : m_oscEng(&m_params) {}
+
+
 void RSEngine::initialize(const int sampleRate, const int numSamples, const int numChannels)
 {
 	m_oscEng.initialize(sampleRate);
@@ -28,8 +31,19 @@ void RSEngine::initialize(const int sampleRate, const int numSamples, const int 
 	m_lfo.initialise([](float x) {return 0.5 * std::sin(x); });
 
 	m_effects.get<2>().setMode(juce::dsp::LadderFilterMode::LPF24);
-
 }
+
+void RSEngine::updateFloatParameter(std::string name, float val)
+{
+	m_params.getParam(name)->setValueNotifyingHost(val);
+}
+
+void RSEngine::updateChoiceParameter(std::string name)
+{
+	auto param = m_params.getChoiceParam(name);
+	*param = (param->getIndex() + 1) % 4;
+}
+
 void RSEngine::process(juce::AudioBuffer<float>& buffer, const juce::MidiBuffer& midiBuffer)
 {
 	m_oscEng.renderNextBlock(buffer, midiBuffer, 0, buffer.getNumSamples());

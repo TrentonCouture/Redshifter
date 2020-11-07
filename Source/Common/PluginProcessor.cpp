@@ -23,10 +23,10 @@ RedshifterAudioProcessor::RedshifterAudioProcessor()
 #endif
 {
 
-	for (auto &it : m_parameters.getAllParams())
+	for (auto &it : m_params.getAllParams())
 		addParameter(it.second);
 
-	for (auto &it : m_parameters.getAllChoiceParams())
+	for (auto &it : m_params.getAllChoiceParams())
 		addParameter(it.second);
 }
 
