@@ -10,7 +10,7 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "Parameters.h"
+#include "ParamDescription.h"
 #include <vector>
 
 class GUISection : public juce::Component, public juce::Slider::Listener, public juce::Button::Listener
@@ -25,5 +25,7 @@ protected:
 	bool m_isLeft;
 private:
 	juce::OwnedArray<juce::Label> m_labels;
+
+	ParamDescriptions m_paramDescs;
 
 };

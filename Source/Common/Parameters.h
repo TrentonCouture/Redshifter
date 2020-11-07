@@ -12,6 +12,8 @@
 #include <JuceHeader.h>
 #include <unordered_map>
 
+#include "ParamDescription.h"
+
 
 class Parameters
 {
@@ -38,6 +40,7 @@ public:
 	}
 
 private:
+	ParamDescriptions m_paramDescs;
 	std::unordered_map<std::string, juce::AudioParameterFloat*> m_floatParams;
 	std::unordered_map<std::string, juce::AudioParameterChoice*> m_choiceParams;
 };

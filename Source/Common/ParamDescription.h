@@ -20,7 +20,6 @@ enum ParamType
 
 struct ParamDescription
 {
-	//ParamDescription() : type(floatType), id(""), name(""), lowVal(0), highVal(0), defaultVal(0), defaultIndex(0) {}
 	ParamType type;
 	std::string id;
 	std::string name;
@@ -30,6 +29,7 @@ struct ParamDescription
 	float defaultVal;
 
 	std::string choices[10];
+	int numChoices;
 	int defaultIndex;
 };
 

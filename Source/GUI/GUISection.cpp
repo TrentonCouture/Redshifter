@@ -19,27 +19,15 @@ void GUISection::addSlider(juce::Slider& slider)
 
 	addAndMakeVisible(*m_labels.getLast());
 
-	//juce::AudioParameterFloat* parameter;
-
-	//auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
-	//if (parent)
-	//	parameter = parent->getEngine()->getParam(slider.getName().toStdString());
-
-	//auto range = parameter->getNormalisableRange();
-
-	//slider.setRange(range.start, range.end);
-	//slider.setValue(parameter->get());
-
-	slider.setRange(0.0, 1.0);
-	slider.setValue(0.2);
+	slider.setRange(m_paramDescs.getParam(slider.getName().toStdString()).lowVal, m_paramDescs.getParam(slider.getName().toStdString()).highVal);
+	slider.setValue(m_paramDescs.getParam(slider.getName().toStdString()).defaultVal);
 
 	slider.setSliderStyle(juce::Slider::RotaryVerticalDrag);
 	slider.setTextBoxStyle(juce::Slider::NoTextBox, true, 0, 0);
 	slider.addListener(this);
 
 	m_labels.getLast()->attachToComponent(&slider, false);
-	//m_labels.getLast()->setText(parameter->getName(10), juce::NotificationType::dontSendNotification);
-	m_labels.getLast()->setText(slider.getName().toStdString(), juce::NotificationType::dontSendNotification);
+	m_labels.getLast()->setText(m_paramDescs.getParam(slider.getName().toStdString()).name, juce::NotificationType::dontSendNotification);
 }
 
 void GUISection::addButton(juce::ShapeButton& button)

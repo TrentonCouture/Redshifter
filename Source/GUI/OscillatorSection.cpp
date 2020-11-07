@@ -45,10 +45,6 @@ void OscillatorSection::drawSineWave(juce::Rectangle<int> section, juce::Graphic
 	path.quadraticTo(section.getX() + section.getWidth() / 4, section.getY(), section.getCentreX(), section.getCentreY());
 	path.quadraticTo(section.getX() + section.getWidth() * (3.0 / 4.0), section.getBottom(), section.getRight(), section.getCentreY());
 
-	//if (m_params.getChoiceParam("oscType" + std::to_string(side))->getCurrentChoiceName() == "sine")
-	//	g.setColour(juce::Colours::white);
-	//else
-
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
@@ -76,9 +72,6 @@ void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics
 	path.lineTo(section.getCentreX(), section.getY() + section.getHeight());
 	path.lineTo(section.getX() + section.getWidth(), section.getCentreY());
 
-	//if (m_params.getChoiceParam("oscType" + std::to_string(side))->getCurrentChoiceName() == "saw")
-	//	g.setColour(juce::Colours::white);
-	//else
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
@@ -108,9 +101,6 @@ void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graph
 	path.lineTo(section.getBottomRight().toFloat());
 	path.lineTo(section.getX() + section.getWidth(), section.getCentreY());
 
-	//if (m_params.getChoiceParam("oscType" + std::to_string(side))->getCurrentChoiceName() == "square")
-	//	g.setColour(juce::Colours::white);
-	//else
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
@@ -138,9 +128,6 @@ void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Gra
 	path.lineTo(section.getX() + section.getWidth() * (3.0 / 4.0), section.getY() + section.getHeight());
 	path.lineTo(section.getX() + section.getWidth(), section.getCentreY());
 
-	//if (m_params.getChoiceParam("oscType" + std::to_string(side))->getCurrentChoiceName() == "triangle")
-	//	g.setColour(juce::Colours::white);
-	//else
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
