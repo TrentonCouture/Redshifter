@@ -12,16 +12,16 @@
 
 #include <JuceHeader.h>
 #include "GUISection.h"
-//#include "PluginEditor.h"
 
-//class RedshifterAudioProcessorEditor;
-
-class OscillatorSection : public GUISection
+class OscillatorSection : public GUISection, public juce::AudioProcessorParameter::Listener
 {
 public:
 	OscillatorSection();
 	void resized() override;
 	void paint(juce::Graphics& g) override;
+	void parameterValueChanged(int parameterIndex, float newValue) override;
+	void parameterGestureChanged(int parameterIndex, bool gestureIsStarting) override {};
+
 private:
 	void drawSineWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
 	void drawSawWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
@@ -34,4 +34,6 @@ private:
 
 	juce::Rectangle<int> m_icons1;
 	juce::Rectangle<int> m_icons2;
+
+	bool m_initialized;
 };

@@ -22,10 +22,32 @@ OscillatorSection::OscillatorSection() :
 	addButton(m_oscButton2);
 
 	m_isLeft = true;
+	m_initialized = false;
+}
+
+void OscillatorSection::parameterValueChanged(int parameterIndex, float newValue)
+{
+	repaint();
 }
 
 void OscillatorSection::paint(juce::Graphics& g)
 {
+	if (!m_initialized)
+	{
+		auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+		if (parent)
+		{
+			auto oscType1 = parent->getEngine()->getChoiceParam("oscType1");
+			auto oscType2 = parent->getEngine()->getChoiceParam("oscType2");
+			if (oscType1 && oscType2)
+			{
+				oscType1->addListener(this);
+				oscType2->addListener(this);
+				m_initialized = true;
+			}
+		}
+	}
+
 	GUISection::paint(g);
 
 	drawSineWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() / 4), g, 1);
@@ -61,7 +83,7 @@ void OscillatorSection::drawSineWave(juce::Rectangle<int> section, juce::Graphic
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	repaint();
+	//repaint();
 }
 
 void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -88,7 +110,7 @@ void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	repaint();
+	//repaint();
 }
 
 void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -117,7 +139,7 @@ void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graph
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	repaint();
+	//repaint();
 }
 
 void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -144,7 +166,7 @@ void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Gra
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	repaint();
+	//repaint();
 }
 
 void OscillatorSection::resized()
