@@ -32,8 +32,6 @@ protected:
 	bool m_isLeft;
 
 private:
-	void setSlider(std::string name, float value);
-
 	juce::OwnedArray<juce::Label> m_labels;
 	ParamDescriptions m_paramDescs;
 

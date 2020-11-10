@@ -19,7 +19,6 @@ GUISection::GUISection()
 
 void GUISection::addSlider(juce::Slider& slider)
 {
-	//addAndMakeVisible(slider);
 	addChildAndSetID(&slider, slider.getName());
 
 	m_labels.add(new juce::Label());
@@ -70,16 +69,6 @@ void GUISection::buttonClicked(juce::Button* button)
 		parent->getEngine()->updateChoiceParameter(name);
 }
 
-void GUISection::setSlider(std::string name, float value)
-{
-	auto slider = dynamic_cast<juce::Slider*>(findChildWithID(name));
-	if (slider)
-	{
-		slider->setValue(value);
-		m_parameterIsSet = true;
-	}
-}
-
 void GUISection::parameterValueChanged(int parameterIndex, float newValue)
 {
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
@@ -97,66 +86,6 @@ void GUISection::parameterValueChanged(int parameterIndex, float newValue)
 	    }
 	  
 	}
-	//switch (parameterIndex) 
-	//{
-	//case 0:
-	//	setSlider("attack", newValue);
-	//	break;
-	//case 1:
-	//	setSlider("decay", newValue);
-	//	break;
-	//case 2:
-	//	setSlider("sustain", newValue);
-	//	break;
-	//case 3:
-	//	setSlider("release", newValue);
-	//	break;
-	//case 4:
-	//	setSlider("roomSize", newValue);
-	//	break;
-	//case 5:
-	//	setSlider("wet", newValue);
-	//	break;
-	//case 6:
-	//	setSlider("chorusRate", newValue);
-	//	break;
-	//case 7:
-	//	setSlider("chorusDepth", newValue);
-	//	break;
-	//case 8:
-	//	setSlider("chorusMix", newValue);
-	//	break;
-	//case 9:
-	//	setSlider("cutoff", newValue);
-	//	break;
-	//case 10:
-	//	setSlider("resonance", newValue);
-	//	break;
-	//case 11:
-	//	setSlider("filterDrive", newValue);
-	//	break;
-	//case 12:
-	//	setSlider("phaserRate", newValue);
-	//	break;
-	//case 13:
-	//	setSlider("phaserDepth", newValue);
-	//	break;
-	//case 14:
-	//	setSlider("phaserMix", newValue);
-	//	break;
-	//case 15:
-	//	setSlider("gain", newValue);
-	//	break;
-	//case 16:
-	//	setSlider("oscMix", newValue);
-	//	break;
-	//case 17:
-	//	setSlider("lfoFilterFreq", newValue);
-	//	break;
-	//case 18:
-	//	setSlider("lfoFilterAmp", newValue);
-	//	break;
-	//}
 }
 
 void GUISection::paint(juce::Graphics& g)
