@@ -34,6 +34,12 @@ public:
 	{
 		return m_params.getParam(name);
 	}
+
+	juce::AudioParameterFloat* getParamByIndex(int index)
+	{
+		return m_params.getParamByIndex(index);
+	}
+
 	juce::AudioParameterChoice* getChoiceParam(std::string name)
 	{
 		return m_params.getChoiceParam(name);

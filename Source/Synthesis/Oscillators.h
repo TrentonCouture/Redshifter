@@ -44,7 +44,7 @@ public:
 private:
 	typedef juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> OscWithGain;
 
-	void processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples);
+	void processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum);
 	void checkIfNewBufferParams(int numChannels, int numSamples);
 
 
@@ -58,7 +58,8 @@ private:
 	OscWithGain m_squareOsc2;
 	OscWithGain m_triOsc2;
 
-	juce::ADSR m_adsr;
+	const int m_numOsc = 2;
+	juce::ADSR m_adsr[2];
 	Parameters* m_params;
 
 	OscType m_oscType1;

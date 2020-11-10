@@ -23,9 +23,6 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 	m_squareOsc2.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
 	m_triOsc2.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
 
-	//DBG("\n");
-	//DBG(m_params->getAllChoiceParams().size());
-	//DBG(m_params.getChoiceParam("oscType1")->getCurrentValueAsText());
 	m_params->getChoiceParam("oscType1")->addListener(this);
 	m_params->getChoiceParam("oscType2")->addListener(this);
 
@@ -79,7 +76,9 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 	adsrParams.decay = *m_params->getParam("decay");
 	adsrParams.sustain = *m_params->getParam("sustain");
 	adsrParams.release = *m_params->getParam("release");
-	m_adsr.setParameters(adsrParams);
+
+	for (int i = 0; i < m_numOsc; i++)
+		m_adsr[i].setParameters(adsrParams);
 
 	m_sinOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 	m_sawOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
@@ -90,15 +89,18 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 	m_sawOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 	m_squareOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 	m_triOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_adsr.noteOn();
+
+	for (int i = 0; i < m_numOsc; i++)
+		m_adsr[i].noteOn();
 }
 
 void Oscillators::stopNote(float velocity, bool tailOff)
 {
-	m_adsr.noteOff();
+	for (int i = 0; i < m_numOsc; i++)
+		m_adsr[i].noteOff();
 }
 
-void Oscillators::processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples)
+void Oscillators::processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum)
 {
 	juce::AudioBuffer<float> tempBuffer(outputBuffer.getNumChannels(), outputBuffer.getNumSamples());
 	tempBuffer.clear();
@@ -108,7 +110,7 @@ void Oscillators::processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputB
 
 	osc.process(context);
 
-	m_adsr.applyEnvelopeToBuffer(tempBuffer, startSample, numSamples);
+	m_adsr[oscNum].applyEnvelopeToBuffer(tempBuffer, startSample, numSamples);
 
 	for (int channel = 0; channel < outputBuffer.getNumChannels(); channel++)
 		outputBuffer.addFrom(channel, startSample, tempBuffer, channel, startSample, numSamples);
@@ -124,7 +126,8 @@ void Oscillators::setCurrentPlaybackSampleRate(double newRate)
 
 	if (newRate > 0.0 && m_numSamples > 0 && m_numChannels > 0)
 	{
-		m_adsr.setSampleRate(newRate);
+		for (int i = 0; i < m_numOsc; i++)
+			m_adsr[i].setSampleRate(newRate);
 		m_sinOsc1.prepare(pSpec);
 		m_sawOsc1.prepare(pSpec);
 		m_squareOsc1.prepare(pSpec);
@@ -163,31 +166,31 @@ void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int st
 
 	switch (m_oscType1) {
 	case OscType::sine:
-		processOsc(m_sinOsc1, outputBuffer, startSample, numSamples);
+		processOsc(m_sinOsc1, outputBuffer, startSample, numSamples, 0);
 		break;
 	case OscType::saw:
-		processOsc(m_sawOsc1, outputBuffer, startSample, numSamples);
+		processOsc(m_sawOsc1, outputBuffer, startSample, numSamples, 0);
 		break;
 	case OscType::square:
-		processOsc(m_squareOsc1, outputBuffer, startSample, numSamples);
+		processOsc(m_squareOsc1, outputBuffer, startSample, numSamples, 0);
 		break;
 	case OscType::triangle:
-		processOsc(m_triOsc1, outputBuffer, startSample, numSamples);
+		processOsc(m_triOsc1, outputBuffer, startSample, numSamples, 0);
 		break;
 	}
 
 	switch (m_oscType2) {
 	case OscType::sine:
-		processOsc(m_sinOsc2, outputBuffer, startSample, numSamples);
+		processOsc(m_sinOsc2, outputBuffer, startSample, numSamples, 1);
 		break;
 	case OscType::saw:
-		processOsc(m_sawOsc2, outputBuffer, startSample, numSamples);
+		processOsc(m_sawOsc2, outputBuffer, startSample, numSamples, 1);
 		break;
 	case OscType::square:
-		processOsc(m_squareOsc2, outputBuffer, startSample, numSamples);
+		processOsc(m_squareOsc2, outputBuffer, startSample, numSamples, 1);
 		break;
 	case OscType::triangle:
-		processOsc(m_triOsc2, outputBuffer, startSample, numSamples);
+		processOsc(m_triOsc2, outputBuffer, startSample, numSamples, 1);
 		break;
 	}
 

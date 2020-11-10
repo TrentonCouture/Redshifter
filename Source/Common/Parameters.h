@@ -24,24 +24,35 @@ public:
 		return m_floatParams.at(name);
 	}
 
+	juce::AudioParameterFloat* getParamByIndex(int index)
+	{
+		int count = 0;
+		for (auto it = m_floatParams.begin(); it != m_floatParams.end(); it++)
+		{
+			if (index == count)
+				return it->second;
+			count++;
+		}
+	}
+
 	juce::AudioParameterChoice* getChoiceParam(std::string name)
 	{
 		return m_choiceParams.at(name);
 	}
 
-	std::unordered_map<std::string, juce::AudioParameterFloat*> getAllParams()
+	auto getAllParams()
 	{
 		return m_floatParams;
 	}
 
-	std::unordered_map<std::string, juce::AudioParameterChoice*> getAllChoiceParams()
+	auto getAllChoiceParams()
 	{
 		return m_choiceParams;
 	}
 
 private:
 	ParamDescriptions m_paramDescs;
-	std::unordered_map<std::string, juce::AudioParameterFloat*> m_floatParams;
+	std::map<std::string, juce::AudioParameterFloat*> m_floatParams;
 	std::unordered_map<std::string, juce::AudioParameterChoice*> m_choiceParams;
 };
 

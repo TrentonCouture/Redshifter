@@ -28,6 +28,7 @@ OscillatorSection::OscillatorSection() :
 void OscillatorSection::parameterValueChanged(int parameterIndex, float newValue)
 {
 	repaint();
+	GUISection::parameterValueChanged(parameterIndex, newValue);
 }
 
 void OscillatorSection::paint(juce::Graphics& g)
@@ -83,7 +84,6 @@ void OscillatorSection::drawSineWave(juce::Rectangle<int> section, juce::Graphic
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	//repaint();
 }
 
 void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -110,7 +110,6 @@ void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	//repaint();
 }
 
 void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -139,7 +138,6 @@ void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graph
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	//repaint();
 }
 
 void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
@@ -166,7 +164,6 @@ void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Gra
 		g.setColour(juce::Colours::black);
 
 	g.strokePath(path, juce::PathStrokeType(2.0));
-	//repaint();
 }
 
 void OscillatorSection::resized()

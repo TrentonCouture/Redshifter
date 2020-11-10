@@ -21,6 +21,7 @@ RedshifterAudioProcessor::RedshifterAudioProcessor()
                      #endif
                        )
 #endif
+	, m_parameterState(*this, nullptr, juce::Identifier("Redshifter"), {})
 {
 
 	for (auto &it : m_params.getAllParams())
