@@ -23,6 +23,7 @@ public:
 	void addSlider(juce::Slider& slider);
 	void addButton(juce::ShapeButton& button);
 	void paint(juce::Graphics& g) override;
+	void resized() override;
 	void sliderValueChanged(juce::Slider* slider) override;
 	void buttonClicked(juce::Button* button) override;
 	void parameterValueChanged(int parameterIndex, float newValue) override;

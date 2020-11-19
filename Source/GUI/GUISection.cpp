@@ -88,7 +88,7 @@ void GUISection::parameterValueChanged(int parameterIndex, float newValue)
 	}
 }
 
-void GUISection::paint(juce::Graphics& g)
+void GUISection::resized()
 {
 	if (!m_isInitialized)
 	{
@@ -106,6 +106,10 @@ void GUISection::paint(juce::Graphics& g)
 			}
 		}
 	}
+}
+
+void GUISection::paint(juce::Graphics& g)
+{
 
 	juce::BorderSize<int> border(1, 1, 1, 1);
 	auto inner = border.subtractedFrom(getLocalBounds());

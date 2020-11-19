@@ -12,10 +12,10 @@
 
 ParamDescriptions::ParamDescriptions() :
 	m_paramDescs({
-	{ "attack", { ParamType::floatType, "attack", "Attack", 0.1f, 1.0f, 0.5f, {""}, 0, 0} },
-	{ "decay", { ParamType::floatType, "decay", "Decay", 0.1f, 1.0f, 0.5f, {""}, 0, 0} },
-	{ "sustain", { ParamType::floatType, "sustain", "Sustain", 0.1f, 1.0f, 0.5f, {""}, 0, 0} },
-	{ "release", { ParamType::floatType, "release", "Release", 0.1f, 1.0f, 0.5f, {""}, 0, 0} },
+	{ "attack", { ParamType::floatType, "attack", "Attack", 0.003f, 1.0f, 0.5f, {""}, 0, 0} },
+	{ "decay", { ParamType::floatType, "decay", "Decay", 0.05f, 1.0f, 0.5f, {""}, 0, 0} },
+	{ "sustain", { ParamType::floatType, "sustain", "Sustain", 0.01f, 1.0f, 0.5f, {""}, 0, 0} },
+	{ "release", { ParamType::floatType, "release", "Release", 0.01f, 1.0f, 0.5f, {""}, 0, 0} },
 	{ "roomSize", { ParamType::floatType, "roomSize", "Room", 0.0f, 1.0f, 0.5f, {""}, 0, 0} },
 	{ "wet", { ParamType::floatType, "wet", "Reverb", 0.0f, 1.0f, 0.5f, {""}, 0, 0} },
 	{ "chorusRate", { ParamType::floatType, "chorusRate", "Rate", 0.0f, 1.0f, 0.2f, {""}, 0, 0} },
