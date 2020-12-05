@@ -2,6 +2,12 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Redshifter\Tests">
+      <UniqueIdentifier>{848C7C4E-567E-3EAC-D951-FDA1B238724F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Redshifter\ConcurrentQueue">
+      <UniqueIdentifier>{C2430B0E-23C3-3128-10D9-C4A9B2243AC1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Redshifter\Synthesis">
       <UniqueIdentifier>{8EAE1536-942C-746E-1382-A2B83EF14857}</UniqueIdentifier>
     </Filter>
@@ -2652,6 +2658,15 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Tests\catch.hpp">
+      <Filter>Redshifter\Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ConcurrentQueue\blockingconcurrentqueue.h">
+      <Filter>Redshifter\ConcurrentQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ConcurrentQueue\concurrentqueue.h">
+      <Filter>Redshifter\ConcurrentQueue</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>

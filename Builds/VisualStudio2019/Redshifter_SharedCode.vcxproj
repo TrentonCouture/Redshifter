@@ -2153,6 +2153,9 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Tests\catch.hpp"/>
+    <ClInclude Include="..\..\Source\ConcurrentQueue\blockingconcurrentqueue.h"/>
+    <ClInclude Include="..\..\Source\ConcurrentQueue\concurrentqueue.h"/>
     <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h"/>
     <ClInclude Include="..\..\Source\Synthesis\Oscillators.h"/>
     <ClInclude Include="..\..\Source\Synthesis\RSEngine.h"/>

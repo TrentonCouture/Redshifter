@@ -6,6 +6,15 @@
               pluginVST3Category="Synth" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               pluginManufacturer="Trenton Couture">
   <MAINGROUP id="nKcm4M" name="Redshifter">
+    <GROUP id="{2EF65516-46B9-D225-2E49-A4B624B16C98}" name="Tests">
+      <FILE id="ZukkN6" name="catch.hpp" compile="0" resource="0" file="Source/Tests/catch.hpp"/>
+    </GROUP>
+    <GROUP id="{FC1B51E2-C36B-D6C9-7F58-BDF790C288F7}" name="ConcurrentQueue">
+      <FILE id="j4OTZL" name="blockingconcurrentqueue.h" compile="0" resource="0"
+            file="Source/ConcurrentQueue/blockingconcurrentqueue.h"/>
+      <FILE id="JKNwPi" name="concurrentqueue.h" compile="0" resource="0"
+            file="Source/ConcurrentQueue/concurrentqueue.h"/>
+    </GROUP>
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
       <FILE id="UtU0Ga" name="OscillatorEngine.cpp" compile="1" resource="0"
             file="Source/Synthesis/OscillatorEngine.cpp"/>
