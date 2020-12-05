@@ -2,13 +2,10 @@
 
 <JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              headerPath="C:\ASIOSDK2.3\common\&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\"
+              headerPath="C:\asiosdk_2.3.3_2019-06-14\common&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\"
               pluginVST3Category="Synth" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               pluginManufacturer="Trenton Couture">
   <MAINGROUP id="nKcm4M" name="Redshifter">
-    <GROUP id="{2EF65516-46B9-D225-2E49-A4B624B16C98}" name="Tests">
-      <FILE id="ZukkN6" name="catch.hpp" compile="0" resource="0" file="Source/Tests/catch.hpp"/>
-    </GROUP>
     <GROUP id="{FC1B51E2-C36B-D6C9-7F58-BDF790C288F7}" name="ConcurrentQueue">
       <FILE id="j4OTZL" name="blockingconcurrentqueue.h" compile="0" resource="0"
             file="Source/ConcurrentQueue/blockingconcurrentqueue.h"/>
