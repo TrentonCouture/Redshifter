@@ -38,8 +38,8 @@ void OscillatorSection::paint(juce::Graphics& g)
 		auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 		if (parent)
 		{
-			auto oscType1 = parent->getEngine()->getChoiceParam("oscType1");
-			auto oscType2 = parent->getEngine()->getChoiceParam("oscType2");
+			auto oscType1 = parent->getChoiceParam("oscType1");
+			auto oscType2 = parent->getChoiceParam("oscType2");
 			if (oscType1 && oscType2)
 			{
 				oscType1->addListener(this);
@@ -71,7 +71,7 @@ void OscillatorSection::drawSineWave(juce::Rectangle<int> section, juce::Graphic
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
-		parameter = parent->getEngine()->getChoiceParam("oscType" + std::to_string(side));
+		parameter = parent->getChoiceParam("oscType" + std::to_string(side));
 
 	if (parameter)
 	{
@@ -97,7 +97,7 @@ void OscillatorSection::drawSawWave(juce::Rectangle<int> section, juce::Graphics
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
-		parameter = parent->getEngine()->getChoiceParam("oscType" + std::to_string(side));
+		parameter = parent->getChoiceParam("oscType" + std::to_string(side));
 
 	if (parameter)
 	{
@@ -125,7 +125,7 @@ void OscillatorSection::drawSquareWave(juce::Rectangle<int> section, juce::Graph
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
-		parameter = parent->getEngine()->getChoiceParam("oscType" + std::to_string(side));
+		parameter = parent->getChoiceParam("oscType" + std::to_string(side));
 
 	if (parameter)
 	{
@@ -151,7 +151,7 @@ void OscillatorSection::drawTriangleWave(juce::Rectangle<int> section, juce::Gra
 	juce::AudioParameterChoice* parameter;
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
-		parameter = parent->getEngine()->getChoiceParam("oscType" + std::to_string(side));
+		parameter = parent->getChoiceParam("oscType" + std::to_string(side));
 
 	if (parameter)
 	{

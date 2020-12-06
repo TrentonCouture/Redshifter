@@ -55,7 +55,7 @@ void GUISection::sliderValueChanged(juce::Slider* slider)
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent && !m_parameterIsSet)
 	{
-		parent->getEngine()->updateFloatParameter(name, slider->getValue());
+		parent->updateFloatParameter(name, slider->getValue());
 	}
 	m_parameterIsSet = false;
 }
@@ -66,7 +66,7 @@ void GUISection::buttonClicked(juce::Button* button)
 
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
-		parent->getEngine()->updateChoiceParameter(name);
+		parent->updateChoiceParameter(name);
 }
 
 void GUISection::parameterValueChanged(int parameterIndex, float newValue)
@@ -74,7 +74,7 @@ void GUISection::parameterValueChanged(int parameterIndex, float newValue)
 	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
 	if (parent)
 	{
-	    auto param = parent->getEngine()->getParamByIndex(parameterIndex);
+	    auto param = parent->getParamByIndex(parameterIndex);
 	    if (param)
 	    {
 			auto slider = dynamic_cast<juce::Slider*>(findChildWithID(param->paramID));
@@ -97,7 +97,7 @@ void GUISection::resized()
 		{
 			for (auto& name : m_sliderNames)
 			{
-				auto param = parent->getEngine()->getParam(name);
+				auto param = parent->getParam(name);
 				if (param)
 				{
 					param->addListener(this);
