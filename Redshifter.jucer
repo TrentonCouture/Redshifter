@@ -25,6 +25,10 @@
       <FILE id="JBOc7z" name="RSSound.h" compile="0" resource="0" file="Source/Synthesis/RSSound.h"/>
     </GROUP>
     <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="AzIW9g" name="AdditiveSection.cpp" compile="1" resource="0"
+            file="Source/GUI/AdditiveSection.cpp"/>
+      <FILE id="IAHML6" name="AdditiveSection.h" compile="0" resource="0"
+            file="Source/GUI/AdditiveSection.h"/>
       <FILE id="rJ2k4J" name="ChorusSection.cpp" compile="1" resource="0"
             file="Source/GUI/ChorusSection.cpp"/>
       <FILE id="exLQ9j" name="ChorusSection.h" compile="0" resource="0" file="Source/GUI/ChorusSection.h"/>

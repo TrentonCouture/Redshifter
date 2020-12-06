@@ -20,6 +20,7 @@ WholeInterface::WholeInterface()
 	addAndMakeVisible(m_phaserSection);
 	addAndMakeVisible(m_gainSection);
 	addAndMakeVisible(m_lfoFilterSection);
+	addAndMakeVisible(m_additiveSection);
 }
 
 
@@ -27,8 +28,12 @@ void WholeInterface::resized()
 {
 	auto area = getLocalBounds();
 
-	const int sectionHeight = 75;
+	const int sectionHeight = 100;
 	const int sectionWidth = getWidth() / 2;
+	const int additiveHeight = 150;
+
+	auto additive = area.removeFromTop(additiveHeight);
+	m_additiveSection.setBounds(additive);
 
 	auto oscAndLfo = area.removeFromTop(sectionHeight);
 	m_oscillatorSection.setBounds(oscAndLfo.removeFromLeft(sectionWidth));
@@ -45,6 +50,4 @@ void WholeInterface::resized()
 	auto phaserAndGain = area.removeFromTop(sectionHeight);
 	m_phaserSection.setBounds(phaserAndGain.removeFromLeft(sectionWidth));
 	m_gainSection.setBounds(phaserAndGain.removeFromLeft(sectionWidth));
-
-	auto lfos = area.removeFromTop(sectionHeight);
 }
