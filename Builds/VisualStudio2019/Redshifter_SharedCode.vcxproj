@@ -137,6 +137,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Synthesis\AdditiveOscillator.cpp"/>
     <ClCompile Include="..\..\Source\Synthesis\OscillatorEngine.cpp"/>
     <ClCompile Include="..\..\Source\Synthesis\Oscillators.cpp"/>
     <ClCompile Include="..\..\Source\Synthesis\RSEngine.cpp"/>
@@ -2156,6 +2157,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Source\ConcurrentQueue\blockingconcurrentqueue.h"/>
     <ClInclude Include="..\..\Source\ConcurrentQueue\concurrentqueue.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\AdditiveOscillator.h"/>
     <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h"/>
     <ClInclude Include="..\..\Source\Synthesis\Oscillators.h"/>
     <ClInclude Include="..\..\Source\Synthesis\RSEngine.h"/>

@@ -13,6 +13,10 @@
             file="Source/ConcurrentQueue/concurrentqueue.h"/>
     </GROUP>
     <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
+      <FILE id="kuR65C" name="AdditiveOscillator.cpp" compile="1" resource="0"
+            file="Source/Synthesis/AdditiveOscillator.cpp"/>
+      <FILE id="gKHeCg" name="AdditiveOscillator.h" compile="0" resource="0"
+            file="Source/Synthesis/AdditiveOscillator.h"/>
       <FILE id="UtU0Ga" name="OscillatorEngine.cpp" compile="1" resource="0"
             file="Source/Synthesis/OscillatorEngine.cpp"/>
       <FILE id="Gve7wU" name="OscillatorEngine.h" compile="0" resource="0"

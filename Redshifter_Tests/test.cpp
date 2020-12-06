@@ -1,6 +1,7 @@
 #include "pch.h"
 #define JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED
 #include "../Source/GUI/AdditiveSection.h"
+#include "../Source/Synthesis/AdditiveOscillator.h"
 
 TEST(TestCaseName, TestName) 
 {
@@ -27,5 +28,18 @@ TEST(AdditiveGUI, getsAdded)
 
 }
 
+TEST(AdditiveDSP, getsAdded)
+{
+	EXPECT_NO_THROW
+	(
+		juce::AudioBuffer<float> tempBuffer(2, 256);
+		tempBuffer.clear();
+		auto wholeBlock = juce::dsp::AudioBlock<float>(tempBuffer);
+		auto block = wholeBlock.getSubBlock(0, (size_t)256);
+		juce::dsp::ProcessContextReplacing<float> context(block);
 
+		juce::dsp::ProcessorChain<AdditiveOscillator> chain;
+		chain.process(context);
+	);
+}
 

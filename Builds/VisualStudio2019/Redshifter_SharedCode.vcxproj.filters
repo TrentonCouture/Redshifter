@@ -460,6 +460,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Synthesis\AdditiveOscillator.cpp">
+      <Filter>Redshifter\Synthesis</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Synthesis\OscillatorEngine.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
@@ -2663,6 +2666,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\ConcurrentQueue\concurrentqueue.h">
       <Filter>Redshifter\ConcurrentQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Synthesis\AdditiveOscillator.h">
+      <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Synthesis\OscillatorEngine.h">
       <Filter>Redshifter\Synthesis</Filter>
