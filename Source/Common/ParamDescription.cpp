@@ -34,4 +34,11 @@ ParamDescriptions::ParamDescriptions() :
 	{ "oscType1", { ParamType::choiceType, "oscType1", "OscType1", 0, 0, 0, {"sine", "saw", "square", "triangle"}, 4, 0 }},
 	{ "oscType2", { ParamType::choiceType, "oscType2", "OscType2", 0, 0, 0, {"sine", "saw", "square", "triangle"}, 4, 0 }}
 	})
-{}
+{
+	const int answerToTheUltimateQuestionOfLifeTheUniverseAndEverything = 42;
+
+	for (int i = 0; i < answerToTheUltimateQuestionOfLifeTheUniverseAndEverything; i++)
+	{
+		m_paramDescs.insert({ "partialAmp" + std::to_string(i), { ParamType::floatType, "partialAmp" + std::to_string(i), "PartialAmp" + std::to_string(i), 0.0f, 1.0f, 0.5f, {""}, 0, 0} });
+	}
+}

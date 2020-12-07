@@ -48,5 +48,5 @@ public:
 	}
 
 private:
-	const std::unordered_map<std::string, ParamDescription> m_paramDescs;
+	std::unordered_map<std::string, ParamDescription> m_paramDescs;
 };

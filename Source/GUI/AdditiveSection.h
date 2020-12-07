@@ -14,5 +14,11 @@
 
 class AdditiveSection : public GUISection
 {
-
+public:
+    AdditiveSection();
+    void resized() override;
+	void buttonClicked(juce::Button* button) override;
+private:
+    void setPartialAmps();
+    juce::ShapeButton m_testButton;
 };
