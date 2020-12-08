@@ -142,6 +142,7 @@
     <ClCompile Include="..\..\Source\Synthesis\Oscillators.cpp"/>
     <ClCompile Include="..\..\Source\Synthesis\RSEngine.cpp"/>
     <ClCompile Include="..\..\Source\Synthesis\RSSound.cpp"/>
+    <ClCompile Include="..\..\Source\Synthesis\StandardOscillator.cpp"/>
     <ClCompile Include="..\..\Source\GUI\AdditiveSection.cpp"/>
     <ClCompile Include="..\..\Source\GUI\ChorusSection.cpp"/>
     <ClCompile Include="..\..\Source\GUI\EnvSection.cpp"/>
@@ -2162,6 +2163,7 @@
     <ClInclude Include="..\..\Source\Synthesis\Oscillators.h"/>
     <ClInclude Include="..\..\Source\Synthesis\RSEngine.h"/>
     <ClInclude Include="..\..\Source\Synthesis\RSSound.h"/>
+    <ClInclude Include="..\..\Source\Synthesis\StandardOscillator.h"/>
     <ClInclude Include="..\..\Source\GUI\AdditiveSection.h"/>
     <ClInclude Include="..\..\Source\GUI\ChorusSection.h"/>
     <ClInclude Include="..\..\Source\GUI\EnvSection.h"/>

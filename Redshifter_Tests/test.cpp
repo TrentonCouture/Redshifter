@@ -2,6 +2,7 @@
 #define JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED
 #include "../Source/GUI/AdditiveSection.h"
 #include "../Source/Synthesis/AdditiveOscillator.h"
+#include "../Source/Synthesis/StandardOscillator.h"
 
 TEST(TestCaseName, TestName) 
 {
@@ -43,3 +44,17 @@ TEST(AdditiveDSP, getsAdded)
 	);
 }
 
+TEST(AdditiveDSP, processorBase)
+{
+	juce::dsp::ProcessorBase* base;
+	AdditiveWrapper addOsc;
+	base = &addOsc;
+
+	EXPECT_NE(base, nullptr);
+
+	StandardOscillator stdOsc;
+
+	base = &stdOsc;
+
+	EXPECT_NE(base, nullptr);
+}

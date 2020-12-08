@@ -30,16 +30,19 @@ void AdditiveSection::buttonClicked(juce::Button* button)
 
 void AdditiveSection::setPartialAmps()
 {
-	DBG("Running setPartialAmps()");
-	juce::AudioParameterFloat* parameter;
-	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
-	if (parent)
-	{
-		DBG("parent added");
-		parameter = parent->getParam("attack");
-		if (parameter)
+
+		juce::AudioParameterFloat* parameter;
+		auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+		if (parent)
 		{
-			DBG("Parameter is set");
+			const int numPartials = 42;
+			for (int i = 0; i < numPartials; i++)
+			{
+				parameter = parent->getParam("partialAmp" + std::to_string(i));
+				if (parameter)
+				{
+					parameter->setValueNotifyingHost(0.5);
+				}
+			}
 		}
-	}
 }

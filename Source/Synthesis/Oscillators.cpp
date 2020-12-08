@@ -12,22 +12,17 @@
 
 Oscillators::Oscillators(Parameters* params) : m_params(params)
 {
-	m_sinOsc1.get<Osc::osc>().initialise([](float x) { return 0.1 * std::sin(x); }, 128);
-	m_sawOsc1.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
-	m_squareOsc1.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
-	m_triOsc1.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
-
-
-	m_sinOsc2.get<Osc::osc>().initialise([](float x) { return 0.1 * std::sin(x); }, 128);
-	m_sawOsc2.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
-	m_squareOsc2.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
-	m_triOsc2.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
+	for (int i = 0; i < m_numOsc; i++)
+	{
+		m_sinOsc[i].processor.get<Osc::osc>().initialise([](float x) { return 0.1 * std::sin(x); }, 128);
+		m_sawOsc[i].processor.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
+		m_squareOsc[i].processor.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
+		m_triOsc[i].processor.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
+		m_oscType[i] = OscType::sine;
+	}
 
 	m_params->getChoiceParam("oscType1")->addListener(this);
 	m_params->getChoiceParam("oscType2")->addListener(this);
-
-	m_oscType1 = OscType::sine;
-	m_oscType2 = OscType::sine;
 
 	m_sampleRate = 0;
 	m_numChannels = 0;
@@ -37,29 +32,33 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 void Oscillators::parameterValueChanged(int parameterIndex, float newValue)
 {
 	// if osc 1
-	if (parameterIndex == 20)
+	if (parameterIndex == 62)
 	{
-		if (newValue < .3)
-			m_oscType1 = OscType::sine;
+		if (newValue < .2)
+			m_oscType[0] = OscType::sine;
+		else if (newValue < .4)
+			m_oscType[0] = OscType::saw;
 		else if (newValue < .6)
-			m_oscType1 = OscType::saw;
-		else if (newValue < .9)
-			m_oscType1 = OscType::square;
+			m_oscType[0] = OscType::square;
+		else if (newValue < .8)
+			m_oscType[0] = OscType::triangle;
 		else
-			m_oscType1 = OscType::triangle;
+			m_oscType[0] = OscType::additive;
 	}
 
 	// if osc 2
-	if (parameterIndex == 19)
+	if (parameterIndex == 61)
 	{
-		if (newValue < .3)
-			m_oscType2 = OscType::sine;
+		if (newValue < .2)
+			m_oscType[1] = OscType::sine;
+		else if (newValue < .4)
+			m_oscType[1] = OscType::saw;
 		else if (newValue < .6)
-			m_oscType2 = OscType::saw;
-		else if (newValue < .9)
-			m_oscType2 = OscType::square;
+			m_oscType[1] = OscType::square;
+		else if (newValue < .8)
+			m_oscType[1] = OscType::triangle;
 		else
-			m_oscType2 = OscType::triangle;
+			m_oscType[1] = OscType::additive;
 	}
 }
 
@@ -78,20 +77,14 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 	adsrParams.release = *m_params->getParam("release");
 
 	for (int i = 0; i < m_numOsc; i++)
+	{
 		m_adsr[i].setParameters(adsrParams);
-
-	m_sinOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_sawOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_squareOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_triOsc1.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-
-	m_sinOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_sawOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_squareOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-	m_triOsc2.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
-
-	for (int i = 0; i < m_numOsc; i++)
+		m_sinOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
+		m_sawOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
+		m_squareOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
+		m_triOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 		m_adsr[i].noteOn();
+	}
 }
 
 void Oscillators::stopNote(float velocity, bool tailOff)
@@ -100,7 +93,7 @@ void Oscillators::stopNote(float velocity, bool tailOff)
 		m_adsr[i].noteOff();
 }
 
-void Oscillators::processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum)
+void Oscillators::processOsc(juce::dsp::ProcessorBase& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum)
 {
 	juce::AudioBuffer<float> tempBuffer(outputBuffer.getNumChannels(), outputBuffer.getNumSamples());
 	tempBuffer.clear();
@@ -127,16 +120,13 @@ void Oscillators::setCurrentPlaybackSampleRate(double newRate)
 	if (newRate > 0.0 && m_numSamples > 0 && m_numChannels > 0)
 	{
 		for (int i = 0; i < m_numOsc; i++)
+		{
 			m_adsr[i].setSampleRate(newRate);
-		m_sinOsc1.prepare(pSpec);
-		m_sawOsc1.prepare(pSpec);
-		m_squareOsc1.prepare(pSpec);
-		m_triOsc1.prepare(pSpec);
-
-		m_sinOsc2.prepare(pSpec);
-		m_sawOsc2.prepare(pSpec);
-		m_squareOsc2.prepare(pSpec);
-		m_triOsc2.prepare(pSpec);
+			m_sinOsc[i].prepare(pSpec);
+			m_sawOsc[i].prepare(pSpec);
+			m_squareOsc[i].prepare(pSpec);
+			m_triOsc[i].prepare(pSpec);
+		}
 	}
 }
 void Oscillators::checkIfNewBufferParams(int numChannels, int numSamples)
@@ -154,44 +144,29 @@ void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int st
 {
 	checkIfNewBufferParams(outputBuffer.getNumChannels(), outputBuffer.getNumSamples());
 
-	m_sinOsc1.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-	m_sawOsc1.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-	m_squareOsc1.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-	m_triOsc1.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-
-	m_sinOsc2.get<Osc::vol>().setGainLinear(1.0 - *m_params->getParam("oscMix"));
-	m_sawOsc2.get<Osc::vol>().setGainLinear(1.0 - *m_params->getParam("oscMix"));
-	m_squareOsc2.get<Osc::vol>().setGainLinear(1.0 - *m_params->getParam("oscMix"));
-	m_triOsc2.get<Osc::vol>().setGainLinear(1.0 - *m_params->getParam("oscMix"));
-
-	switch (m_oscType1) {
-	case OscType::sine:
-		processOsc(m_sinOsc1, outputBuffer, startSample, numSamples, 0);
-		break;
-	case OscType::saw:
-		processOsc(m_sawOsc1, outputBuffer, startSample, numSamples, 0);
-		break;
-	case OscType::square:
-		processOsc(m_squareOsc1, outputBuffer, startSample, numSamples, 0);
-		break;
-	case OscType::triangle:
-		processOsc(m_triOsc1, outputBuffer, startSample, numSamples, 0);
-		break;
+	for (int i = 0; i < m_numOsc; i++)
+	{
+		m_sinOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+		m_sawOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+		m_squareOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+		m_triOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
 	}
 
-	switch (m_oscType2) {
-	case OscType::sine:
-		processOsc(m_sinOsc2, outputBuffer, startSample, numSamples, 1);
-		break;
-	case OscType::saw:
-		processOsc(m_sawOsc2, outputBuffer, startSample, numSamples, 1);
-		break;
-	case OscType::square:
-		processOsc(m_squareOsc2, outputBuffer, startSample, numSamples, 1);
-		break;
-	case OscType::triangle:
-		processOsc(m_triOsc2, outputBuffer, startSample, numSamples, 1);
-		break;
+	for (int i = 0; i < m_numOsc; i++)
+	{
+		switch (m_oscType[i]) {
+		case OscType::sine:
+			processOsc(m_sinOsc[i], outputBuffer, startSample, numSamples, 0);
+			break;
+		case OscType::saw:
+			processOsc(m_sawOsc[i], outputBuffer, startSample, numSamples, 0);
+			break;
+		case OscType::square:
+			processOsc(m_squareOsc[i], outputBuffer, startSample, numSamples, 0);
+			break;
+		case OscType::triangle:
+			processOsc(m_triOsc[i], outputBuffer, startSample, numSamples, 0);
+			break;
+		}
 	}
-
 }

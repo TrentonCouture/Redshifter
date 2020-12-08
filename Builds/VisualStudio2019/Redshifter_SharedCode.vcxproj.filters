@@ -475,6 +475,9 @@
     <ClCompile Include="..\..\Source\Synthesis\RSSound.cpp">
       <Filter>Redshifter\Synthesis</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Synthesis\StandardOscillator.cpp">
+      <Filter>Redshifter\Synthesis</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GUI\AdditiveSection.cpp">
       <Filter>Redshifter\GUI</Filter>
     </ClCompile>
@@ -2680,6 +2683,9 @@
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Synthesis\RSSound.h">
+      <Filter>Redshifter\Synthesis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Synthesis\StandardOscillator.h">
       <Filter>Redshifter\Synthesis</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GUI\AdditiveSection.h">

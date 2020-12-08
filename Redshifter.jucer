@@ -27,6 +27,10 @@
       <FILE id="c8MlDF" name="RSEngine.h" compile="0" resource="0" file="Source/Synthesis/RSEngine.h"/>
       <FILE id="U3sMb6" name="RSSound.cpp" compile="1" resource="0" file="Source/Synthesis/RSSound.cpp"/>
       <FILE id="JBOc7z" name="RSSound.h" compile="0" resource="0" file="Source/Synthesis/RSSound.h"/>
+      <FILE id="yauOeF" name="StandardOscillator.cpp" compile="1" resource="0"
+            file="Source/Synthesis/StandardOscillator.cpp"/>
+      <FILE id="ufOyfe" name="StandardOscillator.h" compile="0" resource="0"
+            file="Source/Synthesis/StandardOscillator.h"/>
     </GROUP>
     <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
       <FILE id="AzIW9g" name="AdditiveSection.cpp" compile="1" resource="0"

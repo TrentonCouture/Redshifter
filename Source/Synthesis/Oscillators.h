@@ -11,6 +11,8 @@
 #pragma once
 #include <JuceHeader.h>
 #include "Parameters.h"
+#include "StandardOscillator.h"
+#include "AdditiveOscillator.h"
 
 enum Osc
 {
@@ -23,7 +25,8 @@ enum OscType
 	sine,
 	saw,
 	square,
-	triangle
+	triangle,
+	additive
 };
 
 class Oscillators : public juce::SynthesiserVoice, public juce::AudioProcessorParameter::Listener
@@ -42,28 +45,19 @@ public:
 	void setCurrentPlaybackSampleRate(double newRate) override;
 
 private:
-	typedef juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>> OscWithGain;
-
-	void processOsc(OscWithGain& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum);
+	void processOsc(juce::dsp::ProcessorBase& osc, juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples, int oscNum);
 	void checkIfNewBufferParams(int numChannels, int numSamples);
 
-
-	OscWithGain m_sinOsc1;
-	OscWithGain m_sawOsc1;
-	OscWithGain m_squareOsc1;
-	OscWithGain m_triOsc1;
-
-	OscWithGain m_sinOsc2;
-	OscWithGain m_sawOsc2;
-	OscWithGain m_squareOsc2;
-	OscWithGain m_triOsc2;
+	StandardOscillator m_sinOsc[2];
+	StandardOscillator m_sawOsc[2];
+	StandardOscillator m_squareOsc[2];
+	StandardOscillator m_triOsc[2];
 
 	const int m_numOsc = 2;
 	juce::ADSR m_adsr[2];
 	Parameters* m_params;
 
-	OscType m_oscType1;
-	OscType m_oscType2;
+	OscType m_oscType[2];
 
 	int m_sampleRate;
 	int m_numChannels;

@@ -31,13 +31,13 @@ ParamDescriptions::ParamDescriptions() :
 	{ "oscMix", { ParamType::floatType, "oscMix", "OscMix", 0.0f, 1.0f, 0.5f, {""}, 0, 0} },
 	{ "lfoFilterFreq", { ParamType::floatType, "lfoFilterFreq", "LfoRate", 0.0f, 1.0f, 0.5f, {""}, 0, 0} },
 	{ "lfoFilterAmp", { ParamType::floatType, "lfoFilterAmp", "LfoAmp", 0.1f, 1.0f, 0.5f, {""}, 0, 0} },
-	{ "oscType1", { ParamType::choiceType, "oscType1", "OscType1", 0, 0, 0, {"sine", "saw", "square", "triangle"}, 4, 0 }},
-	{ "oscType2", { ParamType::choiceType, "oscType2", "OscType2", 0, 0, 0, {"sine", "saw", "square", "triangle"}, 4, 0 }}
+	{ "oscType1", { ParamType::choiceType, "oscType1", "OscType1", 0, 0, 0, {"sine", "saw", "square", "triangle", "additive"}, 5, 0 }},
+	{ "oscType2", { ParamType::choiceType, "oscType2", "OscType2", 0, 0, 0, {"sine", "saw", "square", "triangle", "additive"}, 5, 0 }}
 	})
 {
-	const int answerToTheUltimateQuestionOfLifeTheUniverseAndEverything = 42;
+	const int numPartials = 42;
 
-	for (int i = 0; i < answerToTheUltimateQuestionOfLifeTheUniverseAndEverything; i++)
+	for (int i = 0; i < numPartials; i++)
 	{
 		m_paramDescs.insert({ "partialAmp" + std::to_string(i), { ParamType::floatType, "partialAmp" + std::to_string(i), "PartialAmp" + std::to_string(i), 0.0f, 1.0f, 0.5f, {""}, 0, 0} });
 	}

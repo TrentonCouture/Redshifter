@@ -42,11 +42,11 @@ public:
 		return m_paramDescs.at(name);
 	}
 
-	std::unordered_map<std::string, ParamDescription> getAllParams()
+	std::map<std::string, ParamDescription> getAllParams()
 	{
 		return m_paramDescs;
 	}
 
 private:
-	std::unordered_map<std::string, ParamDescription> m_paramDescs;
+	std::map<std::string, ParamDescription> m_paramDescs;
 };

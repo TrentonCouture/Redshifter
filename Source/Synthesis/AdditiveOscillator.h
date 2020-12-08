@@ -18,3 +18,9 @@ public:
     void process(const juce::dsp::ProcessContextReplacing<float>& context);
     void reset();
 };
+
+class AdditiveWrapper : public juce::dsp::ProcessorWrapper<AdditiveOscillator>
+{
+
+};
+
