@@ -11,7 +11,7 @@
 #pragma once
 #include <JuceHeader.h>
 
-class AdditiveOscillator
+class AdditiveProcessor
 {
 public:
     void prepare(const juce::dsp::ProcessSpec& spec);
@@ -19,7 +19,8 @@ public:
     void reset();
 };
 
-class AdditiveWrapper : public juce::dsp::ProcessorWrapper<AdditiveOscillator>
+//class AdditiveOscillator : public juce::dsp::ProcessorWrapper<juce::dsp::ProcessorChain<AdditiveProcessor, juce::dsp::Gain<float>>>
+class AdditiveOscillator : public juce::dsp::ProcessorWrapper<juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>>>
 {
 
 };

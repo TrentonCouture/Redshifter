@@ -41,7 +41,7 @@ void RSEngine::updateFloatParameter(std::string name, float val)
 void RSEngine::updateChoiceParameter(std::string name)
 {
 	auto param = m_params.getChoiceParam(name);
-	*param = (param->getIndex() + 1) % 4;
+	*param = (param->getIndex() + 1) % 5;
 }
 
 void RSEngine::process(juce::AudioBuffer<float>& buffer, const juce::MidiBuffer& midiBuffer)

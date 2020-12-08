@@ -12,12 +12,14 @@
 
 Oscillators::Oscillators(Parameters* params) : m_params(params)
 {
+	juce::Random random(42);
 	for (int i = 0; i < m_numOsc; i++)
 	{
 		m_sinOsc[i].processor.get<Osc::osc>().initialise([](float x) { return 0.1 * std::sin(x); }, 128);
 		m_sawOsc[i].processor.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
 		m_squareOsc[i].processor.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
 		m_triOsc[i].processor.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
+		m_addOsc[i].processor.get<Osc::osc>().initialise([](float x) { return (float)(rand() % 100)/100 - 0.5;}, 128);
 		m_oscType[i] = OscType::sine;
 	}
 
@@ -126,6 +128,7 @@ void Oscillators::setCurrentPlaybackSampleRate(double newRate)
 			m_sawOsc[i].prepare(pSpec);
 			m_squareOsc[i].prepare(pSpec);
 			m_triOsc[i].prepare(pSpec);
+			m_addOsc[i].prepare(pSpec);
 		}
 	}
 }
@@ -144,13 +147,17 @@ void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int st
 {
 	checkIfNewBufferParams(outputBuffer.getNumChannels(), outputBuffer.getNumSamples());
 
-	for (int i = 0; i < m_numOsc; i++)
-	{
-		m_sinOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-		m_sawOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-		m_squareOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-		m_triOsc[i].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
-	}
+	m_sinOsc[0].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+	m_sawOsc[0].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+	m_squareOsc[0].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+	m_triOsc[0].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+	m_addOsc[0].processor.get<Osc::vol>().setGainLinear(*m_params->getParam("oscMix"));
+
+	m_sinOsc[1].processor.get<Osc::vol>().setGainLinear(1 - *m_params->getParam("oscMix"));
+	m_sawOsc[1].processor.get<Osc::vol>().setGainLinear(1 - *m_params->getParam("oscMix"));
+	m_squareOsc[1].processor.get<Osc::vol>().setGainLinear(1 - *m_params->getParam("oscMix"));
+	m_triOsc[1].processor.get<Osc::vol>().setGainLinear(1 - *m_params->getParam("oscMix"));
+	m_addOsc[1].processor.get<Osc::vol>().setGainLinear(1 - *m_params->getParam("oscMix"));
 
 	for (int i = 0; i < m_numOsc; i++)
 	{
@@ -167,6 +174,8 @@ void Oscillators::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int st
 		case OscType::triangle:
 			processOsc(m_triOsc[i], outputBuffer, startSample, numSamples, 0);
 			break;
+		case OscType::additive:
+			processOsc(m_addOsc[i], outputBuffer, startSample, numSamples, 0);
 		}
 	}
 }

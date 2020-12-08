@@ -53,6 +53,8 @@ private:
 	StandardOscillator m_squareOsc[2];
 	StandardOscillator m_triOsc[2];
 
+	AdditiveOscillator m_addOsc[2];
+
 	const int m_numOsc = 2;
 	juce::ADSR m_adsr[2];
 	Parameters* m_params;

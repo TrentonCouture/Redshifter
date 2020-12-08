@@ -10,11 +10,11 @@
 
 #include "AdditiveOscillator.h"
 
-void AdditiveOscillator::prepare(const juce::dsp::ProcessSpec& spec)
+void AdditiveProcessor::prepare(const juce::dsp::ProcessSpec& spec)
 {}
 
-void AdditiveOscillator::process(const juce::dsp::ProcessContextReplacing<float>& context)
+void AdditiveProcessor::process(const juce::dsp::ProcessContextReplacing<float>& context)
 {}
 
-void AdditiveOscillator::reset()
+void AdditiveProcessor::reset()
 {}
