@@ -27,6 +27,10 @@ private:
 	void drawSawWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
 	void drawSquareWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
 	void drawTriangleWave(juce::Rectangle<int> section, juce::Graphics& g, int side);
+	void drawLabel(juce::Rectangle<int> section, int side);
+
+	const int m_numOscs = 2;
+	juce::Label m_additiveLabel[2];
 
 	juce::Slider m_oscMixSlider;
 	juce::ShapeButton m_oscButton;

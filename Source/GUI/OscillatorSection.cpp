@@ -21,6 +21,15 @@ OscillatorSection::OscillatorSection() :
 	addButton(m_oscButton);
 	addButton(m_oscButton2);
 
+	for (int i = 0; i < m_numOscs; i++)
+	{
+		m_additiveLabel[i].setText("ADD", juce::NotificationType::dontSendNotification);
+		m_additiveLabel[i].setColour(juce::Label::ColourIds::textColourId, juce::Colours::black);
+		m_additiveLabel[i].setMinimumHorizontalScale(.1);
+		m_additiveLabel[i].setBorderSize(juce::BorderSize<int>(0,0,0,0));
+		addAndMakeVisible(m_additiveLabel[i]);
+	}
+
 	m_isLeft = true;
 	m_initialized = false;
 }
@@ -51,14 +60,42 @@ void OscillatorSection::paint(juce::Graphics& g)
 
 	GUISection::paint(g);
 
-	drawSineWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() / 4), g, 1);
-	drawSineWave(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() / 4), g, 2);
-	drawSawWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() / 2 - 2).withTop(m_icons1.getY() + m_icons1.getHeight() / 4), g, 1);
-	drawSawWave(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() / 2 - 2).withTop(m_icons2.getY() + m_icons2.getHeight() / 4), g, 2);
-	drawSquareWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (3.0 / 4.0)).withTop(m_icons1.getY() + m_icons1.getHeight() / 2 + 2), g, 1);
-	drawSquareWave(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (3.0 / 4.0)).withTop(m_icons2.getY() + m_icons2.getHeight() / 2 + 2), g, 2);
-	drawTriangleWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() - 2).withTop(m_icons1.getY() + m_icons1.getHeight() * (3.0 / 4.0)), g, 1);
-	drawTriangleWave(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() - 2).withTop(m_icons2.getY() + m_icons2.getHeight() * (3.0 / 4.0)), g, 2);
+	const float numOptions = 5.0;
+	const float padding = 4.0;
+
+	drawSineWave    (m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (1.0 / numOptions) - padding), g, 1);
+	drawSineWave    (m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (1.0 / numOptions) - padding), g, 2);
+	drawSawWave     (m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (2.0 / numOptions) - padding).withTop(m_icons1.getY() + m_icons1.getHeight() * (1.0 / numOptions)), g, 1);
+	drawSawWave     (m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (2.0 / numOptions) - padding).withTop(m_icons2.getY() + m_icons2.getHeight() * (1.0 / numOptions)), g, 2);
+	drawSquareWave  (m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (3.0 / numOptions) - padding).withTop(m_icons1.getY() + m_icons1.getHeight() * (2.0 / numOptions)), g, 1);
+	drawSquareWave  (m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (3.0 / numOptions) - padding).withTop(m_icons2.getY() + m_icons2.getHeight() * (2.0 / numOptions)), g, 2);
+	drawTriangleWave(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (4.0 / numOptions) - padding).withTop(m_icons1.getY() + m_icons1.getHeight() * (3.0 / numOptions)), g, 1);
+	drawTriangleWave(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (4.0 / numOptions) - padding).withTop(m_icons2.getY() + m_icons2.getHeight() * (3.0 / numOptions)), g, 2);
+	drawLabel		(m_icons1.withBottom(m_icons1.getY() + m_icons1.getHeight() * (5.0 / numOptions) - padding).withTop(m_icons1.getY() + m_icons1.getHeight() * (4.0 / numOptions)),	 1);
+	drawLabel		(m_icons2.withBottom(m_icons2.getY() + m_icons2.getHeight() * (5.0 / numOptions) - padding).withTop(m_icons2.getY() + m_icons2.getHeight() * (4.0 / numOptions)),    2);
+}
+
+void OscillatorSection::drawLabel(juce::Rectangle<int> section, int side)
+{
+	m_additiveLabel[side-1].setBounds(section);
+
+	juce::AudioParameterChoice* parameter;
+	auto parent = findParentComponentOfClass<RedshifterAudioProcessorEditor>();
+	if (parent)
+		parameter = parent->getChoiceParam("oscType" + std::to_string(side));
+
+	if (parameter)
+	{
+		if (parameter->getCurrentChoiceName() == "additive")
+			//g.setColour(juce::Colours::white);
+			m_additiveLabel[side-1].setColour(juce::Label::ColourIds::textColourId, juce::Colours::white);
+		else
+			//g.setColour(juce::Colours::black);
+			m_additiveLabel[side-1].setColour(juce::Label::ColourIds::textColourId, juce::Colours::black);
+	}
+	else
+		//g.setColour(juce::Colours::black);
+		m_additiveLabel[side-1].setColour(juce::Label::ColourIds::textColourId, juce::Colours::black);
 }
 
 void OscillatorSection::drawSineWave(juce::Rectangle<int> section, juce::Graphics& g, int side)
