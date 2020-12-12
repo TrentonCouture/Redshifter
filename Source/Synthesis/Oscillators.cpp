@@ -19,7 +19,8 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 		m_sawOsc[i].processor.get<Osc::osc>().initialise([](float x) { return 0.1 * x / juce::MathConstants<float>::pi; }, 128);
 		m_squareOsc[i].processor.get<Osc::osc>().initialise([](float x) { return x > 0 ? 0.1 : -0.1; }, 128);
 		m_triOsc[i].processor.get<Osc::osc>().initialise([](float x) { return std::abs(0.1 * (2 * x / juce::MathConstants<float>::pi - 1)); }, 128);
-		m_addOsc[i].processor.get<Osc::osc>().initialise([](float x) { return (float)(rand() % 100)/100 - 0.5;}, 128);
+		//m_addOsc[i].processor.get<Osc::osc>().initialise([](float x) { return (float)(rand() % 100)/100 - 0.5;}, 128);
+		m_addOsc[i].processor.get<Osc::osc>().initialise(params);
 		m_oscType[i] = OscType::sine;
 	}
 
@@ -85,6 +86,7 @@ void Oscillators::startNote(int midiNoteNumber, float velocity, juce::Synthesise
 		m_sawOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 		m_squareOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 		m_triOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
+		m_addOsc[i].processor.get<Osc::osc>().setFrequency(noteToFreq(midiNoteNumber), true);
 		m_adsr[i].noteOn();
 	}
 }
