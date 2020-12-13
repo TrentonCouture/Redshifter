@@ -77,6 +77,8 @@ void GUISection::parameterValueChanged(int parameterIndex, float newValue)
 	    auto param = parent->getParamByIndex(parameterIndex);
 	    if (param)
 	    {
+			DBG("PARAM ID");
+			DBG(param->paramID);
 			auto slider = dynamic_cast<juce::Slider*>(findChildWithID(param->paramID));
 			if (slider)
 			{

@@ -33,6 +33,8 @@ public:
 				return it->second;
 			count++;
 		}
+
+		return nullptr;
 	}
 
 	juce::AudioParameterChoice* getChoiceParam(std::string name)

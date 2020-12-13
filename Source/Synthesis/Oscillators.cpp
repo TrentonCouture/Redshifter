@@ -27,6 +27,10 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 	m_params->getChoiceParam("oscType1")->addListener(this);
 	m_params->getChoiceParam("oscType2")->addListener(this);
 
+	const int numPartials = 42;
+	for (int i = 0; i < numPartials; i++)
+		m_params->getParam("partialAmp" + std::to_string(i))->addListener(this);
+
 	m_sampleRate = 0;
 	m_numChannels = 0;
 	m_numSamples = 0;
@@ -34,6 +38,11 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 
 void Oscillators::parameterValueChanged(int parameterIndex, float newValue)
 {
+	// if partial amp
+	if (parameterIndex >= 11 && parameterIndex <= 47)
+		m_addOsc->processor.get<0>().initialiseOscs();
+		
+
 	// if osc 1
 	if (parameterIndex == 62)
 	{

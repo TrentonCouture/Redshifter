@@ -41,7 +41,16 @@ void AdditiveSection::setPartialAmps()
 				parameter = parent->getParam("partialAmp" + std::to_string(i));
 				if (parameter)
 				{
-					parameter->setValueNotifyingHost(0.5);
+					parameter->setValueNotifyingHost(1.0);
+				}
+			}
+
+			for (int i = 0; i < numPartials; i++)
+			{
+				parameter = parent->getParam("partialAmp" + std::to_string(i));
+				if (parameter && i % 2 == 0)
+				{
+					parameter->setValueNotifyingHost(0.0);
 				}
 			}
 		}

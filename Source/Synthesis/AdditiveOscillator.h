@@ -10,12 +10,15 @@
 
 #pragma once
 #include <JuceHeader.h>
+#include <algorithm>
+
 #include "Parameters.h"
 
 class AdditiveProcessor
 {
 public:
     void initialise(Parameters* params);
+    void initialiseOscs();
     void setFrequency(float newFreq, bool force);
 
     void prepare(const juce::dsp::ProcessSpec& spec);
@@ -26,6 +29,12 @@ private:
     Parameters* m_params;
 
     juce::dsp::Oscillator<float> m_osc;
+
+    const float m_numPartials = 10;
+
+    float m_testGain;
+    //juce::OwnedArray<juce::dsp::Oscillator<float>> m_oscs;
+    juce::OwnedArray<juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>>> m_oscs;
 };
 
 class AdditiveOscillator : public juce::dsp::ProcessorWrapper<juce::dsp::ProcessorChain<AdditiveProcessor, juce::dsp::Gain<float>>>
