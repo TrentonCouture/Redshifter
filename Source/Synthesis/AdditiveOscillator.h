@@ -27,18 +27,11 @@ public:
 
 private:
     Parameters* m_params;
-
-    juce::dsp::Oscillator<float> m_osc;
-
-    const float m_numPartials = 10;
-
-    float m_testGain;
-    //juce::OwnedArray<juce::dsp::Oscillator<float>> m_oscs;
+    const float m_numPartials = 42;
     juce::OwnedArray<juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>>> m_oscs;
 };
 
 class AdditiveOscillator : public juce::dsp::ProcessorWrapper<juce::dsp::ProcessorChain<AdditiveProcessor, juce::dsp::Gain<float>>>
-//class AdditiveOscillator : public juce::dsp::ProcessorWrapper<juce::dsp::ProcessorChain<juce::dsp::Oscillator<float>, juce::dsp::Gain<float>>>
 {
 
 };
