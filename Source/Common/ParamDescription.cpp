@@ -40,5 +40,6 @@ ParamDescriptions::ParamDescriptions() :
 	for (int i = 0; i < numPartials; i++)
 	{
 		m_paramDescs.insert({ "partialAmp" + std::to_string(i), { ParamType::floatType, "partialAmp" + std::to_string(i), "PartialAmp" + std::to_string(i), 0.0f, 1.0f, 0.5f, {""}, 0, 0} });
+		m_paramDescs.insert({ "partialFreq" + std::to_string(i), { ParamType::floatType, "partialFreq" + std::to_string(i), "PartialFreq" + std::to_string(i), 0.0f, 1.0f, 0.5f, {""}, 0, 0} });
 	}
 }

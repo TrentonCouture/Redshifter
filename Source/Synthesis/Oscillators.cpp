@@ -29,7 +29,10 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 
 	const int numPartials = 42;
 	for (int i = 0; i < numPartials; i++)
+	{
 		m_params->getParam("partialAmp" + std::to_string(i))->addListener(this);
+		m_params->getParam("partialFreq" + std::to_string(i))->addListener(this);
+	}
 
 	m_sampleRate = 0;
 	m_numChannels = 0;
@@ -39,12 +42,15 @@ Oscillators::Oscillators(Parameters* params) : m_params(params)
 void Oscillators::parameterValueChanged(int parameterIndex, float newValue)
 {
 	// if partial amp
-	if (parameterIndex >= 11 && parameterIndex <= 47)
+	if (parameterIndex >= 11 && parameterIndex <= 52)
 		m_addOsc->processor.get<0>().initialiseOscs();
-		
+
+	// if partial freq
+	if (parameterIndex >= 53 && parameterIndex <= 94)
+		m_addOsc->processor.get<0>().modulateFrequency();
 
 	// if osc 1
-	if (parameterIndex == 62)
+	if (parameterIndex == 104)
 	{
 		if (newValue < .2)
 			m_oscType[0] = OscType::sine;
@@ -59,7 +65,7 @@ void Oscillators::parameterValueChanged(int parameterIndex, float newValue)
 	}
 
 	// if osc 2
-	if (parameterIndex == 61)
+	if (parameterIndex == 103)
 	{
 		if (newValue < .2)
 			m_oscType[1] = OscType::sine;

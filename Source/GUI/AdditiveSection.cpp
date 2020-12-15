@@ -74,36 +74,39 @@ void AdditiveSection::run()
 		{
 			parameter = parent->getParam("partialAmp" + std::to_string(i));
 			if (parameter)
-			{
-				parameter->setValueNotifyingHost(0.0);
-			}
+				parameter->setValueNotifyingHost(1.0);
 		}
 
-		//float t = 0.0;
 		float t[numPartials];
 		float amp[numPartials];
+		float rands[numPartials];
+
+		juce::Random rand;
 		for (int i = 0; i < numPartials; i++)
 		{
 			t[i] = 0.0;
 			amp[i] = 0.0;
+			rands[i] = rand.nextFloat();
 		}
 
-		juce::Random rand;
 
 		while (!threadShouldExit())
 		{
 			for (int i = 0; i < numPartials; i++)
 			{
 				amp[i] = (std::sin(t[i]) + 1) / 2;
+				parameter = parent->getParam("partialFreq" + std::to_string(i));
+				if (parameter)
+					parameter->setValueNotifyingHost(amp[i]);
+
 				parameter = parent->getParam("partialAmp" + std::to_string(i));
 				if (parameter)
-				{
 					parameter->setValueNotifyingHost(amp[i]);
-				}
 
-				t[i] += 0.00001 * (48 - i/2) ;
+				//t[i] += 0.00001 * (48 - i/2) ;
 				//t[i] += 0.001 * i;
 				//t[i] += 0.001 * rand.nextFloat();
+				t[i] += 0.01 * rands[i];
 
 				if (t[i] >= 2*juce::MathConstants<float>::pi)
 					t[i] = 0.0;

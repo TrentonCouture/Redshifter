@@ -28,8 +28,16 @@ void AdditiveProcessor::initialiseOscs()
         m_oscs[i]->get<1>().setGainLinear(m_params->getParam("partialAmp" + std::to_string(i))->get());
 }
 
+void AdditiveProcessor::modulateFrequency()
+{
+    for (int i = 0; i < m_numPartials; i++)
+        m_oscs[i]->get<0>().setFrequency(m_currentFreq * (i + 1) + 100 * (-0.5 + m_params->getParam("partialFreq" + std::to_string(i))->get()));
+        //m_oscs[i]->get<0>().setFrequency(m_currentFreq);
+}
+
 void AdditiveProcessor::setFrequency(float newFreq, bool force)
 {
+    m_currentFreq = newFreq;
     for (int i = 0; i < m_numPartials; i++)
         m_oscs[i]->get<0>().setFrequency(newFreq * (i + 1), force);
 }
