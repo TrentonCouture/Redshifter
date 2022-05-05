@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="HT8LVc" name="Redshifter" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              headerPath="C:\asiosdk_2.3.3_2019-06-14\common&#10;..\..\Source\&#10;..\..\Source\GUI\&#10;..\..\Source\Synthesis\&#10;..\..\Source\Common\"
+              pluginVST3Category="Synth" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              pluginManufacturer="Trenton Couture">
+  <MAINGROUP id="nKcm4M" name="Redshifter">
+    <GROUP id="{FC1B51E2-C36B-D6C9-7F58-BDF790C288F7}" name="ConcurrentQueue">
+      <FILE id="j4OTZL" name="blockingconcurrentqueue.h" compile="0" resource="0"
+            file="Source/ConcurrentQueue/blockingconcurrentqueue.h"/>
+      <FILE id="JKNwPi" name="concurrentqueue.h" compile="0" resource="0"
+            file="Source/ConcurrentQueue/concurrentqueue.h"/>
+    </GROUP>
+    <GROUP id="{1A907AC9-A66E-EF13-A92B-E156ECF2E8AC}" name="Synthesis">
+      <FILE id="kuR65C" name="AdditiveOscillator.cpp" compile="1" resource="0"
+            file="Source/Synthesis/AdditiveOscillator.cpp"/>
+      <FILE id="gKHeCg" name="AdditiveOscillator.h" compile="0" resource="0"
+            file="Source/Synthesis/AdditiveOscillator.h"/>
+      <FILE id="UtU0Ga" name="OscillatorEngine.cpp" compile="1" resource="0"
+            file="Source/Synthesis/OscillatorEngine.cpp"/>
+      <FILE id="Gve7wU" name="OscillatorEngine.h" compile="0" resource="0"
+            file="Source/Synthesis/OscillatorEngine.h"/>
+      <FILE id="qCZaZO" name="Oscillators.cpp" compile="1" resource="0" file="Source/Synthesis/Oscillators.cpp"/>
+      <FILE id="CKbbHC" name="Oscillators.h" compile="0" resource="0" file="Source/Synthesis/Oscillators.h"/>
+      <FILE id="oAIZVa" name="RSEngine.cpp" compile="1" resource="0" file="Source/Synthesis/RSEngine.cpp"/>
+      <FILE id="c8MlDF" name="RSEngine.h" compile="0" resource="0" file="Source/Synthesis/RSEngine.h"/>
+      <FILE id="U3sMb6" name="RSSound.cpp" compile="1" resource="0" file="Source/Synthesis/RSSound.cpp"/>
+      <FILE id="JBOc7z" name="RSSound.h" compile="0" resource="0" file="Source/Synthesis/RSSound.h"/>
+      <FILE id="yauOeF" name="StandardOscillator.cpp" compile="1" resource="0"
+            file="Source/Synthesis/StandardOscillator.cpp"/>
+      <FILE id="ufOyfe" name="StandardOscillator.h" compile="0" resource="0"
+            file="Source/Synthesis/StandardOscillator.h"/>
+    </GROUP>
+    <GROUP id="{7583C6D2-70D3-B27A-DBC8-FBC1107B171E}" name="GUI">
+      <FILE id="AzIW9g" name="AdditiveSection.cpp" compile="1" resource="0"
+            file="Source/GUI/AdditiveSection.cpp"/>
+      <FILE id="IAHML6" name="AdditiveSection.h" compile="0" resource="0"
+            file="Source/GUI/AdditiveSection.h"/>
+      <FILE id="rJ2k4J" name="ChorusSection.cpp" compile="1" resource="0"
+            file="Source/GUI/ChorusSection.cpp"/>
+      <FILE id="exLQ9j" name="ChorusSection.h" compile="0" resource="0" file="Source/GUI/ChorusSection.h"/>
+      <FILE id="pObDoU" name="EnvSection.cpp" compile="1" resource="0" file="Source/GUI/EnvSection.cpp"/>
+      <FILE id="gIXaoG" name="EnvSection.h" compile="0" resource="0" file="Source/GUI/EnvSection.h"/>
+      <FILE id="BvEWMJ" name="FilterSection.cpp" compile="1" resource="0"
+            file="Source/GUI/FilterSection.cpp"/>
+      <FILE id="Kaiq1i" name="FilterSection.h" compile="0" resource="0" file="Source/GUI/FilterSection.h"/>
+      <FILE id="pFvEY9" name="GainSection.cpp" compile="1" resource="0" file="Source/GUI/GainSection.cpp"/>
+      <FILE id="hVKp4s" name="GainSection.h" compile="0" resource="0" file="Source/GUI/GainSection.h"/>
+      <FILE id="ACVPGK" name="GUISection.cpp" compile="1" resource="0" file="Source/GUI/GUISection.cpp"/>
+      <FILE id="R749j2" name="GUISection.h" compile="0" resource="0" file="Source/GUI/GUISection.h"/>
+      <FILE id="POBrmL" name="LfoFilterSection.cpp" compile="1" resource="0"
+            file="Source/GUI/LfoFilterSection.cpp"/>
+      <FILE id="oZfxFV" name="LfoFilterSection.h" compile="0" resource="0"
+            file="Source/GUI/LfoFilterSection.h"/>
+      <FILE id="RDWerd" name="OscillatorSection.cpp" compile="1" resource="0"
+            file="Source/GUI/OscillatorSection.cpp"/>
+      <FILE id="VFW6ry" name="OscillatorSection.h" compile="0" resource="0"
+            file="Source/GUI/OscillatorSection.h"/>
+      <FILE id="qWUWXa" name="PhaserSection.cpp" compile="1" resource="0"
+            file="Source/GUI/PhaserSection.cpp"/>
+      <FILE id="I8ORSb" name="PhaserSection.h" compile="0" resource="0" file="Source/GUI/PhaserSection.h"/>
+      <FILE id="EB5ReE" name="ReverbSection.cpp" compile="1" resource="0"
+            file="Source/GUI/ReverbSection.cpp"/>
+      <FILE id="c5fHtB" name="ReverbSection.h" compile="0" resource="0" file="Source/GUI/ReverbSection.h"/>
+      <FILE id="TDbJ0M" name="WholeInterface.cpp" compile="1" resource="0"
+            file="Source/GUI/WholeInterface.cpp"/>
+      <FILE id="Aq8vXe" name="WholeInterface.h" compile="0" resource="0"
+            file="Source/GUI/WholeInterface.h"/>
+    </GROUP>
+    <GROUP id="{22E8697E-2807-40D2-DDB5-EE3704B3BD1E}" name="Source">
+      <FILE id="Q7D2dO" name="ParamDescription.cpp" compile="1" resource="0"
+            file="Source/Common/ParamDescription.cpp"/>
+      <FILE id="WYM1I4" name="ParamDescription.h" compile="0" resource="0"
+            file="Source/Common/ParamDescription.h"/>
+      <FILE id="u0xwZB" name="Parameters.cpp" compile="1" resource="0" file="Source/Common/Parameters.cpp"/>
+      <FILE id="X8Iehu" name="Parameters.h" compile="0" resource="0" file="Source/Common/Parameters.h"/>
+      <FILE id="vuZw25" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/Common/PluginEditor.cpp"/>
+      <FILE id="GKMWxf" name="PluginEditor.h" compile="0" resource="0" file="Source/Common/PluginEditor.h"/>
+      <FILE id="RGlh6W" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/Common/PluginProcessor.cpp"/>
+      <FILE id="xzbb6P" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/Common/PluginProcessor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               JUCE_ASIO="1"/>
+  <EXPORTFORMATS>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Redshifter"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Redshifter"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <WINDOWS/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
