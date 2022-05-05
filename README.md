@@ -6,4 +6,4 @@ It contains 2 oscillators that can be set to sine, sawtooth, square, or triangle
 
 It also has envelopes, 8 voice polyphony, reverb, chorus, phaser, gain, and a filter with an LFO to modulate the cutoff frequency.
 
-![alt text](https://github.com/TrentonCouture/Redshifter/blob/master/Assets/Redshifter.PNG?raw=true)
+![Redshifter Picture](/Assets/Redshifter.PNG?raw=true)
